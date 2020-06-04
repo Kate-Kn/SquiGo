@@ -11,10 +11,10 @@ import java.io.SequenceInputStream;
 public class Main extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        stage.setTitle("SquiGo");
-        stage.setScene(new Scene(root, 300, 275));
+    public void start(Stage stage) {
+        ViewManager view=new ViewManager();
+        stage=view.getStage();
+        //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         stage.show();
     }
 
