@@ -1,9 +1,9 @@
-package Frontend;
+package view;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import java.awt.*;
 
 public class ViewManager {
     private Stage stage;
@@ -19,5 +19,9 @@ public class ViewManager {
     }
     public Stage getStage(){
         return stage;
+    }
+    private void createButton(){
+        Button button=new Button();
+        mainPane.getChildren().add(button);
     }
 }

@@ -1,12 +1,8 @@
-package Frontend;
+package model;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.SequenceInputStream;
+import view.ViewManager;
 
 public class Main extends Application {
 
