@@ -14,12 +14,13 @@ public class Game extends Canvas implements Runnable {
     private Random r;
     public Game (){
         handler=new Handler();
-        new Window(WIGHT, HEIGTH, "MY GAME", this);
+        this.addKeyListener(new KeyInput(handler));
+        new Window(WIGHT, HEIGTH, "SquiGo", this);
 
         r=new Random();
-        for(int i=0; i<20; i++) {
-            handler.addObject(new Player(r.nextInt(WIGHT/2-32), r.nextInt(HEIGTH/2-32), ID.Player));
-        }
+        handler.addObject(new Player((WIGHT/2-32), (HEIGTH/2-32), ID.Player));
+        handler.addObject(new Player((WIGHT/2+64), (HEIGTH/2+64), ID.Player2));
+
     }
     public  synchronized void start(){
         thread= new Thread(this);
@@ -56,7 +57,7 @@ public class Game extends Canvas implements Runnable {
             frames++;
             if (System.currentTimeMillis()-timer> 1000) {
                 timer += 1000;
-                System.out.println("FPS:  " + frames);
+               // System.out.println("FPS:  " + frames);
                 frames = 0;
 
             }
