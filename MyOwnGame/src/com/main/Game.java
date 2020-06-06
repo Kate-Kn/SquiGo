@@ -13,11 +13,12 @@ public class Game extends Canvas implements Runnable {
     private Handler handler;
     private Random r;
     public Game (){
+        handler=new Handler();
         new Window(WIGHT, HEIGTH, "MY GAME", this);
-        handler = new Handler();
+
         r=new Random();
         for(int i=0; i<20; i++) {
-            handler.addObject(new Player(r.nextInt(WIGHT), r.nextInt(HEIGTH), ID.Player));
+            handler.addObject(new Player(r.nextInt(WIGHT/2-32), r.nextInt(HEIGTH/2-32), ID.Player));
         }
     }
     public  synchronized void start(){
@@ -74,7 +75,7 @@ public class Game extends Canvas implements Runnable {
         }
 
         Graphics g=bs.getDrawGraphics();
-        g.setColor(Color.green);
+        g.setColor(Color.black);
         g.fillRect(0,0,getWidth(),getHeight());
         handler.render(g);
         g.dispose();
