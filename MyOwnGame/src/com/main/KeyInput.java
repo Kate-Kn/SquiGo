@@ -26,13 +26,13 @@ public class KeyInput extends KeyAdapter {
             }
             if(temp.getId()==ID.Player2){
                 if(key==KeyEvent.VK_W)
-                    temp.setVelY(0);
+                    temp.setVelY(5);
                 if(key==KeyEvent.VK_S)
-                    temp.setVelY(0);
+                    temp.setVelY(-5);
                 if(key==KeyEvent.VK_D)
-                    temp.setVelX(0);
+                    temp.setVelX(5);
                 if(key==KeyEvent.VK_A)
-                    temp.setVelX(0);
+                    temp.setVelX(-5);
 
 
             }
