@@ -1,4 +1,4 @@
-package Game;
+package Model;
 
 public enum ID {
     Player(),

@@ -2,28 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Game/BasicEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/resources/treeG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/resources/treeW.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquiGoWithSwing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SquiGoWithSwing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/META-INF/SquiGoWithSwing.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/GameObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/Handler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/ID.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/KeyInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/Window.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/p3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/rabbit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/ID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/ID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/KeyInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game/BasicEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/BasicEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game/ID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/ID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,17 +41,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/textEditor/textEditor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Game/resources" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\src\Game\resources" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Game.Game" />
+      <option name="MAIN_CLASS_NAME" value="Model.Game" />
       <module name="SquiGoWithSwing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Game.*" />
+          <option name="PATTERN" value="Model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,14 +100,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591507687557</updated>
-      <workItem from="1591507692749" duration="1164000" />
+      <workItem from="1591507692749" duration="4356000" />
     </task>
+    <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
+      <created>1591509342521</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591509342521</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way." />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="0" key="#Auto_Import/0.0.1366.738@0.0.1366.738" timestamp="1591511358213" />
     <state x="137" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591508305096">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -126,35 +136,29 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state width="1306" height="155" key="GridCell.Tab.0.bottom" timestamp="1591508908781">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1591509337883">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591508908781" />
-    <state width="1306" height="155" key="GridCell.Tab.0.center" timestamp="1591508908781">
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591509337883" />
+    <state width="1306" height="155" key="GridCell.Tab.0.bottom" timestamp="1591512289290">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591508908781" />
-    <state width="1306" height="155" key="GridCell.Tab.0.left" timestamp="1591508908781">
+    <state width="1306" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591512289290" />
+    <state width="1306" height="155" key="GridCell.Tab.0.center" timestamp="1591512289290">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591508908781" />
-    <state width="1306" height="155" key="GridCell.Tab.0.right" timestamp="1591508908781">
+    <state width="1306" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591512289290" />
+    <state width="1306" height="155" key="GridCell.Tab.0.left" timestamp="1591512289290">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591508908781" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Game/Game/BasicEnemy.java</url>
-          <line>13</line>
-          <properties class="Game.BasicEnemy" method="tick">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1306" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591512289290" />
+    <state width="1306" height="155" key="GridCell.Tab.0.right" timestamp="1591512289290">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1306" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591512289290" />
+    <state width="602" height="255" key="javadoc.popup" timestamp="1591511890831">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="602" height="255" key="javadoc.popup/0.0.1366.738@0.0.1366.738" timestamp="1591511890831" />
   </component>
 </project>

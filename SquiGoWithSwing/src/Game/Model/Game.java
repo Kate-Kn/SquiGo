@@ -1,13 +1,13 @@
-package Game;
+package Model;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.util.Random;
 
 public class Game extends Canvas implements Runnable {
+    protected    static final int WIDTH = 640;
+    protected  static final int HEIGHT = WIDTH /12*9;
 
-    private static final int WIGHT = 640;
-    private static final int HEIGTH = WIGHT/12*9;
     private Thread thread;
     private boolean running =true;
     private Handler handler;
@@ -15,13 +15,13 @@ public class Game extends Canvas implements Runnable {
     public Game(){
         handler=new Handler();
         this.addKeyListener(new KeyInput(handler));
-        new Window(WIGHT, HEIGTH, "SquiGo", this);
+        new Window(WIDTH, HEIGHT, "SquiGo", this);
 
         r=new Random();
-        handler.addObject(new Player((WIGHT/2-32), (HEIGTH/2-32), ID.Player));
-        //if everythig is on time, may add multiplayer
-        handler.addObject(new Player((WIGHT/2+64), (HEIGTH/2+64), ID.Player2));
-        handler.addObject(new BasicEnemy((WIGHT/2+64), (HEIGTH/2+64), ID.BasicEnemy));
+        handler.addObject(new Player((WIDTH /2-32), (HEIGHT /2-32), ID.Player));
+        //if everything is on time, may add multiplayer
+       // handler.addObject(new Player((WIGHT/2+64), (HEIGHT /2+64), ID.Player2));
+        handler.addObject(new BasicEnemy((WIDTH /2+64), (HEIGHT /2+64), ID.BasicEnemy));
     }
     public  synchronized void start(){
         thread= new Thread(this);
@@ -35,7 +35,6 @@ public class Game extends Canvas implements Runnable {
         }catch (Exception e){
             e.printStackTrace();
         }
-
     }
     public void run(){
         long lastTime=System.nanoTime();
@@ -63,6 +62,7 @@ public class Game extends Canvas implements Runnable {
 
             }
         }
+
         stop();
     }
 
