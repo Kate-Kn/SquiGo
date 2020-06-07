@@ -7,7 +7,7 @@ import java.util.Random;
 public class Game extends Canvas implements Runnable {
     protected    static final int WIDTH = 640;
     protected  static final int HEIGHT = WIDTH /12*9;
-
+private HUD hud;
     private Thread thread;
     private boolean running =true;
     private Handler handler;
@@ -16,6 +16,7 @@ public class Game extends Canvas implements Runnable {
         handler=new Handler();
         this.addKeyListener(new KeyInput(handler));
         new Window(WIDTH, HEIGHT, "SquiGo", this);
+        hud=new HUD();
 
         r=new Random();
         handler.addObject(new Player((WIDTH /2-32), (HEIGHT /2-32), ID.Player));
@@ -39,6 +40,7 @@ public class Game extends Canvas implements Runnable {
         }
     }
     public void run(){
+        this.requestFocus();
         long lastTime=System.nanoTime();
         double amountOfTricks = 60;
         double ns= 1000000000/amountOfTricks;
@@ -68,8 +70,10 @@ public class Game extends Canvas implements Runnable {
         stop();
     }
 
-    private void tick(){
+    private void tick()
+    {
         handler.tick();
+        hud.tick();
     }
     private void render(){
         BufferStrategy bs= this.getBufferStrategy();
@@ -82,6 +86,7 @@ public class Game extends Canvas implements Runnable {
         g.setColor(Color.black);
         g.fillRect(0,0,getWidth(),getHeight());
         handler.render(g);
+        hud.render(g);
         g.dispose();
         bs.show();
     }

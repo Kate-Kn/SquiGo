@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Game/Model/HUD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/KeyInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/KeyInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591507687557</updated>
       <workItem from="1591507692749" duration="6048000" />
+      <workItem from="1591513960698" duration="1543000" />
     </task>
     <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
       <created>1591509342521</created>
@@ -111,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591512413185</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added 20 enimies">
+      <created>1591514088783</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591514088783</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +128,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way." />
     <MESSAGE value="Changed identifier of width and height.&#10;Basic movement of enemy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed identifier of width and height.&#10;Basic movement of enemy." />
+    <MESSAGE value="Added 20 enimies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 20 enimies" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
@@ -139,26 +148,26 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1591512409264">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1591514076326">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591512409264" />
-    <state width="873" height="194" key="GridCell.Tab.0.bottom" timestamp="1591513806738">
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591514076326" />
+    <state width="1323" height="155" key="GridCell.Tab.0.bottom" timestamp="1591515681098">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="873" height="194" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
-    <state width="873" height="194" key="GridCell.Tab.0.center" timestamp="1591513806738">
+    <state width="1323" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591515681098" />
+    <state width="1323" height="155" key="GridCell.Tab.0.center" timestamp="1591515681098">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="873" height="194" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
-    <state width="873" height="194" key="GridCell.Tab.0.left" timestamp="1591513806738">
+    <state width="1323" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591515681098" />
+    <state width="1323" height="155" key="GridCell.Tab.0.left" timestamp="1591515681098">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="873" height="194" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
-    <state width="873" height="194" key="GridCell.Tab.0.right" timestamp="1591513806738">
+    <state width="1323" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591515681098" />
+    <state width="1323" height="155" key="GridCell.Tab.0.right" timestamp="1591515681098">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="873" height="194" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
+    <state width="1323" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591515681098" />
     <state width="873" height="194" key="GridCell.Tab.1.bottom" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -187,5 +196,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="602" height="255" key="javadoc.popup/0.0.1366.738@0.0.1366.738" timestamp="1591511890831" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1591514461262">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1591514461262" />
   </component>
 </project>
