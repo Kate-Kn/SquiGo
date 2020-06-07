@@ -1,44 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7684ac95-5222-4121-945c-e6ba9edaec3e" name="Default Changelist" comment="Finished working on KeyInput.java.&#10;Try launching rabbit.png as a player.">
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/.idea/SquiGoWithSwing.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/SquiGoWithSwing.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/MyOwnGame/META-INF/MyOwnGame.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/MyOwnGame/com/main/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/MyOwnGame/com/main/GameObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/MyOwnGame/com/main/Handler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/MyOwnGame/com/main/ID.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/MyOwnGame/com/main/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/MyOwnGame/com/main/Window.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/MyOwnGame/com/main/p3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/META-INF/SquiGoWithSwing.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/com/main/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/com/main/GameObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/com/main/Handler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/com/main/ID.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/com/main/KeyInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/com/main/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/com/main/Window.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/com/main/p3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/out/production/SquiGoWithSwing/com/main/rabbit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/src/Game/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/src/Game/GameObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/src/Game/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/src/Game/ID.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/src/Game/KeyInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/src/Game/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/src/Game/Window.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/src/Game/resources/p3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SquiGoWithSwing/MyOwnGame/src/Game/resources/rabbit.png" beforeDir="false" />
+    <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/Game/BasicEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SquiGoWithSwing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SquiGoWithSwing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/META-INF/SquiGoWithSwing.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/GameObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/Handler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/ID.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/KeyInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/Window.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/p3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/com/main/rabbit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/ID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/ID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/KeyInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="C:\Users\Member\Desktop\SquiGo\MyOwnGame\.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="ProjectId" id="1cwnD7PxcKJSKUBNhMzQPlJKMC1" />
+  <component name="ProjectId" id="1cyjNZDKboWMo7MsBkrLttrmf8M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -71,30 +49,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Member\Desktop\SquiGo\MyOwnGame\src\com\main" />
-    </key>
+    <property name="last_opened_file_path" value="$USER_HOME$/textEditor/textEditor" />
   </component>
   <component name="RunManager">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.main.Game" />
+      <option name="MAIN_CLASS_NAME" value="Game.Game" />
       <module name="SquiGoWithSwing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.main.*" />
+          <option name="PATTERN" value="Game.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,7 +73,7 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.main.Game" />
+      <option name="MAIN_CLASS_NAME" value="Game.Game" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,88 +101,60 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7684ac95-5222-4121-945c-e6ba9edaec3e" name="Default Changelist" comment="" />
-      <created>1591448400959</created>
+      <changelist id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="" />
+      <created>1591507687557</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1591448400959</updated>
-      <workItem from="1591448407393" duration="9117000" />
-      <workItem from="1591461584186" duration="442000" />
-      <workItem from="1591507269759" duration="10000" />
+      <updated>1591507687557</updated>
+      <workItem from="1591507692749" duration="1164000" />
     </task>
-    <task id="LOCAL-00001" summary="Minor bugs fix:&#10;Handler should be initialized before Window (to prevent NullPointerException) &#10;Changed background color to black">
-      <created>1591450313146</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1591450313146</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Change title of window to SquiGo&#10;Started working on KeyInput class. Player keys: up, down, right, left. Player keys: A,S,W,D.">
-      <created>1591454607826</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1591454607826</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Finished working on KeyInput.java.&#10;Try launching rabbit.png as a player.">
-      <created>1591461821136</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1591461821136</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor bugs fix:&#10;Handler should be initialized before Window (to prevent NullPointerException) &#10;Changed background color to black" />
-    <MESSAGE value="Change title of window to SquiGo&#10;Started working on KeyInput class. Player keys: up, down, right, left. Player keys: A,S,W,D." />
-    <MESSAGE value="Finished working on KeyInput.java.&#10;Try launching rabbit.png as a player." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished working on KeyInput.java.&#10;Try launching rabbit.png as a player." />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="0" key="#Project_Structure" timestamp="1591507278240">
+    <state x="137" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591508305096">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="0" key="#Project_Structure/0.0.1366.738@0.0.1366.738" timestamp="1591507278240" />
-    <state x="137" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591448912464">
+    <state x="137" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508305096" />
+    <state x="488" y="51" key="#com.intellij.ide.util.MemberChooser" timestamp="1591508507385">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="137" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1591448912464" />
-    <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1591448905331">
+    <state x="488" y="51" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1591508507385" />
+    <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1591508283276">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591448905331" />
-    <state x="286" y="0" width="793" height="726" key="CommitChangelistDialog2" timestamp="1591507292445">
+    <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
+    <state width="1306" height="155" key="GridCell.Tab.0.bottom" timestamp="1591508908781">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="286" y="0" width="793" height="726" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591507292445" />
-    <state x="463" y="43" key="FileChooserDialogImpl" timestamp="1591462047064">
+    <state width="1306" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591508908781" />
+    <state width="1306" height="155" key="GridCell.Tab.0.center" timestamp="1591508908781">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="43" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1591462047064" />
-    <state width="1306" height="155" key="GridCell.Tab.0.bottom" timestamp="1591462048484">
+    <state width="1306" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591508908781" />
+    <state width="1306" height="155" key="GridCell.Tab.0.left" timestamp="1591508908781">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591462048484" />
-    <state width="1306" height="155" key="GridCell.Tab.0.center" timestamp="1591462048484">
+    <state width="1306" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591508908781" />
+    <state width="1306" height="155" key="GridCell.Tab.0.right" timestamp="1591508908781">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591462048484" />
-    <state width="1306" height="155" key="GridCell.Tab.0.left" timestamp="1591462048484">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591462048484" />
-    <state width="1306" height="155" key="GridCell.Tab.0.right" timestamp="1591462048484">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591462048484" />
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591461842124">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591461842124" />
+    <state width="1306" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591508908781" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Game/Game/BasicEnemy.java</url>
+          <line>13</line>
+          <properties class="Game.BasicEnemy" method="tick">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,8 +1,8 @@
-package com.main;
+package Game;
 
 public enum ID {
     Player(),
     Player2(),
-    Enemy();
+    BasicEnemy();
 
 }

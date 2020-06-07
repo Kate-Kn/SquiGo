@@ -1,4 +1,4 @@
-package com.main;
+package Game;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -12,7 +12,7 @@ public class Game extends Canvas implements Runnable {
     private boolean running =true;
     private Handler handler;
     private Random r;
-    public Game (){
+    public Game(){
         handler=new Handler();
         this.addKeyListener(new KeyInput(handler));
         new Window(WIGHT, HEIGTH, "SquiGo", this);
@@ -21,7 +21,7 @@ public class Game extends Canvas implements Runnable {
         handler.addObject(new Player((WIGHT/2-32), (HEIGTH/2-32), ID.Player));
         //if everythig is on time, may add multiplayer
         handler.addObject(new Player((WIGHT/2+64), (HEIGTH/2+64), ID.Player2));
-
+        handler.addObject(new BasicEnemy((WIGHT/2+64), (HEIGTH/2+64), ID.BasicEnemy));
     }
     public  synchronized void start(){
         thread= new Thread(this);
