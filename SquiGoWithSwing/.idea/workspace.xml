@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="53a8e96f-1031-4a3c-833c-891f7c2e87ed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SquiGoWithSwing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/SquiGoWithSwing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/MyOwnGame/META-INF/MyOwnGame.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/MyOwnGame/com/main/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/MyOwnGame/com/main/GameObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/MyOwnGame/com/main/Handler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/MyOwnGame/com/main/ID.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/MyOwnGame/com/main/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/MyOwnGame/com/main/Window.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/MyOwnGame/com/main/p3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/META-INF/SquiGoWithSwing.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/com/main/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/com/main/GameObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/com/main/Handler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/com/main/ID.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/com/main/KeyInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/com/main/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/com/main/Window.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/com/main/p3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/out/production/SquiGoWithSwing/com/main/rabbit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/src/Game/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/src/Game/GameObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/src/Game/Handler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/src/Game/ID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/src/Game/KeyInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/src/Game/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/src/Game/Window.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/src/Game/resources/p3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOwnGame/src/Game/resources/rabbit.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cygYdwwl6pwwktn4ny4d1nc1Jd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SquiGoWithS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\MyOwnGame\src\com\resources" />
+      <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\MyOwnGame\src\com" />
+      <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\MyOwnGame\src" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53a8e96f-1031-4a3c-833c-891f7c2e87ed" name="Default Changelist" comment="" />
+      <created>1591506295465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591506295465</updated>
+      <workItem from="1591506297935" duration="943000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="141" y="0" key="CommitChangelistDialog2" timestamp="1591506944875">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="141" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591506944875" />
+    <state x="463" y="96" key="FileChooserDialogImpl" timestamp="1591507261128">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="96" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1591507261128" />
+    <state x="492" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591506892893">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="492" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1591506892893" />
+  </component>
+</project>
