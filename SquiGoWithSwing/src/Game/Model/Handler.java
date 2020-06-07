@@ -10,6 +10,7 @@ public class Handler {
             GameObject tempObject = object.get(i);
             tempObject.tick();
         }
+
     }
 
     public void render(Graphics g){

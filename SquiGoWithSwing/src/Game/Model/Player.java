@@ -8,16 +8,39 @@ import java.util.Random;
 
 public class Player extends GameObject {
     Random r=new Random();
-    public Player(int x, int y, ID id) {
-        super(x, y, id);
-    }
+    Handler handler;
 
+    public Player(int x, int y, ID id, Handler handler) {
+
+        super(x, y, id);
+        this.handler=handler;
+    }
+    public Rectangle getBounds(){
+        return new Rectangle(x,y, 9,9);
+    }
     @Override
     public void tick() {
     x+=velX;
     y+=velY;
         x=Game.clam(x,0,Game.WIDTH-45);
         y=Game.clam(y,0,Game.HEIGHT-82);
+        handler.addObject(new BasicTrail(x,y,ID.BasicTrail, Color.white, 9,9, 0.02f, handler) );
+
+        colision();
+    }
+
+    private void colision() {
+        for (int i =0; i<handler.object.size(); i++){
+            GameObject tempObject = handler.object.get(i);
+            if (tempObject.getId()== ID.BasicEnemy){
+
+                if (getBounds().intersects(tempObject.getBounds())){ //tempobject is now a basic anemy
+                    // colision code
+                    HUD.HEALTH-=5;
+
+                }
+            }
+        }
     }
 
     @Override
@@ -27,14 +50,21 @@ public class Player extends GameObject {
             BufferedImage image=new BufferedImage(9,9,12);
             try {
                  image = ImageIO.read(new File("src\\Game\\resources\\rabbit.png"));
+                //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
+                // хз як виправити, хай поки буде так
+                // короткий "src\\Game\\resources\\rabbit.png"
+                // мій "C:\Users\Owner\IdeaProjects\SquiGo\SquiGoWithSwing\src\Game\resources\rabbit.png"
+
             }catch(Exception e){
                 e.printStackTrace();
             }
             g.drawImage(image,x,y,null);
         }
-        if(id==ID.Player2) {
-            g.setColor(Color.red);
-           g.fillRect(x,y,32,32);
-        }
+//        if(id==ID.Player2) {
+//            g.setColor(Color.red);
+//           g.fillRect(x,y,32,32);
+//        }
+
+
     }
 }

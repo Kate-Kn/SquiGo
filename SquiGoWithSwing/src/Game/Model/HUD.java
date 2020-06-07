@@ -5,7 +5,7 @@ import java.awt.*;
 public class HUD {
     public static  int HEALTH=100;
     public void tick(){
-        HEALTH--;
+
    HEALTH=Game.clam(HEALTH,0,100);
     }
     public void render(Graphics g){

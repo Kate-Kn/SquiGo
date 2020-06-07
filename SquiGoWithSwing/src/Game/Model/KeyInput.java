@@ -23,18 +23,18 @@ public class KeyInput extends KeyAdapter {
                     temp.setVelX(5);
 
             }
-            if(temp.getId()==ID.Player2){
-                if(key==KeyEvent.VK_W)
-                    temp.setVelY(5);
-                if(key==KeyEvent.VK_S)
-                    temp.setVelY(-5);
-                if(key==KeyEvent.VK_D)
-                    temp.setVelX(5);
-                if(key==KeyEvent.VK_A)
-                    temp.setVelX(-5);
-
-
-            }
+//            if(temp.getId()==ID.Player2){
+//                if(key==KeyEvent.VK_W)
+//                    temp.setVelY(5);
+//                if(key==KeyEvent.VK_S)
+//                    temp.setVelY(-5);
+//                if(key==KeyEvent.VK_D)
+//                    temp.setVelX(5);
+//                if(key==KeyEvent.VK_A)
+//                    temp.setVelX(-5);
+//
+//
+//            }
 
 
         }

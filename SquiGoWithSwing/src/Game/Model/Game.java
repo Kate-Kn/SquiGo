@@ -7,7 +7,7 @@ import java.util.Random;
 public class Game extends Canvas implements Runnable {
     protected    static final int WIDTH = 640;
     protected  static final int HEIGHT = WIDTH /12*9;
-private HUD hud;
+    private HUD hud;
     private Thread thread;
     private boolean running =true;
     private Handler handler;
@@ -19,12 +19,16 @@ private HUD hud;
         hud=new HUD();
 
         r=new Random();
-        handler.addObject(new Player((WIDTH /2-32), (HEIGHT /2-32), ID.Player));
+        handler.addObject(new Player((WIDTH /2-32), (HEIGHT /2-32), ID.Player, handler));
         //if everything is on time, may add multiplayer
        // handler.addObject(new Player((WIGHT/2+64), (HEIGHT /2+64), ID.Player2));
-        for(int i=0;i<20;i++) {
-            handler.addObject(new BasicEnemy(r.nextInt(WIDTH ),r.nextInt (HEIGHT ), ID.BasicEnemy));
-        }
+//
+//    //for many trees    for(int i=0;i<20;i++) {
+//            handler.addObject(new BasicEnemy(r.nextInt(WIDTH ),r.nextInt (HEIGHT ), ID.BasicEnemy, handler));
+//        }
+        handler.addObject(new BasicEnemy(r.nextInt(WIDTH ),r.nextInt (HEIGHT ), ID.BasicEnemy, handler));
+//
+
     }
     public  synchronized void start(){
         thread= new Thread(this);
@@ -84,7 +88,7 @@ private HUD hud;
 
         Graphics g=bs.getDrawGraphics();
         g.setColor(Color.black);
-        g.fillRect(0,0,getWidth(),getHeight());
+        g.fillRect(0,0,WIDTH,HEIGHT);
         handler.render(g);
         hud.render(g);
         g.dispose();
