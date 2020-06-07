@@ -21,7 +21,9 @@ public class Game extends Canvas implements Runnable {
         handler.addObject(new Player((WIDTH /2-32), (HEIGHT /2-32), ID.Player));
         //if everything is on time, may add multiplayer
        // handler.addObject(new Player((WIGHT/2+64), (HEIGHT /2+64), ID.Player2));
-        handler.addObject(new BasicEnemy((WIDTH /2+64), (HEIGHT /2+64), ID.BasicEnemy));
+        for(int i=0;i<20;i++) {
+            handler.addObject(new BasicEnemy(r.nextInt(WIDTH ),r.nextInt (HEIGHT ), ID.BasicEnemy));
+        }
     }
     public  synchronized void start(){
         thread= new Thread(this);
@@ -82,6 +84,14 @@ public class Game extends Canvas implements Runnable {
         handler.render(g);
         g.dispose();
         bs.show();
+    }
+    public  static  int clam(int var,int min,int max){
+    if(var>=max){
+    return var=max;
+    }else if(var<=min){
+        return var=min;
+    }
+    return var;
     }
     public static void main (String args[]){
         new Game();

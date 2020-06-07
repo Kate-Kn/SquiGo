@@ -16,6 +16,8 @@ public class Player extends GameObject {
     public void tick() {
     x+=velX;
     y+=velY;
+        x=Game.clam(x,0,Game.WIDTH-45);
+        y=Game.clam(y,0,Game.HEIGHT-82);
     }
 
     @Override
@@ -34,8 +36,5 @@ public class Player extends GameObject {
             g.setColor(Color.red);
            g.fillRect(x,y,32,32);
         }
-
-
-
     }
 }

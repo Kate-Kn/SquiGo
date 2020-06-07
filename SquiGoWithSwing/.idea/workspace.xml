@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Game/resources/treeG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/resources/treeW.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Game/BasicEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/BasicEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Game/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Game/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Game/ID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/ID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Game/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Game/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591507687557</updated>
-      <workItem from="1591507692749" duration="4356000" />
+      <workItem from="1591507692749" duration="6048000" />
     </task>
     <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
       <created>1591509342521</created>
@@ -109,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591509342521</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed identifier of width and height.&#10;Basic movement of enemy.">
+      <created>1591512413185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591512413185</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +119,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way." />
+    <MESSAGE value="Changed identifier of width and height.&#10;Basic movement of enemy." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed identifier of width and height.&#10;Basic movement of enemy." />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
@@ -136,26 +139,50 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1591509337883">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1591512409264">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591509337883" />
-    <state width="1306" height="155" key="GridCell.Tab.0.bottom" timestamp="1591512289290">
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591512409264" />
+    <state width="873" height="194" key="GridCell.Tab.0.bottom" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591512289290" />
-    <state width="1306" height="155" key="GridCell.Tab.0.center" timestamp="1591512289290">
+    <state width="873" height="194" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
+    <state width="873" height="194" key="GridCell.Tab.0.center" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591512289290" />
-    <state width="1306" height="155" key="GridCell.Tab.0.left" timestamp="1591512289290">
+    <state width="873" height="194" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
+    <state width="873" height="194" key="GridCell.Tab.0.left" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591512289290" />
-    <state width="1306" height="155" key="GridCell.Tab.0.right" timestamp="1591512289290">
+    <state width="873" height="194" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
+    <state width="873" height="194" key="GridCell.Tab.0.right" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591512289290" />
+    <state width="873" height="194" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
+    <state width="873" height="194" key="GridCell.Tab.1.bottom" timestamp="1591513806738">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="873" height="194" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
+    <state width="873" height="194" key="GridCell.Tab.1.center" timestamp="1591513806738">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="873" height="194" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
+    <state width="873" height="194" key="GridCell.Tab.1.left" timestamp="1591513806738">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="873" height="194" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
+    <state width="873" height="194" key="GridCell.Tab.1.right" timestamp="1591513806738">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="873" height="194" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591512640350">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591512640350" />
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1591513971320">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1591513971320" />
     <state width="602" height="255" key="javadoc.popup" timestamp="1591511890831">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
