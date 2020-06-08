@@ -8,7 +8,7 @@ import java.io.File;
 public class FastSnowflake extends GameObject {
 
     private Handler handler;
-    public FastSnowflake(int x, int y, ID id, Handler handler) {
+    public FastSnowflake(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
         velX = 6;
@@ -18,7 +18,7 @@ public class FastSnowflake extends GameObject {
     }
 
     public Rectangle getBounds() {
-        return new Rectangle(x, y, 50, 50);
+        return new Rectangle((int)x, (int)y, 50, 50);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class FastSnowflake extends GameObject {
             e.printStackTrace();
         }
 
-        g.drawImage(image, x, y, null);
+        g.drawImage(image, (int)x, (int)y, null);
     }
 }
 

@@ -19,6 +19,9 @@ public class Spawn {
          if(hud.getLevel()==2){
              handler.addObject(new FastSnowflake(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.FastSnowflake, handler));
          }
+         if(hud.getLevel()==3){
+             handler.addObject(new FollowingEnemy(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.FollowingEnemy, handler));
+         }
      }
     }
 }

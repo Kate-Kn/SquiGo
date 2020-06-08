@@ -19,14 +19,13 @@ public class Player extends GameObject {
     Random r = new Random();
     Handler handler;
 
-    public Player(int x, int y, ID id, Handler handler) {
-
+    public Player(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
     }
 
     public Rectangle getBounds() {
-        return new Rectangle(x, y, 30, 41);
+        return new Rectangle((int)x, (int)y, 30, 41);
     }
 
     @Override
@@ -43,7 +42,7 @@ public class Player extends GameObject {
     private void collision() {
         for (int i = 0; i < handler.object.size(); i++) {
             GameObject tempObject = handler.object.get(i);
-            if (tempObject.getId() == ID.BasicEnemy||tempObject.getId() == ID.FastSnowflake) {
+            if (tempObject.getId() == ID.BasicEnemy||tempObject.getId() == ID.FastSnowflake||tempObject.getId()==ID.FollowingEnemy) {
                 if (getBounds().intersects(tempObject.getBounds())) { //temp object is now a basic enemy
                     // collision code
                     HUD.HEALTH -= 5;
@@ -74,7 +73,7 @@ public class Player extends GameObject {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            g.drawImage(image, x, y, null);
+            g.drawImage(image, (int)x, (int)y, null);
         }
 //        if(id==ID.Player2) {
 //            g.setColor(Color.red);
