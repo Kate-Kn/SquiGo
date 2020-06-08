@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/BasicEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/BasicEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/BasicEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/BasicEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/BasicTrail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/BasicTrail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/HUD.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +95,7 @@
       <workItem from="1591507692749" duration="6048000" />
       <workItem from="1591513960698" duration="1837000" />
       <workItem from="1591555400380" duration="571000" />
-      <workItem from="1591610150196" duration="5682000" />
+      <workItem from="1591610150196" duration="6871000" />
     </task>
     <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
       <created>1591509342521</created>
@@ -135,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591614669979</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changes on image size.">
+      <created>1591618677416</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591618677416</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +151,8 @@
     <MESSAGE value="Added 20 enimies" />
     <MESSAGE value="Health bar added in HUD.java." />
     <MESSAGE value="fix typos" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix typos" />
+    <MESSAGE value="changes on image size." />
+    <option name="LAST_COMMIT_MESSAGE" value="changes on image size." />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
@@ -166,26 +171,26 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1591614665295">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1591618672929">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591614665295" />
-    <state width="661" height="155" key="GridCell.Tab.0.bottom" timestamp="1591618458600">
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591618672929" />
+    <state width="661" height="155" key="GridCell.Tab.0.bottom" timestamp="1591619861646">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="661" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591618458600" />
-    <state width="661" height="155" key="GridCell.Tab.0.center" timestamp="1591618458600">
+    <state width="661" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591619861646" />
+    <state width="661" height="155" key="GridCell.Tab.0.center" timestamp="1591619861646">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="661" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591618458600" />
-    <state width="661" height="155" key="GridCell.Tab.0.left" timestamp="1591618458600">
+    <state width="661" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591619861646" />
+    <state width="661" height="155" key="GridCell.Tab.0.left" timestamp="1591619861646">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="661" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591618458600" />
-    <state width="661" height="155" key="GridCell.Tab.0.right" timestamp="1591618458600">
+    <state width="661" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591619861646" />
+    <state width="661" height="155" key="GridCell.Tab.0.right" timestamp="1591619861646">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="661" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591618458600" />
+    <state width="661" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591619861646" />
     <state width="873" height="194" key="GridCell.Tab.1.bottom" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
