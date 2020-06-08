@@ -4,22 +4,24 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class KeyInput extends KeyAdapter {
-    private  Handler handler;
-    public KeyInput(Handler handler){
-        this.handler=handler;
+    private Handler handler;
+
+    public KeyInput(Handler handler) {
+        this.handler = handler;
     }
-    public void keyPressed(KeyEvent e){
-        int key=e.getKeyCode();
-        for(int i=0;i<handler.object.size();i++){
-            GameObject temp=handler.object.get(i);
-            if(temp.getId()==ID.Player){
-                if(key==38)
+
+    public void keyPressed(KeyEvent e) {
+        int key = e.getKeyCode();
+        for (int i = 0; i < handler.object.size(); i++) {
+            GameObject temp = handler.object.get(i);
+            if (temp.getId() == ID.Player) {
+                if (key == 38)
                     temp.setVelY(-5);
-                if(key==40)
+                if (key == 40)
                     temp.setVelY(5);
-                if(key==37)
+                if (key == 37)
                     temp.setVelX(-5);
-                if(key==39)
+                if (key == 39)
                     temp.setVelX(5);
 
             }
@@ -38,34 +40,35 @@ public class KeyInput extends KeyAdapter {
 
 
         }
-        if(key==KeyEvent.VK_ESCAPE){
+        if (key == KeyEvent.VK_ESCAPE) {
             System.exit(1);
         }
 
     }
-    public  void keyReleased(KeyEvent e){
-        int key=e.getKeyCode();
-        for(int i=0;i<handler.object.size();i++){
-            GameObject temp=handler.object.get(i);
-            if(temp.getId()==ID.Player){
-                if(key==38)
+
+    public void keyReleased(KeyEvent e) {
+        int key = e.getKeyCode();
+        for (int i = 0; i < handler.object.size(); i++) {
+            GameObject temp = handler.object.get(i);
+            if (temp.getId() == ID.Player) {
+                if (key == 38)
                     temp.setVelY(0);
-                if(key==40)
+                if (key == 40)
                     temp.setVelY(0);
-                if(key==37)
+                if (key == 37)
                     temp.setVelX(0);
-                if(key==39)
+                if (key == 39)
                     temp.setVelX(0);
 
             }
-            if(temp.getId()==ID.Player2){
-                if(key==KeyEvent.VK_W)
+            if (temp.getId() == ID.Player2) {
+                if (key == KeyEvent.VK_W)
                     temp.setVelY(0);
-                if(key==KeyEvent.VK_S)
+                if (key == KeyEvent.VK_S)
                     temp.setVelY(0);
-                if(key==KeyEvent.VK_D)
+                if (key == KeyEvent.VK_D)
                     temp.setVelX(0);
-                if(key==KeyEvent.VK_A)
+                if (key == KeyEvent.VK_A)
                     temp.setVelX(0);
 
 

@@ -5,21 +5,20 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-public class BasicEnemy extends GameObject {
+public class FastSnowflake extends GameObject {
 
     private Handler handler;
-
-    public BasicEnemy(int x, int y, ID id, Handler handler) {
+    public FastSnowflake(int x, int y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
-        velX = 5;
-        velY = 5;
+        velX = 6;
+        velY = 2;
 
 
     }
 
     public Rectangle getBounds() {
-        return new Rectangle(x, y, 30, 56);
+        return new Rectangle(x, y, 50, 50);
     }
 
     @Override
@@ -33,18 +32,18 @@ public class BasicEnemy extends GameObject {
             velY *= -1;
         }
 
-        handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.green, 9, 9, 0.1f, handler));
+        handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.white, 4, 4, 0.1f, handler));
     }
 
     @Override
     public void render(Graphics g) {
         BufferedImage image = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(new File("src\\Game\\resources\\treeG.png"));
+            image = ImageIO.read(new File("src\\Game\\resources\\sprite_0045.png"));
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"
-            // мій "C:\Users\Owner\IdeaProjects\SquiGo\SquiGoWithSwing\src\Game\resources\treeG.png"
+            // мій "C:\Users\Owner\IdeaProjects\SquiGo\SquiGoWithSwing\src\Game\resources\snowflake.png"
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -52,3 +51,4 @@ public class BasicEnemy extends GameObject {
         g.drawImage(image, x, y, null);
     }
 }
+

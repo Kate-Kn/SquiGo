@@ -5,105 +5,114 @@ import java.awt.image.BufferStrategy;
 import java.util.Random;
 
 public class Game extends Canvas implements Runnable {
-    protected    static final int WIDTH = 640;
-    protected  static final int HEIGHT = WIDTH /12*9;
+    protected static final int WIDTH = 640;
+    protected static final int HEIGHT = WIDTH / 12 * 9;
     private HUD hud;
     private Thread thread;
-    private boolean running =true;
+    private boolean running = true;
     private Handler handler;
     private Random r;
-    public Game(){
-        handler=new Handler();
+    private Spawn spawn;
+
+    public Game() {
+        handler = new Handler();
+        hud = new HUD();
+        spawn = new Spawn(handler,hud);
         this.addKeyListener(new KeyInput(handler));
         new Window(WIDTH, HEIGHT, "SquiGo", this);
-        hud=new HUD();
-
-        r=new Random();
-        handler.addObject(new Player((WIDTH /2-32), (HEIGHT /2-32), ID.Player, handler));
+        r = new Random();
+        handler.addObject(new Player((WIDTH / 2 - 32), (HEIGHT / 2 - 32), ID.Player, handler));
         //if everything is on time, may add multiplayer
-       // handler.addObject(new Player((WIGHT/2+64), (HEIGHT /2+64), ID.Player2));
+        // handler.addObject(new Player((WIGHT/2+64), (HEIGHT /2+64), ID.Player2));
 //
-//    //for many trees    for(int i=0;i<20;i++) {
+//    //for many enemies
+//    for(int i=0;i<20;i++) {
 //            handler.addObject(new BasicEnemy(r.nextInt(WIDTH ),r.nextInt (HEIGHT ), ID.BasicEnemy, handler));
 //        }
-        handler.addObject(new BasicEnemy(r.nextInt(WIDTH ),r.nextInt (HEIGHT ), ID.BasicEnemy, handler));
+        handler.addObject(new BasicEnemy(r.nextInt(WIDTH-60), r.nextInt(HEIGHT-30), ID.BasicEnemy, handler));
 //
 
     }
-    public  synchronized void start(){
-        thread= new Thread(this);
+
+    public synchronized void start() {
+        thread = new Thread(this);
         thread.start();
-        running= true;
+        running = true;
     }
-    public  synchronized void stop(){
-        try{
+
+    public synchronized void stop() {
+        try {
             thread.join();
-            running= false;
-        }catch (Exception e){
+            running = false;
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public void run(){
+
+    public void run() {
         this.requestFocus();
-        long lastTime=System.nanoTime();
+        long lastTime = System.nanoTime();
         double amountOfTricks = 60;
-        double ns= 1000000000/amountOfTricks;
+        double ns = 1000000000 / amountOfTricks;
         double delta = 0;
         long timer = System.currentTimeMillis();
         int frames = 0;
-        while(running){
+        while (running) {
             long now = System.nanoTime();
-            delta+=(now-lastTime)/ns;
-            lastTime=now;
-            while(delta>=1){
+            delta += (now - lastTime) / ns;
+            lastTime = now;
+            while (delta >= 1) {
                 tick();
                 delta--;
             }
-            if (running){
+            if (running) {
                 render();
             }
             frames++;
-            if (System.currentTimeMillis()-timer> 1000) {
+            if (System.currentTimeMillis() - timer > 1000) {
                 timer += 1000;
-               // System.out.println("FPS:  " + frames);
+                // System.out.println("FPS:  " + frames);
                 frames = 0;
 
             }
         }
-
         stop();
     }
 
-    private void tick()
-    {
-        hud=new HUD();
+    private void tick() {
+        //hud = new HUD();
+        //spawn=new Spawn(handler,hud);
         handler.tick();
         hud.tick();
+        spawn.tick();
     }
-    private void render(){
-        BufferStrategy bs= this.getBufferStrategy();
-        if(bs==null){
+
+    private void render() {
+        BufferStrategy bs = this.getBufferStrategy();
+        if (bs == null) {
             this.createBufferStrategy(3);
             return;
         }
 
-        Graphics g=bs.getDrawGraphics();
+        Graphics g = bs.getDrawGraphics();
         g.setColor(Color.black);
-        g.fillRect(0,0,WIDTH,HEIGHT);
+        g.fillRect(0, 0, WIDTH, HEIGHT);
         handler.render(g);
         hud.render(g);
         g.dispose();
         bs.show();
     }
-    public  static  int clam(int var,int min,int max){
-    if(var>=max){
-    return var=max;
-    }else if(var<=min){
-        return var=min;
+
+    public static int clam(int var, int min, int max) {
+        if (var >= max) {
+            return var = max;
+        } else if (var <= min) {
+            return var = min;
+        }
+        return var;
     }
-    return var;
-    }
-    public static void main (String args[]){
+
+    public static void main(String args[]) {
         new Game();
     }
 }
