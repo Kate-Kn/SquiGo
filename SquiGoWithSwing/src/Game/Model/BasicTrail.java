@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class BasicTrail extends GameObject {
 
-    private float alfa = 1;
+    private float alpha = 1;
     private Handler handler;
     private Color color;
     private int width, height;
@@ -22,8 +22,8 @@ public class BasicTrail extends GameObject {
 
     @Override
     public void tick() {
-    if(alfa>life) {
-        alfa-=life-0.001f;
+    if(alpha >life) {
+        alpha -=life-0.001f;
     } else{
             handler.removeObject(this);
            }
@@ -32,10 +32,10 @@ public class BasicTrail extends GameObject {
     @Override
     public void render(Graphics g) {
         Graphics2D g2d= (Graphics2D ) g;
-        g2d.setComposite(makeTransparent(alfa));
+        g2d.setComposite(makeTransparent(alpha));
         g.setColor(color);
         g.fillRect(x,y,width,height);
-        g2d.setComposite(makeTransparent(1));
+      //  g2d.setComposite(makeTransparent(1));
 
     }
     private AlphaComposite makeTransparent(float alfa){

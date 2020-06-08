@@ -18,7 +18,7 @@ public class BasicEnemy extends GameObject{
 
     }
     public Rectangle getBounds(){
-        return new Rectangle(x,y, 16,16);
+        return new Rectangle(x,y, 30,56);
     }
     @Override
     public void tick() {
@@ -31,7 +31,7 @@ public class BasicEnemy extends GameObject{
             velY*=-1;
         }
 
-    handler.addObject(new BasicTrail(x,y,ID.BasicTrail, Color.red, 9,9, 0.1f, handler) );
+    handler.addObject(new BasicTrail(x,y,ID.BasicTrail, Color.green, 9,9, 0.1f, handler) );
     }
 
     @Override

@@ -2,8 +2,17 @@ package Model;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.font.FontRenderContext;
+import java.awt.font.GlyphVector;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
+import java.awt.image.BufferedImageOp;
+import java.awt.image.ImageObserver;
+import java.awt.image.RenderedImage;
+import java.awt.image.renderable.RenderableImage;
 import java.io.File;
+import java.text.AttributedCharacterIterator;
+import java.util.Map;
 import java.util.Random;
 
 public class Player extends GameObject {
@@ -15,8 +24,9 @@ public class Player extends GameObject {
         super(x, y, id);
         this.handler=handler;
     }
+
     public Rectangle getBounds(){
-        return new Rectangle(x,y, 16,16);
+        return new Rectangle(x,y, 30,41);
     }
     @Override
     public void tick() {
@@ -24,7 +34,7 @@ public class Player extends GameObject {
     y+=velY;
         x=Game.clam(x,0,Game.WIDTH-45);
         y=Game.clam(y,0,Game.HEIGHT-82);
-        handler.addObject(new BasicTrail(x,y,ID.BasicTrail, Color.white, 16,16, 0.02f, handler) );
+        handler.addObject(new BasicTrail(x,y,ID.BasicTrail, Color.white, 9,9, 0.02f, handler) );
 
         collision();
     }
@@ -45,8 +55,13 @@ public class Player extends GameObject {
     @Override
     public void render(Graphics g)  {
         if(id==ID.Player) {
+            Graphics2D g2=(Graphics2D) g;
+            //корисний код, щоб перевірити, чи відповідає задана висота і ширина картинці
+               //g.setColor(Color.green);
+               //g2.draw(getBounds());
            // g.setColor(Color.white);
-            BufferedImage image=new BufferedImage(9,9,12);
+            //задана висота і ширина не грає ніякої ролі, має значення тільки розмірність картинки
+           BufferedImage image=new BufferedImage(156,9,12);
 
             try {
                  image = ImageIO.read(new File("src\\Game\\resources\\rabbit.png"));
@@ -63,7 +78,6 @@ public class Player extends GameObject {
 //        if(id==ID.Player2) {
 //            g.setColor(Color.red);
 //           g.fillRect(x,y,32,32);
-//        }
 
 
     }
