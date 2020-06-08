@@ -18,7 +18,7 @@ public class BasicEnemy extends GameObject{
 
     }
     public Rectangle getBounds(){
-        return new Rectangle(x,y, 9,9);
+        return new Rectangle(x,y, 16,16);
     }
     @Override
     public void tick() {

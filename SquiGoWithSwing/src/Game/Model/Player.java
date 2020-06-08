@@ -16,7 +16,7 @@ public class Player extends GameObject {
         this.handler=handler;
     }
     public Rectangle getBounds(){
-        return new Rectangle(x,y, 9,9);
+        return new Rectangle(x,y, 16,16);
     }
     @Override
     public void tick() {
@@ -24,18 +24,17 @@ public class Player extends GameObject {
     y+=velY;
         x=Game.clam(x,0,Game.WIDTH-45);
         y=Game.clam(y,0,Game.HEIGHT-82);
-        handler.addObject(new BasicTrail(x,y,ID.BasicTrail, Color.white, 9,9, 0.02f, handler) );
+        handler.addObject(new BasicTrail(x,y,ID.BasicTrail, Color.white, 16,16, 0.02f, handler) );
 
-        colision();
+        collision();
     }
 
-    private void colision() {
+    private void collision() {
         for (int i =0; i<handler.object.size(); i++){
             GameObject tempObject = handler.object.get(i);
             if (tempObject.getId()== ID.BasicEnemy){
-
-                if (getBounds().intersects(tempObject.getBounds())){ //tempobject is now a basic anemy
-                    // colision code
+                if (getBounds().intersects(tempObject.getBounds())){ //temp object is now a basic enemy
+                    // collision code
                     HUD.HEALTH-=5;
 
                 }
@@ -48,6 +47,7 @@ public class Player extends GameObject {
         if(id==ID.Player) {
            // g.setColor(Color.white);
             BufferedImage image=new BufferedImage(9,9,12);
+
             try {
                  image = ImageIO.read(new File("src\\Game\\resources\\rabbit.png"));
                 //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
