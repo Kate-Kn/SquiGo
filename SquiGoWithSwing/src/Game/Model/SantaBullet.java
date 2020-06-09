@@ -10,6 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class SantaBullet extends GameObject {
    Random r=new Random();
     private Handler handler;
+    private int dec=ThreadLocalRandom.current().nextInt(0, 5);
 
     public SantaBullet(float x, float y, ID id, Handler handler) {
         super(x, y, id);
@@ -23,17 +24,10 @@ public class SantaBullet extends GameObject {
     public Rectangle getBounds() {
         return new Rectangle((int)x, (int)y, 30, 56);
     }
-
     @Override
     public void tick() {
         x += velX;
         y += velY;
-     /*   if (x <= 0 || x >= Game.WIDTH - 32) {
-            velX *= -1;
-        }
-        if (y <= 50 || y >= Game.HEIGHT - 85) {
-            velY *= -1;
-        }*/
      if(y>Game.HEIGHT)
          handler.removeObject(this);
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.pink, 9, 9, 0.1f, handler));
@@ -60,13 +54,10 @@ public class SantaBullet extends GameObject {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        g.drawImage(image, (int) x, (int) y, null);
-       int dec= ThreadLocalRandom.current().nextInt(0, 4);
-
        if(dec==0) {
-           //g.drawImage(image, (int) x, (int) y, null);
+           g.drawImage(image, (int) x, (int) y, null);
        }
-     /*  if(dec==1) {
+      if(dec==1) {
            g.drawImage(imag, (int) x, (int) y, null);
        }
        if(dec==2) {
@@ -77,6 +68,6 @@ public class SantaBullet extends GameObject {
        }
        if(dec==4) {
            g.drawImage(i, (int) x, (int) y, null);
-       }*/
+       }
     }
     }

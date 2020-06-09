@@ -44,7 +44,7 @@ public class SantaEnemyFif extends GameObject {
             int spawn= random.nextInt(10);
             System.out.println(spawn);
             if(spawn==0)
-                handler.addObject(new SantaBullet(x,y, ID.SantaBullet,handler));
+                handler.addObject(new SantaBullet(x+40,y+75, ID.SantaBullet,handler));
         }
 
         if (x <= 0 || x >= 640 - 50) {
@@ -60,7 +60,7 @@ public class SantaEnemyFif extends GameObject {
     public void render(Graphics g) {
         BufferedImage image = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(new File("src\\Game\\resources\\santa.png"));
+            image = ImageIO.read(new File("src\\Game\\resources\\santa2.png"));
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"

@@ -22,8 +22,8 @@ public class HUD {
         g.fillRect(15, 15, (int)HEALTH * 2, 32);
         g.setColor(Color.white);
         g.drawRect(15, 15, 200, 32);
-        g.drawString("Health: "+ HEALTH,15,64);
-        g.drawString("Level: "+ level,15,80);
+        g.drawString("Health: "+ HEALTH,220,35);
+        g.drawString("Level: "+ level,320,35);
     }
 
     public  float getLevel(){

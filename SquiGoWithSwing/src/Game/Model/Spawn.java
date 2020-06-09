@@ -14,18 +14,28 @@ public class Spawn {
     public void tick(){
      scoreKeep++;
 
-     if(scoreKeep>=100){
+     if(scoreKeep>=500){
          scoreKeep=0;
          hud.setLevel(hud.getLevel()+1);
-
+         TreeEnemyS tr=new TreeEnemyS(r.nextInt(Game.WIDTH-
+                 60),Game.HEIGHT-100, ID.TreeEnemyS, handler);
+         SantaEnemyFif sa=new SantaEnemyFif((Game.WIDTH/2-48), -50, ID.SantaEnemyFif, handler);
          if(hud.getLevel()==2){
-             handler.addObject(new TreeEnemyS(r.nextInt(Game.WIDTH-60),Game.HEIGHT-100, ID.TreeEnemyS, handler));
+             handler.addObject(tr);
          }
          if(hud.getLevel()==3){
-             //handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.DecorationEnemyTh, handler));
+            // for(int i=0;i<20;i++)
+             handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.DecorationEnemyTh, handler));
          }
          if(hud.getLevel()==4){
-             handler.addObject(new SantaEnemyFif((Game.WIDTH/2-48), -50, ID.SantaEnemyFif, handler));
+             //handler.addObject(new ReinDeerEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.ReindeerEnemyTh, handler));
+         }
+         if(hud.getLevel()==5){
+             handler.addObject(sa);
+         }
+         if(hud.getLevel()==6) {
+             handler.removeObject(tr);
+             handler.removeObject(sa);
          }
      }
     }
