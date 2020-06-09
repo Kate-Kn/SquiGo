@@ -13,24 +13,36 @@ public class Game extends Canvas implements Runnable {
     private Handler handler;
     private Random r;
     private Spawn spawn;
-
+    private Menu menu;
+    public enum STATE {
+        Menu,
+        Help,
+        Game
+    };
+    public STATE gameState= STATE.Menu;
     public Game() {
         handler = new Handler();
+        menu= new Menu(this, handler);
+        this.addMouseListener(menu);
         hud = new HUD();
         spawn = new Spawn(handler,hud);
         this.addKeyListener(new KeyInput(handler));
         new Window(WIDTH, HEIGHT, "SquiGo", this);
+
         r = new Random();
-        handler.addObject(new Player((WIDTH / 2 - 32), (HEIGHT / 2 - 32), ID.Player, handler));
-        //if everything is on time, may add multiplayer
-        // handler.addObject(new Player((WIGHT/2+64), (HEIGHT /2+64), ID.Player2));
+        if(gameState==STATE.Game){
+            handler.addObject(new Player((WIDTH / 2 - 32), (HEIGHT / 2 - 32), ID.Player, handler));
+            //if everything is on time, may add multiplayer
+            // handler.addObject(new Player((WIGHT/2+64), (HEIGHT /2+64), ID.Player2));
 //
 //    //for many enemies
 //    for(int i=0;i<20;i++) {
 //            handler.addObject(new BasicEnemy(r.nextInt(WIDTH ),r.nextInt (HEIGHT ), ID.BasicEnemy, handler));
 //        }
-        handler.addObject(new BasicEnemy(r.nextInt(WIDTH-60), r.nextInt(HEIGHT-30), ID.BasicEnemy, handler));
+            handler.addObject(new BasicEnemy(r.nextInt(WIDTH-60), r.nextInt(HEIGHT-30), ID.BasicEnemy, handler));
 //
+        }
+
 
     }
 
@@ -83,8 +95,15 @@ public class Game extends Canvas implements Runnable {
         //hud = new HUD();
         //spawn=new Spawn(handler,hud);
         handler.tick();
+        if(gameState==STATE.Game){
         hud.tick();
         spawn.tick();
+        } else if (gameState==STATE.Menu){
+            menu.tick();
+        }
+
+
+
     }
 
     private void render() {
@@ -97,8 +116,16 @@ public class Game extends Canvas implements Runnable {
         Graphics g = bs.getDrawGraphics();
         g.setColor(Color.black);
         g.fillRect(0, 0, WIDTH, HEIGHT);
+
         handler.render(g);
-        hud.render(g);
+
+        if(gameState==STATE.Game){
+            hud.render(g);
+        }else if (gameState==STATE.Menu||gameState==STATE.Help){
+            menu.render(g);
+        }
+
+
         g.dispose();
         bs.show();
     }
