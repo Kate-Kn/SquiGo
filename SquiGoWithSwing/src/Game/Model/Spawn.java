@@ -17,10 +17,13 @@ public class Spawn {
          scoreKeep=0;
          hud.setLevel(hud.getLevel()+1);
          if(hud.getLevel()==2){
-             handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.SnowflakeEnemyF, handler));
+             handler.addObject(new TreeEnemyS(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.TreeEnemyS, handler));
          }
          if(hud.getLevel()==3){
-             handler.addObject(new SantaEnemyFif(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.SantaEnemyFif, handler));
+             //handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.DecorationEnemyTh, handler));
+         }
+         if(hud.getLevel()==4){
+             handler.addObject(new SantaEnemyFif((Game.WIDTH/2-48), -50, ID.SantaEnemyFif, handler));
          }
      }
     }

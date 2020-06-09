@@ -9,17 +9,13 @@ public class SantaEnemyFif extends GameObject {
 
     private Handler handler;
     private  GameObject player;
-
+    private  int timer=30;
+    private int timer2=10;
     public SantaEnemyFif(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
-        for(int i=0;i<handler.object.size();i++){
-            if(handler.object.get(i).getId()==ID.Player){
-                player=handler.object.get(i);
-            }
-        }
-
-
+        velX = 0;
+        velY = 2;
     }
 
     public Rectangle getBounds() {
@@ -28,21 +24,29 @@ public class SantaEnemyFif extends GameObject {
 
     @Override
     public void tick() {
-        float diffX=x-player.getX()-8;
-        float diffY=y-player.getY()-8;
-        float distance= (float) Math.sqrt((x-player.getX())*(x-player.getX())+(y-player.getY())*(y-player.getY()));
-        velX=((-1)/distance)*diffX;
-        velY=((-1)/distance)*diffY;
         x += velX;
         y += velY;
-        /*if (x <= 0 || x >= Game.WIDTH - 32) {
+       if(timer<=0){
+            velY=0;
+        }else{
+            timer--;
+        }
+       if(timer<=0){
+           timer2--;
+       }
+        if(timer2<=0){
+            if(velX==0) {
+                velX = 4;
+            }
+        }
+
+        if (x <= 0 || x >= 640 - 50) {
             velX *= -1;
         }
-        if (y <= 0 || y >= Game.HEIGHT - 85) {
-            velY *= -1;
-        }*/
-
-        handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.red, 9, 9, 0.1f, handler));
+        //if (y <= 0 || y >= Game.HEIGHT - 85) {
+          //  velY *= -1;
+        //}
+      //  handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.red, 9, 9, 0.08f, handler));
     }
 
     @Override
@@ -60,5 +64,6 @@ public class SantaEnemyFif extends GameObject {
 
         g.drawImage(image, (int)x, (int)y, null);
     }
+
 }
 

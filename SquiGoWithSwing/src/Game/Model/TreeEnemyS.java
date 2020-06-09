@@ -32,8 +32,6 @@ public class TreeEnemyS extends GameObject {
         if (y <= 0 || y >= Game.HEIGHT - 85) {
             velY *= -1;
         }
-
-
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.green, 9, 9, 0.1f, handler));
     }
 

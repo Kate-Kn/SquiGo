@@ -3,7 +3,6 @@ package Model;
 import java.awt.*;
 
 public class HUD {
-
     public static float HEALTH = 100;
     private float greenValue = 200;
     private float score=0;
@@ -23,7 +22,7 @@ public class HUD {
         g.fillRect(15, 15, (int)HEALTH * 2, 32);
         g.setColor(Color.white);
         g.drawRect(15, 15, 200, 32);
-        g.drawString("Score: "+ score,15,64);
+        g.drawString("Health: "+ HEALTH,15,64);
         g.drawString("Level: "+ level,15,80);
     }
 
@@ -33,7 +32,7 @@ public class HUD {
     public void setLevel(float level){
         this.level=level;
     }
-    public void setScore(int score){
+    public void setScore(float score){
         this.score=score;
     }
     public float getScore(){
