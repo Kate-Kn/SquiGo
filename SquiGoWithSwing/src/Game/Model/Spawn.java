@@ -24,18 +24,18 @@ public class Spawn {
              handler.addObject(tr);
          }
          if(hud.getLevel()==3){
-            // for(int i=0;i<20;i++)
+             handler.clearEnemies();
+             for(int i=0;i<10;i++)
              handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.DecorationEnemyTh, handler));
          }
          if(hud.getLevel()==4){
              //handler.addObject(new ReinDeerEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.ReindeerEnemyTh, handler));
          }
          if(hud.getLevel()==5){
+             handler.clearEnemies();
              handler.addObject(sa);
          }
          if(hud.getLevel()==6) {
-             handler.removeObject(tr);
-             handler.removeObject(sa);
          }
      }
     }

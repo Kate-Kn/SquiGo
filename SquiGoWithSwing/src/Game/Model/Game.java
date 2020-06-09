@@ -101,9 +101,6 @@ public class Game extends Canvas implements Runnable {
         } else if (gameState==STATE.Menu){
           menu.tick();
         }
-
-
-
     }
 
     private void render() {

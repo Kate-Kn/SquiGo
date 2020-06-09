@@ -14,8 +14,8 @@ public class DecorationEnemyTh extends GameObject {
     public DecorationEnemyTh(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
-        velX = 4;
-        velY = 2;
+        velX = 5;
+        velY = 4;
     }
     public Rectangle getBounds() {
         return new Rectangle((int)x, (int)y, 30, 56);
