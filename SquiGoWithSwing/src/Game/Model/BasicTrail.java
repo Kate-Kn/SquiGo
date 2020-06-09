@@ -35,7 +35,7 @@ public class BasicTrail extends GameObject {
         g2d.setComposite(makeTransparent(alpha));
         g.setColor(color);
         g.fillRect((int)x, (int)y, width, height);
-        //  g2d.setComposite(makeTransparent(1));
+         g2d.setComposite(makeTransparent(1));
 
     }
 

@@ -6,15 +6,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 public class SnowflakeEnemyF extends GameObject {
-
     private Handler handler;
     public SnowflakeEnemyF(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
         velX = 6;
         velY = 2;
-
-
     }
 
     public Rectangle getBounds() {
@@ -25,10 +22,11 @@ public class SnowflakeEnemyF extends GameObject {
     public void tick() {
         x += velX;
         y += velY;
+        y = Game.clam(y, 50, Game.HEIGHT - 82);
         if (x <= 0 || x >= Game.WIDTH - 32) {
             velX *= -1;
         }
-        if (y <= 0 || y >= Game.HEIGHT - 85) {
+        if (y <= 50 || y >= Game.HEIGHT - 85) {
             velY *= -1;
         }
 

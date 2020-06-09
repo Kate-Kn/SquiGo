@@ -4,18 +4,21 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.RandomAccessFile;
+import java.util.Random;
 
 public class SantaEnemyFif extends GameObject {
 
     private Handler handler;
     private  GameObject player;
-    private  int timer=30;
+    Random random=new Random();
+    private  int timer=35;
     private int timer2=10;
     public SantaEnemyFif(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
         velX = 0;
-        velY = 2;
+        velY = 3;
     }
 
     public Rectangle getBounds() {
@@ -38,6 +41,10 @@ public class SantaEnemyFif extends GameObject {
             if(velX==0) {
                 velX = 4;
             }
+            int spawn= random.nextInt(10);
+            System.out.println(spawn);
+            if(spawn==0)
+                handler.addObject(new SantaBullet(x,y, ID.SantaBullet,handler));
         }
 
         if (x <= 0 || x >= 640 - 50) {

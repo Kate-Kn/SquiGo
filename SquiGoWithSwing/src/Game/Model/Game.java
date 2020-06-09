@@ -30,7 +30,7 @@ public class Game extends Canvas implements Runnable {
         new Window(WIDTH, HEIGHT, "SquiGo", this);
 
         r = new Random();
-        if(gameState==STATE.Game){
+      /*  if(gameState==STATE.Game){
             handler.addObject(new Player((WIDTH / 2 - 32), (HEIGHT / 2 - 32), ID.Player, handler));
             //if everything is on time, may add multiplayer
             // handler.addObject(new Player((WIGHT/2+64), (HEIGHT /2+64), ID.Player2));
@@ -39,9 +39,9 @@ public class Game extends Canvas implements Runnable {
 //    for(int i=0;i<20;i++) {
 //            handler.addObject(new BasicEnemy(r.nextInt(WIDTH ),r.nextInt (HEIGHT ), ID.BasicEnemy, handler));
 //        }
-            handler.addObject(new SnowflakeEnemyF(r.nextInt(WIDTH-60), r.nextInt(HEIGHT-30), ID.SnowflakeEnemyF, handler));
-//
-        }
+            handler.addObject(new SnowflakeEnemyF(r.nextInt(WIDTH-60), HEIGHT-100, ID.SnowflakeEnemyF, handler));
+            handler.addObject(new SnowflakeEnemyF(WIDTH-100,HEIGHT-100,ID.SnowflakeEnemyF,handler));
+        }*/
 
 
     }
@@ -99,7 +99,7 @@ public class Game extends Canvas implements Runnable {
         hud.tick();
         spawn.tick();
         } else if (gameState==STATE.Menu){
-            menu.tick();
+          menu.tick();
         }
 
 

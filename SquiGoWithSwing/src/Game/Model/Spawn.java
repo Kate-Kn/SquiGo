@@ -13,11 +13,13 @@ public class Spawn {
     }
     public void tick(){
      scoreKeep++;
+
      if(scoreKeep>=100){
          scoreKeep=0;
          hud.setLevel(hud.getLevel()+1);
+
          if(hud.getLevel()==2){
-             handler.addObject(new TreeEnemyS(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.TreeEnemyS, handler));
+             handler.addObject(new TreeEnemyS(r.nextInt(Game.WIDTH-60),Game.HEIGHT-100, ID.TreeEnemyS, handler));
          }
          if(hud.getLevel()==3){
              //handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.DecorationEnemyTh, handler));

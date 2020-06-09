@@ -7,7 +7,8 @@ public enum ID {
     Player2(),//for multiplayer.
     ReindeerEnemyFo(),
     SantaEnemyFif(),
-    SnowflakeEnemyF(),
-    TreeEnemyS();
+    TreeEnemyS(),
+    SantaBullet(),
+    SnowflakeEnemyF();
 
 }
