@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Game/Model/FollowingEnemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/resources/santa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/Model/DecorationEnemyTh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/Model/ReindeerEnemyFo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/KeyInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/KeyInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/BasicEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/BasicEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/BasicTrail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/BasicTrail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/FastSnowflake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/FastSnowflake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/BasicEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/BasicEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/GameObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/ID.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/ID.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/BasicEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/TreeEnemyS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/FastSnowflake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/FollowingEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SantaEnemyFif.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/HUD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/ID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/ID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/Spawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Spawn.java" afterDir="false" />
     </list>
@@ -110,7 +112,8 @@
       <workItem from="1591513960698" duration="1837000" />
       <workItem from="1591555400380" duration="571000" />
       <workItem from="1591610150196" duration="12788000" />
-      <workItem from="1591635283703" duration="3813000" />
+      <workItem from="1591635283703" duration="4141000" />
+      <workItem from="1591702769211" duration="759000" />
     </task>
     <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
       <created>1591509342521</created>
@@ -168,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591625699253</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Created FollowingEnemy.java (if santa is confirmed, need to program rotate).&#10;Reverse system to float(it is obvious for FollowingEnemy.java)">
+      <created>1591639393935</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591639393951</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +193,8 @@
     <MESSAGE value="changes on image size." />
     <MESSAGE value="Health bar from green to red while playing" />
     <MESSAGE value="New enemy available - fast snowflake.&#10;Start work on spawn class(enemies creation).&#10;Format code." />
-    <option name="LAST_COMMIT_MESSAGE" value="New enemy available - fast snowflake.&#10;Start work on spawn class(enemies creation).&#10;Format code." />
+    <MESSAGE value="Created FollowingEnemy.java (if santa is confirmed, need to program rotate).&#10;Reverse system to float(it is obvious for FollowingEnemy.java)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created FollowingEnemy.java (if santa is confirmed, need to program rotate).&#10;Reverse system to float(it is obvious for FollowingEnemy.java)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
@@ -202,26 +213,26 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591625694894">
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591639389559">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591625694894" />
-    <state width="1323" height="155" key="GridCell.Tab.0.bottom" timestamp="1591639211872">
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591639389559" />
+    <state width="1323" height="155" key="GridCell.Tab.0.bottom" timestamp="1591702953494">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591639211872" />
-    <state width="1323" height="155" key="GridCell.Tab.0.center" timestamp="1591639211864">
+    <state width="1323" height="155" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591702953494" />
+    <state width="1323" height="155" key="GridCell.Tab.0.center" timestamp="1591702953494">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591639211864" />
-    <state width="1323" height="155" key="GridCell.Tab.0.left" timestamp="1591639211864">
+    <state width="1323" height="155" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591702953494" />
+    <state width="1323" height="155" key="GridCell.Tab.0.left" timestamp="1591702953494">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591639211864" />
-    <state width="1323" height="155" key="GridCell.Tab.0.right" timestamp="1591639211872">
+    <state width="1323" height="155" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591702953494" />
+    <state width="1323" height="155" key="GridCell.Tab.0.right" timestamp="1591702953494">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591639211872" />
+    <state width="1323" height="155" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591702953494" />
     <state width="873" height="194" key="GridCell.Tab.1.bottom" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -238,18 +249,18 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="873" height="194" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591625714310">
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591639400883">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591625714310" />
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1591635563529">
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591639400883" />
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1591702766189">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1591635563529" />
-    <state x="417" y="161" key="git4idea.merge.GitPullDialog" timestamp="1591625706356">
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1591702766189" />
+    <state x="417" y="161" key="git4idea.merge.GitPullDialog" timestamp="1591702809422">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="417" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1591625706356" />
+    <state x="417" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1591702809422" />
     <state width="602" height="255" key="javadoc.popup" timestamp="1591511890831">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

@@ -2,17 +2,8 @@ package Model;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.font.FontRenderContext;
-import java.awt.font.GlyphVector;
-import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
-import java.awt.image.BufferedImageOp;
-import java.awt.image.ImageObserver;
-import java.awt.image.RenderedImage;
-import java.awt.image.renderable.RenderableImage;
 import java.io.File;
-import java.text.AttributedCharacterIterator;
-import java.util.Map;
 import java.util.Random;
 
 public class Player extends GameObject {
@@ -42,7 +33,7 @@ public class Player extends GameObject {
     private void collision() {
         for (int i = 0; i < handler.object.size(); i++) {
             GameObject tempObject = handler.object.get(i);
-            if (tempObject.getId() == ID.BasicEnemy||tempObject.getId() == ID.FastSnowflake||tempObject.getId()==ID.FollowingEnemy) {
+            if (tempObject.getId() == ID.TreeEnemyS ||tempObject.getId() == ID.SnowflakeEnemyF ||tempObject.getId()==ID.SantaEnemyFif) {
                 if (getBounds().intersects(tempObject.getBounds())) { //temp object is now a basic enemy
                     // collision code
                     HUD.HEALTH -= 5;
@@ -64,7 +55,7 @@ public class Player extends GameObject {
             BufferedImage image = new BufferedImage(156, 9, 12);
 
             try {
-                image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\rabbit.png"));
+                image = ImageIO.read(new File("src\\Game\\resources\\rabbit.png"));
                 //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
                 // хз як виправити, хай поки буде так
                 // короткий "src\\Game\\resources\\rabbit.png"

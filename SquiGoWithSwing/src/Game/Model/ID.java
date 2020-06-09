@@ -1,11 +1,13 @@
 package Model;
 
 public enum ID {
-    Player(),
-    Player2(),
-    BasicEnemy(),
     BasicTrail(),
-    FastSnowflake(),
-    FollowingEnemy();
+    DecorationEnemyTh(),
+    Player(),
+    Player2(),//for multiplayer.
+    ReindeerEnemyFo(),
+    SantaEnemyFif(),
+    SnowflakeEnemyF(),
+    TreeEnemyS();
 
 }
