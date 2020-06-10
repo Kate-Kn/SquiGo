@@ -21,6 +21,7 @@ public class Spawn {
 
          SantaEnemyFif sa=new SantaEnemyFif((Game.WIDTH/2-48), -50, ID.SantaEnemyFif, handler);
          if(hud.getLevel()==2){
+             handler.clearEnemies();
              for(int i=0;i<10;i++)
              handler.addObject(new TreeEnemyS(r.nextInt(Game.WIDTH- 60),ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.TreeEnemyS, handler, ThreadLocalRandom.current().nextInt(0, 5)));
          }

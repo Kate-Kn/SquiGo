@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Menu extends MouseAdapter {
     private Game game;
@@ -22,9 +23,9 @@ public class Menu extends MouseAdapter {
             //play button
             if (mouseOver(mx, my, 210, 150, 300, 64)) {
                 game.gameState = Game.STATE.Game;//??
-                handler.addObject(new Player((Game.WIDTH / 2 - 32), (Game.HEIGHT / 2 - 32), ID.Player, handler));
+                handler.addObject(new Player(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.Player, handler));
                 for(int i=0;i<8;i++)
-                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH - 60), Game.HEIGHT - 100, ID.SnowflakeEnemyF, handler));
+                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
             }
             //help button
             if (mouseOver(mx, my, 210, 250, 200, 64)) {
