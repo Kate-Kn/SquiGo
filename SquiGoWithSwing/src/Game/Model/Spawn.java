@@ -29,7 +29,9 @@ public class Spawn {
              handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.DecorationEnemyTh, handler));
          }
          if(hud.getLevel()==4){
-             //handler.addObject(new ReinDeerEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.ReindeerEnemyTh, handler));
+             handler.clearEnemies();
+             handler.addObject(new ReindeerEnemyFo((Game.WIDTH-150), (Game.HEIGHT-300), ID.ReindeerEnemyFo, handler,1));
+             handler.addObject(new ReindeerEnemyFo((0), (Game.HEIGHT-150), ID.ReindeerEnemyFo, handler,2));
          }
          if(hud.getLevel()==5){
              handler.clearEnemies();
