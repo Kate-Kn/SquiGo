@@ -45,7 +45,7 @@ public class ReindeerBullet extends GameObject {
             return new Rectangle((int)x, (int)y, 50, 40);
         if(dec==6)
             return new Rectangle((int)x, (int)y, 34, 40);
-        return new Rectangle((int)x, (int)y, 20, 20);
+        return new Rectangle((int)x, (int)y, 0, 0);
     }
     @Override
     public void tick() {

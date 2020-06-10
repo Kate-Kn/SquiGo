@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Spawn {
     private  Handler handler;
@@ -14,19 +15,19 @@ public class Spawn {
     public void tick(){
      scoreKeep++;
 
-     if(scoreKeep>=500){
+     if(scoreKeep>=1000){
          scoreKeep=0;
          hud.setLevel(hud.getLevel()+1);
-         TreeEnemyS tr=new TreeEnemyS(r.nextInt(Game.WIDTH-
-                 60),Game.HEIGHT-100, ID.TreeEnemyS, handler);
+
          SantaEnemyFif sa=new SantaEnemyFif((Game.WIDTH/2-48), -50, ID.SantaEnemyFif, handler);
          if(hud.getLevel()==2){
-           //  handler.addObject(tr);
+             for(int i=0;i<10;i++)
+             handler.addObject(new TreeEnemyS(r.nextInt(Game.WIDTH- 60),ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.TreeEnemyS, handler, ThreadLocalRandom.current().nextInt(0, 5)));
          }
          if(hud.getLevel()==3){
              handler.clearEnemies();
-             //for(int i=0;i<10;i++)
-            // handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH-60), r.nextInt(Game.HEIGHT-80), ID.DecorationEnemyTh, handler));
+             for(int i=0;i<10;i++)
+             handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.DecorationEnemyTh, handler,ThreadLocalRandom.current().nextInt(0, 7)));
          }
          if(hud.getLevel()==4){
              handler.clearEnemies();
@@ -35,7 +36,7 @@ public class Spawn {
          }
          if(hud.getLevel()==5){
              handler.clearEnemies();
-            // handler.addObject(sa);
+             handler.addObject(sa);
          }
          if(hud.getLevel()==6) {
          }

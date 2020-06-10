@@ -10,10 +10,11 @@ import java.util.concurrent.ThreadLocalRandom;
 public class SantaBullet extends GameObject {
    Random r=new Random();
     private Handler handler;
-    private int dec=ThreadLocalRandom.current().nextInt(0, 5);
+    private int dec;
 
-    public SantaBullet(float x, float y, ID id, Handler handler) {
+    public SantaBullet(float x, float y, ID id, Handler handler,int dec) {
         super(x, y, id);
+        this.dec=dec;
         this.handler = handler;
         velX = (r.nextInt(5));
         velY = 4;
@@ -21,8 +22,19 @@ public class SantaBullet extends GameObject {
 
     }
 
-    public Rectangle getBounds() {
-        return new Rectangle((int)x, (int)y, 30, 56);
+    public Rectangle getBounds()
+    {
+        if(dec==1)
+        return new Rectangle((int)x, (int)y, 40, 40);
+        if(dec==2)
+            return new Rectangle((int)x, (int)y, 26, 26);
+        if(dec==3)
+        return new Rectangle((int)x, (int)y, 27, 25);
+        if(dec==4)
+        return new Rectangle((int)x, (int)y, 16, 16);
+        if(dec==5)
+        return new Rectangle((int)x, (int)y, 50, 50);
+        return new Rectangle((int)x, (int)y, 0, 0);
     }
     @Override
     public void tick() {

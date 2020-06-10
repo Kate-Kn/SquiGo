@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.RandomAccessFile;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class SantaEnemyFif extends GameObject {
 
@@ -43,7 +44,7 @@ public class SantaEnemyFif extends GameObject {
             }
             int spawn= random.nextInt(10);
             if(spawn==0)
-                handler.addObject(new SantaBullet(x+40,y+75, ID.SantaBullet,handler));
+                handler.addObject(new SantaBullet(x+40,y+75, ID.SantaBullet,handler, ThreadLocalRandom.current().nextInt(0, 5)));
         }
 
         if (x <= 0 || x >= 640 - 50) {

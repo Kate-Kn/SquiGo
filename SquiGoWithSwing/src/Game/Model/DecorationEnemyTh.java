@@ -4,21 +4,35 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class DecorationEnemyTh extends GameObject {
 
-    private int dec= ThreadLocalRandom.current().nextInt(0, 7);
+    private int dec;
     private Handler handler;
 
-    public DecorationEnemyTh(float x, float y, ID id, Handler handler) {
+    public DecorationEnemyTh(float x, float y, ID id, Handler handler,int dec) {
         super(x, y, id);
+        this.dec=dec;
         this.handler = handler;
         velX = 5;
         velY = 4;
     }
     public Rectangle getBounds() {
-        return new Rectangle((int)x, (int)y, 30, 56);
+        if(dec==0)
+        return new Rectangle((int)x, (int)y, 23, 24);
+        if(dec==1)
+            return new Rectangle((int)x, (int)y, 40, 49);
+        if(dec==2)
+            return new Rectangle((int)x, (int)y, 30, 24);
+        if(dec==3)
+            return new Rectangle((int)x, (int)y, 21, 31);
+        if(dec==4)
+            return new Rectangle((int)x, (int)y, 45, 60);
+        if(dec==5)
+            return new Rectangle((int)x, (int)y, 37, 40);
+        if(dec==6)
+            return new Rectangle((int)x, (int)y, 32, 32);
+        return new Rectangle((int)x, (int)y, 0, 0);
     }
 
     @Override
