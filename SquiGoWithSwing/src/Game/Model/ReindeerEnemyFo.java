@@ -4,12 +4,14 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Random;
 
 public class ReindeerEnemyFo extends GameObject {
 
     private Handler handler;
     private  GameObject player;
     int i;
+    private Random random=new Random();
 
     public ReindeerEnemyFo(float x, float y, ID id, Handler handler,int i) {
         super(x, y, id);
@@ -22,7 +24,6 @@ public class ReindeerEnemyFo extends GameObject {
         }
         velX=0;
         velY=5;
-
 
     }
 
@@ -47,6 +48,13 @@ public class ReindeerEnemyFo extends GameObject {
         }
 
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.yellow, 9, 9, 0.1f, handler));
+        int spawn= random.nextInt(20);
+        if(spawn==0) {
+            if (i == 1)
+                handler.addObject(new ReindeerBullet(x, y, ID.ReindeerBullet, handler,1));
+            if (i == 2)
+                handler.addObject(new ReindeerBullet(x + 150, y, ID.ReindeerBullet, handler,2));
+        }
     }
 
     @Override

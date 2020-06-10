@@ -42,7 +42,6 @@ public class SantaEnemyFif extends GameObject {
                 velX = 4;
             }
             int spawn= random.nextInt(10);
-            System.out.println(spawn);
             if(spawn==0)
                 handler.addObject(new SantaBullet(x+40,y+75, ID.SantaBullet,handler));
         }
