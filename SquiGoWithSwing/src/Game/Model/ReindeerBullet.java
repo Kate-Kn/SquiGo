@@ -10,12 +10,14 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ReindeerBullet extends GameObject {
     Random r=new Random();
     private Handler handler;
-    private int dec=ThreadLocalRandom.current().nextInt(0, 7);
+    private int dec;
     private int i;
     private int timer=20;
 
-    public ReindeerBullet(float x, float y, ID id, Handler handler,int i) {
+    public ReindeerBullet(float x, float y, ID id, Handler handler,int i,int dec) {
         super(x, y, id);
+        this.dec=dec;
+
         this.i=i;
         this.handler = handler;
         if(i==2) {
@@ -27,12 +29,23 @@ public class ReindeerBullet extends GameObject {
             velY = 0;
         }
 
-
-
     }
-
     public Rectangle getBounds() {
-        return new Rectangle((int)x, (int)y, 30, 56);
+        if(dec==0)
+             return new Rectangle((int)x, (int)y, 18, 24);
+        if(dec==1)
+            return new Rectangle((int)x+20, (int)y+20, 20, 20);
+        if(dec==2)
+            return new Rectangle((int)x, (int)y, 47, 49);
+        if(dec==3)
+            return new Rectangle((int)x, (int)y, 19, 19);
+        if(dec==4)
+            return new Rectangle((int)x, (int)y, 20, 20);
+        if(dec==5)
+            return new Rectangle((int)x, (int)y, 50, 40);
+        if(dec==6)
+            return new Rectangle((int)x, (int)y, 34, 40);
+        return new Rectangle((int)x, (int)y, 20, 20);
     }
     @Override
     public void tick() {

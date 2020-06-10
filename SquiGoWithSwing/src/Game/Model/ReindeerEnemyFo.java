@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ReindeerEnemyFo extends GameObject {
 
@@ -48,12 +49,12 @@ public class ReindeerEnemyFo extends GameObject {
         }
 
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.yellow, 9, 9, 0.1f, handler));
-        int spawn= random.nextInt(20);
+        int spawn= random.nextInt(30);
         if(spawn==0) {
             if (i == 1)
-                handler.addObject(new ReindeerBullet(x, y, ID.ReindeerBullet, handler,1));
+                handler.addObject(new ReindeerBullet(x, y, ID.ReindeerBullet, handler,1, ThreadLocalRandom.current().nextInt(0, 7)));
             if (i == 2)
-                handler.addObject(new ReindeerBullet(x + 150, y, ID.ReindeerBullet, handler,2));
+                handler.addObject(new ReindeerBullet(x + 150, y, ID.ReindeerBullet, handler,2,ThreadLocalRandom.current().nextInt(0, 7)));
         }
     }
 
