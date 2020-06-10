@@ -9,9 +9,10 @@ public class KeyInput extends KeyAdapter {
 
 
     public KeyInput(Handler handler) {
-        for (int i = 0; i < keyDown.length; i++) {
-            keyDown[i] = false;
-        }
+        keyDown[0] = false;
+        keyDown[1] = false;
+        keyDown[2] = false;
+        keyDown[3] = false;
         this.handler = handler;
     }
 
@@ -20,19 +21,19 @@ public class KeyInput extends KeyAdapter {
         for (int i = 0; i < handler.object.size(); i++) {
             GameObject temp = handler.object.get(i);
             if (temp.getId() == ID.Player) {
-                if (key == 38) {
+                if (key == KeyEvent.VK_UP) {
                     temp.setVelY(-5);
                     keyDown[0] = true;
                 }
-                if (key == 40) {
+                if (key == KeyEvent.VK_DOWN) {
                     temp.setVelY(5);
                     keyDown[1] = true;
                 }
-                if (key == 37) {
+                if (key == KeyEvent.VK_LEFT) {
                     temp.setVelX(-5);
                     keyDown[2] = true;
                 }
-                if (key == 39) {
+                if (key == KeyEvent.VK_RIGHT) {
                     temp.setVelX(5);
                     keyDown[3] = true;
                 }
@@ -65,22 +66,26 @@ public class KeyInput extends KeyAdapter {
         for (int i = 0; i < handler.object.size(); i++) {
             GameObject temp = handler.object.get(i);
             if (temp.getId() == ID.Player) {
-                if (key == 38)
-                    keyDown[0]=false;
+                if (key == 38) {
+                    keyDown[0] = false;
                     //temp.setVelY(0);
-                if (key == 40)
-                    keyDown[0]=false;
+                }
+                if (key == 40) {
+                    keyDown[1] = false;
                     //temp.setVelY(0);
-                if (key == 37)
-                    keyDown[0]=false;
-                   // temp.setVelX(0);
-                if (key == 39)
-                    keyDown[0]=false;
-                   // temp.setVelX(0);
-                if(keyDown[0]&& keyDown[1]){
+                }
+                if (key == 37) {
+                    keyDown[2] = false;
+                    // temp.setVelX(0);
+                }
+                if (key == 39) {
+                    keyDown[3] = false;
+                    // temp.setVelX(0);
+                }
+                if(!keyDown[0]&& !keyDown[1]){
                     temp.setVelY(0);
                 }
-                if(keyDown[2]&& keyDown[3]){
+                if(!keyDown[2]&& !keyDown[3]){
                     temp.setVelX(0);
 
                 }
