@@ -5,15 +5,15 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class SantaBullet extends GameObject {
    Random r=new Random();
     private Handler handler;
     private int dec;
-
-    public SantaBullet(float x, float y, ID id, Handler handler,int dec) {
+    private int santaLoc;
+    public SantaBullet(float x, float y, ID id, Handler handler,int dec, int santaLoc) {
         super(x, y, id);
+        this.santaLoc=santaLoc;
         this.dec=dec;
         this.handler = handler;
         velX = (r.nextInt(5));
@@ -42,7 +42,10 @@ public class SantaBullet extends GameObject {
         y += velY;
      if(y>Game.HEIGHT)
          handler.removeObject(this);
+     if(santaLoc<Game.WIDTH/2-30)
+         velX*=(-1);
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.pink, 9, 9, 0.1f, handler));
+
     }
 
     @Override

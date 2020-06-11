@@ -1,10 +1,8 @@
 package Model;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.RandomAccessFile;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -44,10 +42,10 @@ public class SantaEnemyFif extends GameObject {
             }
             int spawn= random.nextInt(10);
             if(spawn==0)
-                handler.addObject(new SantaBullet(x+40,y+75, ID.SantaBullet,handler, ThreadLocalRandom.current().nextInt(0, 5)));
+                handler.addObject(new SantaBullet(x+40,y+75, ID.SantaBullet,handler, ThreadLocalRandom.current().nextInt(0, 5),(int)x));
         }
 
-        if (x <= 0 || x >= 640 - 50) {
+        if (x <= -30 || x >= 640 - 50) {
             velX *= -1;
         }
         //if (y <= 0 || y >= Game.HEIGHT - 85) {
