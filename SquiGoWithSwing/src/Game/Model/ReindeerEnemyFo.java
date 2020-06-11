@@ -63,8 +63,11 @@ public class ReindeerEnemyFo extends GameObject {
         BufferedImage image = new BufferedImage(9, 9, 12);
         BufferedImage imag = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\deer.png"));
-            imag = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\deerL.png"));
+
+          image = ImageIO.read(getClass().getResource("/resources/deer.png"));
+          imag = ImageIO.read(getClass().getResource("/resources/deerL.png"));
+            //image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\deer.png")); last path used 10.06
+        
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"
@@ -78,5 +81,3 @@ public class ReindeerEnemyFo extends GameObject {
         g.drawImage(image, (int)x, (int)y, null);
     }
 }
-
-
