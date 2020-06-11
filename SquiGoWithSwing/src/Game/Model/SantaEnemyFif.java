@@ -13,6 +13,7 @@ public class SantaEnemyFif extends GameObject {
     Random random=new Random();
     private  int timer=35;
     private int timer2=10;
+    private  int timer3=500;
     public SantaEnemyFif(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
@@ -43,6 +44,15 @@ public class SantaEnemyFif extends GameObject {
             int spawn= random.nextInt(10);
             if(spawn==0)
                 handler.addObject(new SantaBullet(x+40,y+75, ID.SantaBullet,handler, ThreadLocalRandom.current().nextInt(0, 5),(int)x));
+        }
+        if(timer3<=0){
+            if(!SnowflakeEnemyF.isA) {
+                handler.addObject(new Nut(random.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.Nut, handler));
+                SnowflakeEnemyF.isA=true;
+            } else
+                timer3=500;
+        }else{
+            timer3--;
         }
 
         if (x <= -30 || x >= 640 - 50) {

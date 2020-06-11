@@ -29,7 +29,7 @@ public class SnowflakeEnemyF extends GameObject {
         y += velY;
         if(timer<=0){
             if(!isA) {
-                handler.addObject(new Nut(100, 100, ID.Nut, handler));
+                handler.addObject(new Nut(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.Nut, handler));
                 isA=true;
             } else
                 timer=500;

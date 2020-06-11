@@ -1,15 +1,9 @@
 package Model;
 
-import javafx.scene.transform.Rotate;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.geom.AffineTransform;
-import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class ReindeerBullet extends GameObject {
     Random r=new Random();
@@ -106,25 +100,9 @@ if (timer<=0){
             g.drawImage(image, (int) x, (int) y, null);
         }
         if(dec==1) {
-           /* final double rads = Math.toRadians(90);
-            final double sin = Math.abs(Math.sin(rads));
-            final double cos = Math.abs(Math.cos(rads));
-            final int w = (int) Math.floor(imag.getWidth() * cos + imag.getHeight() * sin);
-            final int h = (int) Math.floor(imag.getHeight() * cos + imag.getWidth() * sin);
-            final BufferedImage rotatedImage = new BufferedImage(w, h, imag.getType());
-            final AffineTransform at = new AffineTransform();
-            at.translate(w / 2, h / 2);
-            at.rotate(rads,0, 0);
-            at.translate(-imag.getWidth() / 2, -imag.getHeight() / 2);
-            final AffineTransformOp rotateOp = new AffineTransformOp(at, AffineTransformOp.TYPE_BILINEAR);
-            rotateOp.filter(imag,rotatedImage);*/
+
             g.drawImage(imag, (int) x, (int) y, null);
-          /* AffineTransform identity = new AffineTransform();
-            Graphics2D g2d = (Graphics2D)g;
-            AffineTransform trans = new AffineTransform();
-            trans.setTransform(identity);
-            trans.rotate( Math.toRadians(180) );
-            g2d.drawImage(imag, trans, null);*/
+
       }
         if(dec==2) {
             g.drawImage(ima, (int) x, (int) y, null);

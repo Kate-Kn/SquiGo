@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jinput.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/resources.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquiGoWithSwing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SquiGoWithSwing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/ReindeerEnemyFo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/ReindeerEnemyFo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/DecorationEnemyTh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/DecorationEnemyTh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/ReindeerBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/ReindeerBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/SantaEnemyFif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SantaEnemyFif.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyF.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/Spawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Spawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/TreeEnemyS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/TreeEnemyS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +119,7 @@
       <workItem from="1591855739364" duration="1541000" />
       <workItem from="1591869468832" duration="7743000" />
       <workItem from="1591886659649" duration="65000" />
-      <workItem from="1591886789550" duration="3368000" />
+      <workItem from="1591886789550" duration="4025000" />
     </task>
     <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
       <created>1591509342521</created>
@@ -317,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591877096071</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Nut in ReindeerEnemyFo.java &amp; TreeEnemyS.java">
+      <created>1591894538162</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1591894538162</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +325,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added 20 enimies" />
     <MESSAGE value="Health bar added in HUD.java." />
     <MESSAGE value="fix typos" />
     <MESSAGE value="changes on image size." />
@@ -350,7 +349,8 @@
     <MESSAGE value="Resolve" />
     <MESSAGE value="Change &quot;Go to menu&quot; to &quot;Menu&quot;" />
     <MESSAGE value="Change location." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change location." />
+    <MESSAGE value="Nut in ReindeerEnemyFo.java &amp; TreeEnemyS.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nut in ReindeerEnemyFo.java &amp; TreeEnemyS.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
@@ -377,10 +377,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591877092065">
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591894533382">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591877092065" />
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591894533382" />
     <state x="129" y="62" key="DiffContextDialog" timestamp="1591893466426">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
