@@ -58,13 +58,18 @@ public class DecorationEnemyTh extends GameObject {
         BufferedImage i1 = new BufferedImage(9, 9, 12);
         BufferedImage i2 = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\ornament\\ornament1.png"));
-            imag = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\ornament\\ornament2.png"));
-            ima = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\ornament\\ornament2.png"));
-            im = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\ornament\\ornament4.png"));
-            i = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\ornament\\ornament5.png"));
-            i1 = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\ornament\\ornament6.png"));
-            i2 = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\ornament\\ornament7.png"));
+
+
+          image = ImageIO.read(getClass().getResource("/resources/ornament/ornament1.png"));
+          imag = ImageIO.read(getClass().getResource("/resources/ornament/ornament2.png"));
+          ima = ImageIO.read(getClass().getResource("/resources/ornament/ornament3.png"));
+          im = ImageIO.read(getClass().getResource("/resources/ornament/ornament4.png"));
+          i = ImageIO.read(getClass().getResource("/resources/ornament/ornament5.png"));
+          i1 = ImageIO.read(getClass().getResource("/resources/ornament/ornament6.png"));
+          i2 = ImageIO.read(getClass().getResource("/resources/ornament/ornament7.png"));
+
+          //  image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\ornament\\ornament1.png")); last path used 10.06
+      
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"
@@ -95,4 +100,3 @@ public class DecorationEnemyTh extends GameObject {
         }
     }
 }
-
