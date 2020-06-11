@@ -7,7 +7,6 @@ public class HUD {
     private float greenValue = 200;
     private float score=0;
     private float level=1;
-    public static int nut=0;
 
     public void tick() {
         HEALTH = Game.clam(HEALTH, 0, 100);
@@ -25,7 +24,6 @@ public class HUD {
         g.drawRect(15, 15, 200, 32);
         g.drawString("Health: "+ HEALTH,220,35);
         g.drawString("Level: "+ level,320,35);
-        g.drawString("Nuts:  "+ nut,420,35);
     }
 
     public  float getLevel(){
