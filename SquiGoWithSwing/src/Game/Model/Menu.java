@@ -26,10 +26,12 @@ public class Menu extends MouseAdapter {
         if (game.gameState == Game.STATE.Menu) {
             //play button
             if (mouseOver(mx, my, 210, 150, 300, 64)) {
-                game.gameState = Game.STATE.Game;//??
-                handler.addObject(new Player(50,  0, ID.Player, handler));
-                for(int i=0;i<5;i++)
-                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
+//                game.gameState = Game.STATE.Game;//??
+//                handler.addObject(new Player(50,  0, ID.Player, handler));
+//                for(int i=0;i<5;i++)
+//                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
+           game.gameState= Game.STATE.Select;
+           return;
             }
             //help button
             if (mouseOver(mx, my, 210, 250, 200, 64)) {
@@ -38,6 +40,30 @@ public class Menu extends MouseAdapter {
             //quit button
             if (mouseOver(mx, my, 210, 350, 200, 64)) {
                 System.exit(1);
+            }
+        }
+        if (game.gameState == Game.STATE.Select) {
+            //normal button
+            if (mouseOver(mx, my, 210, 150, 300, 64)) {
+                game.gameState = Game.STATE.Game;
+                handler.addObject(new Player(50,  0, ID.Player, handler));
+                for(int i=0;i<5;i++)
+                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
+                game.diff=0;
+            }
+            //hard button
+            if (mouseOver(mx, my, 210, 250, 200, 64)) {
+                game.gameState = Game.STATE.Game;
+                handler.addObject(new Player(50,  0, ID.Player, handler));
+                for(int i=0;i<5;i++)
+                handler.addObject(new SnowflakeEnemyFhard(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
+                game.diff=1;
+            }
+            //back button
+            if (mouseOver(mx, my, 210, 350, 200, 64)) {
+
+                    game.gameState = Game.STATE.Menu;
+                    return;
             }
         }
 
@@ -50,17 +76,34 @@ public class Menu extends MouseAdapter {
             }
         }
 
-        //back button for help
+        //buttons for end
         if (game.gameState == Game.STATE.End) {
+            //try again
             if (mouseOver(mx, my, 210, 350, 200, 64)) {
-                game.gameState = Game.STATE.Game;
+                game.gameState = Game.STATE.Select;
 
                 hud.setLevel(1);
                 hud.setScore(0);
-                handler.addObject(new Player((Game.WIDTH / 2 - 32), (Game.HEIGHT / 2 - 32), ID.Player, handler));
-                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH - 60), Game.HEIGHT - 100, ID.SnowflakeEnemyF, handler));//1 level
+                Spawn.scoreKeep=0;
+//                handler.addObject(new Player((Game.WIDTH / 2 - 32), (Game.HEIGHT / 2 - 32), ID.Player, handler));
+//                for(int i=0;i<5;i++)
+//                    handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));//1 level
+
+
 
             }
+            //go to menu
+            if (mouseOver(mx, my, 210, 250, 200, 64)) {
+                game.gameState = Game.STATE.Menu;
+
+                hud.setLevel(1);
+                hud.setScore(0);
+                Spawn.scoreKeep=0;
+//                handler.addObject(new Player((Game.WIDTH / 2 - 32), (Game.HEIGHT / 2 - 32), ID.Player, handler));
+//                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH - 60), Game.HEIGHT - 100, ID.SnowflakeEnemyF, handler));//1 level
+
+            }
+
         }
     }
 
@@ -124,10 +167,33 @@ public class Menu extends MouseAdapter {
             g.setFont(fnt2);
             g.drawString("You lost with score: "+hud.getScore()+" and level "+ hud.getLevel(), 100, 200);
 
-
             g.setFont(fnt2);
             g.drawString("Try again", 245, 390);
             g.drawRect(210, 350, 200, 64);
+
+
+            g.setColor(Color.WHITE);
+            g.drawString("Go to menu", 270, 290);
+            g.drawRect(210, 250, 200, 64);
+        }else if (game.gameState == Game.STATE.Select) {
+            Font fnt = new Font("arial", 1, 50);
+            Font fnt2 = new Font("arial", 1, 30);
+            g.setFont(fnt);
+            g.setColor(Color.WHITE);
+            g.drawString("SELECT DIFICULTY", 140, 70);
+
+            g.setFont(fnt2);
+            g.drawString("Normal", 270, 190);
+            g.drawRect(210, 150, 200, 64);
+
+            g.setColor(Color.WHITE);
+            g.drawString("Hard", 270, 290);
+            g.drawRect(210, 250, 200, 64);
+
+            g.setColor(Color.WHITE);
+            g.drawString("Back", 270, 390);
+            g.drawRect(210, 350, 200, 64);
+
 
         }
     }

@@ -14,11 +14,16 @@ public class Game extends Canvas implements Runnable {
     private Handler handler;
     private Random r;
     private Spawn spawn;
+    public int diff=0;
+    //0=normal
+    //1=hard
+
     private Menu menu;
     public enum STATE {
         Menu,
         Help,
         Game,
+        Select,
         End
     };
     public static STATE gameState= STATE.Menu;
@@ -28,7 +33,7 @@ public class Game extends Canvas implements Runnable {
         menu= new Menu(this, handler,hud);
         this.addMouseListener(menu);
 
-        spawn = new Spawn(handler,hud);
+        spawn = new Spawn(handler,hud,this);
         this.addKeyListener(new KeyInput(handler, this));
         new Window(WIDTH, HEIGHT, "SquiGo", this);
 
@@ -112,7 +117,7 @@ public class Game extends Canvas implements Runnable {
 
                     }
             }
-        } else if (gameState==STATE.Menu||gameState==STATE.End){
+        } else if (gameState==STATE.Menu||gameState==STATE.End||gameState==STATE.Select){
           menu.tick();
           handler.tick();
         }
@@ -138,7 +143,7 @@ public class Game extends Canvas implements Runnable {
         }
         if(gameState==STATE.Game){
             hud.render(g);
-        }else if (gameState==STATE.Menu||gameState==STATE.Help||gameState==STATE.End){
+        }else if (gameState==STATE.Menu||gameState==STATE.Help||gameState==STATE.End||gameState==STATE.Select){
             menu.render(g);
         }
 
