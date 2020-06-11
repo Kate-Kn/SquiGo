@@ -2,6 +2,7 @@ package Model;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.concurrent.ThreadLocalRandom;
@@ -38,6 +39,8 @@ public class SnowflakeEnemyF extends GameObject {
 
     @Override
     public void render(Graphics g) {
+
+
         BufferedImage image = new BufferedImage(9, 9, 12);
         BufferedImage imag = new BufferedImage(9, 9, 12);
         BufferedImage ima = new BufferedImage(9, 9, 12);
@@ -54,6 +57,7 @@ public class SnowflakeEnemyF extends GameObject {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         if(dec==0)
           g.drawImage(image, (int)x, (int)y, null);
 

@@ -1,7 +1,11 @@
 package Model;
 
+import javafx.scene.transform.Rotate;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Random;
@@ -34,7 +38,7 @@ public class ReindeerBullet extends GameObject {
         if(dec==0)
              return new Rectangle((int)x, (int)y, 18, 24);
         if(dec==1)
-            return new Rectangle((int)x+20, (int)y+20, 20, 20);
+            return new Rectangle((int)x, (int)y, 20, 20);
         if(dec==2)
             return new Rectangle((int)x, (int)y, 47, 49);
         if(dec==3)
@@ -60,7 +64,7 @@ if (timer<=0){
 }
         if(y>Game.HEIGHT)
             handler.removeObject(this);
-        handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.pink, 9, 9, 0.1f, handler));
+      //  handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.pink, 9, 9, 0.1f, handler));
     }
 
     @Override
@@ -92,8 +96,26 @@ if (timer<=0){
             g.drawImage(image, (int) x, (int) y, null);
         }
         if(dec==1) {
+           /* final double rads = Math.toRadians(90);
+            final double sin = Math.abs(Math.sin(rads));
+            final double cos = Math.abs(Math.cos(rads));
+            final int w = (int) Math.floor(imag.getWidth() * cos + imag.getHeight() * sin);
+            final int h = (int) Math.floor(imag.getHeight() * cos + imag.getWidth() * sin);
+            final BufferedImage rotatedImage = new BufferedImage(w, h, imag.getType());
+            final AffineTransform at = new AffineTransform();
+            at.translate(w / 2, h / 2);
+            at.rotate(rads,0, 0);
+            at.translate(-imag.getWidth() / 2, -imag.getHeight() / 2);
+            final AffineTransformOp rotateOp = new AffineTransformOp(at, AffineTransformOp.TYPE_BILINEAR);
+            rotateOp.filter(imag,rotatedImage);*/
             g.drawImage(imag, (int) x, (int) y, null);
-        }
+          /* AffineTransform identity = new AffineTransform();
+            Graphics2D g2d = (Graphics2D)g;
+            AffineTransform trans = new AffineTransform();
+            trans.setTransform(identity);
+            trans.rotate( Math.toRadians(180) );
+            g2d.drawImage(imag, trans, null);*/
+      }
         if(dec==2) {
             g.drawImage(ima, (int) x, (int) y, null);
         }
