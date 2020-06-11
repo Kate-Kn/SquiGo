@@ -1,15 +1,19 @@
 package Model;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class SnowflakeEnemyF extends GameObject {
     private Handler handler;
     private  int dec = ThreadLocalRandom.current().nextInt(0, 4);
+    private int timer=500;
+    private Random r =new Random();
+    public static boolean isA=false;
     public SnowflakeEnemyF(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
@@ -26,6 +30,15 @@ public class SnowflakeEnemyF extends GameObject {
     public void tick() {
         x += velX;
         y += velY;
+        if(timer<=0){
+            if(!isA) {
+                handler.addObject(new Nut(100, 100, ID.Nut, handler));
+                isA=true;
+            } else
+                timer=500;
+        }else{
+            timer--;
+        }
         y = Game.clam(y, 50, Game.HEIGHT - 82);
         if (x <= 0 || x >= Game.WIDTH - 32) {
             velX *= -1;
@@ -46,10 +59,10 @@ public class SnowflakeEnemyF extends GameObject {
         BufferedImage ima = new BufferedImage(9, 9, 12);
         BufferedImage im = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\sprite_0045.png"));
-            imag = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\snowball1.png"));
-            ima = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\snowball2.png"));
-            im = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\snowball3.png"));
+            image = ImageIO.read(new File("src\\Game\\resources\\sprite_0045.png"));
+            imag = ImageIO.read(new File("src\\Game\\resources\\snowball1.png"));
+            ima = ImageIO.read(new File("src\\Game\\resources\\snowball2.png"));
+            im = ImageIO.read(new File("src\\Game\\resources\\snowball3.png"));
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре  sprite_0045
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"
