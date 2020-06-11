@@ -23,8 +23,8 @@ public class Menu extends MouseAdapter {
             //play button
             if (mouseOver(mx, my, 210, 150, 300, 64)) {
                 game.gameState = Game.STATE.Game;//??
-                handler.addObject(new Player(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.Player, handler));
-                for(int i=0;i<8;i++)
+                handler.addObject(new Player(50,  0, ID.Player, handler));
+                for(int i=0;i<5;i++)
                 handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
             }
             //help button

@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/SantaBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SantaBullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/SantaEnemyFif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SantaEnemyFif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyF.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +108,7 @@
       <workItem from="1591702769211" duration="18004000" />
       <workItem from="1591765800996" duration="5594000" />
       <workItem from="1591784644103" duration="9852000" />
-      <workItem from="1591852482641" duration="2417000" />
+      <workItem from="1591852482641" duration="2908000" />
     </task>
     <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
       <created>1591509342521</created>
@@ -250,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591817725013</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update SantaBullet.java.">
+      <created>1591855218568</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1591855218568</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +285,8 @@
     <MESSAGE value="ReindeerEnemyFo.java update." />
     <MESSAGE value="Upgrade SantaBullet.java, ReindeerBullet.java, SnowflakeEnemyF.java and DecorationEnemyTh.java." />
     <MESSAGE value="Finish emulation of levels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish emulation of levels" />
+    <MESSAGE value="Update SantaBullet.java." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update SantaBullet.java." />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
@@ -297,26 +305,26 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591817720948">
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591855215934">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591817720948" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1591855061196">
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591855215934" />
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1591855682140">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591855061196" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1591855061196">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591855682140" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1591855682140">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591855061196" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1591855061196">
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591855682140" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1591855682140">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591855061196" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1591855061196">
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591855682140" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1591855682140">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591855061196" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591855682140" />
     <state width="873" height="194" key="GridCell.Tab.1.bottom" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -333,14 +341,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="873" height="194" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1591513806738" />
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591817730716">
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591855235762">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591817730716" />
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1591853141654">
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591855235762" />
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1591855759154">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1591853141654" />
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1591855759154" />
     <state x="417" y="161" key="git4idea.merge.GitPullDialog" timestamp="1591853153233">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

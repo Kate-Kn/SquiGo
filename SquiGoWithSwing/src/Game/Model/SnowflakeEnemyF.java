@@ -12,7 +12,7 @@ public class SnowflakeEnemyF extends GameObject {
     public SnowflakeEnemyF(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
-        velX = 6;
+        velX = 5;
         velY = 2;
     }
 
