@@ -54,7 +54,7 @@ public class ReindeerEnemyFo extends GameObject {
             if (i == 1)
                 handler.addObject(new ReindeerBullet(x, y, ID.ReindeerBullet, handler,1, ThreadLocalRandom.current().nextInt(0, 7)));
             if (i == 2)
-                handler.addObject(new ReindeerBullet(x + 150, y, ID.ReindeerBullet, handler,2,ThreadLocalRandom.current().nextInt(0, 7)));
+                handler.addObject(new ReindeerBullet(x + 150, y, ID.ReindeerBullet, handler,2,1));
         }
     }
 
