@@ -63,11 +63,14 @@ public class SantaBullet extends GameObject {
 //            im = ImageIO.read(new File("src\\Game\\resources\\present\\present5.png"));
 //            i = ImageIO.read(new File("src\\Game\\resources\\present\\present6.png"));
 
-            image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\present\\present1.png"));
-            imag = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\present\\present3.png"));
-            ima = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\present\\present4.png"));
-            im = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\present\\present5.png"));
 
+
+image = ImageIO.read(getClass().getResource("/resources/present/present1.png"));
+imag = ImageIO.read(getClass().getResource("/resources/present/present3.png"));
+ima = ImageIO.read(getClass().getResource("/resources/present/present4.png"));
+im = ImageIO.read(getClass().getResource("/resources/present/present5.png"));
+          //  image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\present\\present1.png")); last path used 10.06
+          
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"
