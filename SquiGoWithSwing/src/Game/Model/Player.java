@@ -43,7 +43,7 @@ public class Player extends GameObject {
             if(tempObject.getId()==ID.Nut){
                 if (getBounds().intersects(tempObject.getBounds())) {
                     handler.removeObject(tempObject);
-                    HUD.nut++;
+                    HUD.nuts++;
                      SnowflakeEnemyF.isA=false;
                 }
             }
