@@ -74,13 +74,21 @@ if (timer<=0){
         BufferedImage i1 = new BufferedImage(9, 9, 12);
         BufferedImage i2 = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(new File("src\\Game\\resources\\candy\\candy1.png"));
-            imag = ImageIO.read(new File("src\\Game\\resources\\candy\\candy2.png"));
-            ima = ImageIO.read(new File("src\\Game\\resources\\candy\\candy3.png"));
-            im = ImageIO.read(new File("src\\Game\\resources\\candy\\candy4.png"));
-            i = ImageIO.read(new File("src\\Game\\resources\\candy\\candy5.png"));
-            i1 = ImageIO.read(new File("src\\Game\\resources\\candy\\candy6.png"));
-            i2 = ImageIO.read(new File("src\\Game\\resources\\candy\\candy7.png"));
+//            image = ImageIO.read(new File("src\\Game\\resources\\candy\\candy1.png"));
+//            imag = ImageIO.read(new File("src\\Game\\resources\\candy\\candy2.png"));
+//            ima = ImageIO.read(new File("src\\Game\\resources\\candy\\candy3.png"));
+//            im = ImageIO.read(new File("src\\Game\\resources\\candy\\candy4.png"));
+//            i = ImageIO.read(new File("src\\Game\\resources\\candy\\candy5.png"));
+//            i1 = ImageIO.read(new File("src\\Game\\resources\\candy\\candy6.png"));
+//            i2 = ImageIO.read(new File("src\\Game\\resources\\candy\\candy7.png"));
+
+            image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\candy\\candy1.png"));
+            imag = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\candy\\candy2.png"));
+            ima = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\candy\\candy3.png"));
+            im = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\candy\\candy4.png"));
+            i = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\candy\\candy5.png"));
+            i1 = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\candy\\candy6.png"));
+            i2 = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\candy\\candy7.png"));
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"

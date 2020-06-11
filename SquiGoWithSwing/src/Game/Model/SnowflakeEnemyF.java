@@ -43,10 +43,10 @@ public class SnowflakeEnemyF extends GameObject {
         BufferedImage ima = new BufferedImage(9, 9, 12);
         BufferedImage im = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(new File("src\\Game\\resources\\sprite_0045.png"));
-            imag = ImageIO.read(new File("src\\Game\\resources\\snowball1.png"));
-            ima = ImageIO.read(new File("src\\Game\\resources\\snowball2.png"));
-            im = ImageIO.read(new File("src\\Game\\resources\\snowball3.png"));
+            image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\sprite_0045.png"));
+            imag = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\snowball1.png"));
+            ima = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\snowball2.png"));
+            im = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\snowball3.png"));
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре  sprite_0045
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"

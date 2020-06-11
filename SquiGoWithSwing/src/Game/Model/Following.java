@@ -49,7 +49,7 @@ public class Following extends GameObject {
     public void render(Graphics g) {
         BufferedImage image = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(new File("src\\Game\\resources\\santa.png"));
+            image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\santa.png"));
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"
