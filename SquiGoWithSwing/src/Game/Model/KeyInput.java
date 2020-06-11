@@ -6,14 +6,17 @@ import java.awt.event.KeyEvent;
 public class KeyInput extends KeyAdapter {
     private Handler handler;
     private boolean[] keyDown = new boolean[4];
+    Game game;
 
 
-    public KeyInput(Handler handler) {
+    public KeyInput(Handler handler, Game game) {
+        this.game=game;
+        this.handler = handler;
         keyDown[0] = false;
         keyDown[1] = false;
         keyDown[2] = false;
         keyDown[3] = false;
-        this.handler = handler;
+
     }
 
     public void keyPressed(KeyEvent e) {
@@ -40,6 +43,7 @@ public class KeyInput extends KeyAdapter {
 
 
             }
+
 //            if(temp.getId()==ID.Player2){
 //                if(key==KeyEvent.VK_W)
 //                    temp.setVelY(5);
@@ -55,6 +59,17 @@ public class KeyInput extends KeyAdapter {
 
 
         }
+        if (key ==KeyEvent.VK_SPACE){
+            if(game.gameState== Game.STATE.Game){
+                Game.paused=!Game.paused;
+//                    if(Game.paused){
+//                        Game.paused=false;
+//                    }else {
+//                        Game.paused = true;
+//                    }
+            }
+        }
+
         if (key == KeyEvent.VK_ESCAPE) {
             System.exit(1);
         }

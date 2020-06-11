@@ -33,11 +33,12 @@ public class Handler {
     public  void clearEnemies(){
         for (int i = 0; i < object.size(); i++) {
             GameObject tempObject = object.get(i);
-            if(tempObject.getId()==ID.Player){
+            if(tempObject.getId()==ID.Player) {
                 object.clear();
-                addObject(new Player(tempObject.getX(),tempObject.getY(),ID.Player,this));
+                if (Game.gameState != Game.STATE.End) {
+                    addObject(new Player(tempObject.getX(), tempObject.getY(), ID.Player, this));
+                }
             }
-
         }
     }
 }

@@ -36,7 +36,7 @@ public class Player extends GameObject {
             if (tempObject.getId() == ID.TreeEnemyS ||tempObject.getId() == ID.SnowflakeEnemyF ||tempObject.getId()==ID.SantaEnemyFif||tempObject.getId()==ID.ReindeerEnemyFo ||tempObject.getId()==ID.ReindeerBullet|tempObject.getId()==ID.SantaBullet||tempObject.getId()==ID.DecorationEnemyTh) {
                 if (getBounds().intersects(tempObject.getBounds())) { //temp object is now a basic enemy
                     // collision code
-                    HUD.HEALTH -= 5;
+                    HUD.HEALTH -= 1;
 
                 }
             }
@@ -55,7 +55,7 @@ public class Player extends GameObject {
             BufferedImage image = new BufferedImage(156, 9, 12);
 
             try {
-                image = ImageIO.read(new File("src\\Game\\resources\\rabbit.png"));
+                image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\rabbit.png"));
                 //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
                 // хз як виправити, хай поки буде так
                 // короткий "src\\Game\\resources\\rabbit.png"

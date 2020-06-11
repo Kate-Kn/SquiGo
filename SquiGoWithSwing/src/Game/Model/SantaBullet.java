@@ -57,11 +57,17 @@ public class SantaBullet extends GameObject {
         BufferedImage im = new BufferedImage(9, 9, 12);
         BufferedImage i = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(new File("src\\Game\\resources\\present\\present1.png"));
-            imag = ImageIO.read(new File("src\\Game\\resources\\present\\present3.png"));
-            ima = ImageIO.read(new File("src\\Game\\resources\\present\\present4.png"));
-            im = ImageIO.read(new File("src\\Game\\resources\\present\\present5.png"));
-            i = ImageIO.read(new File("src\\Game\\resources\\present\\present6.png"));
+//            image = ImageIO.read(new File("src\\Game\\resources\\present\\present1.png"));
+//            imag = ImageIO.read(new File("src\\Game\\resources\\present\\present3.png"));
+//            ima = ImageIO.read(new File("src\\Game\\resources\\present\\present4.png"));
+//            im = ImageIO.read(new File("src\\Game\\resources\\present\\present5.png"));
+//            i = ImageIO.read(new File("src\\Game\\resources\\present\\present6.png"));
+
+            image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\present\\present1.png"));
+            imag = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\present\\present3.png"));
+            ima = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\present\\present4.png"));
+            im = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\present\\present5.png"));
+
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"

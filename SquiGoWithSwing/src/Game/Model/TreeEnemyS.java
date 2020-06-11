@@ -52,11 +52,11 @@ public class TreeEnemyS extends GameObject {
         BufferedImage i = new BufferedImage(9, 9, 12);
 
         try {
-            image = ImageIO.read(new File("src\\Game\\resources\\chtree\\treeG.png"));
-            imag = ImageIO.read(new File("src\\Game\\resources\\chtree\\treeW.png"));
-            ima = ImageIO.read(new File("src\\Game\\resources\\chtree\\chrtree1.png"));
-            im = ImageIO.read(new File("src\\Game\\resources\\chtree\\chrtree2.png"));
-            i = ImageIO.read(new File("src\\Game\\resources\\chtree\\chrtree3.png"));
+            image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\chtree\\treeG.png"));
+            imag = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\chtree\\treeW.png"));
+            ima = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\chtree\\chrtree1.png"));
+            im = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\chtree\\chrtree2.png"));
+            i = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\chtree\\chrtree3.png"));
             //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
             // хз як виправити, хай поки буде так
             // короткий "src\\Game\\resources\\treeG.png"
