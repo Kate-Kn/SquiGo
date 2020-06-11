@@ -173,7 +173,7 @@ public class Menu extends MouseAdapter {
 
 
             g.setColor(Color.WHITE);
-            g.drawString("Go to menu", 270, 290);
+            g.drawString("Menu", 270, 290);
             g.drawRect(210, 250, 200, 64);
         }else if (game.gameState == Game.STATE.Select) {
             Font fnt = new Font("arial", 1, 50);
