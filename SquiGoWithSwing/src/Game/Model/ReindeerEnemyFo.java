@@ -13,6 +13,8 @@ public class ReindeerEnemyFo extends GameObject {
     private  GameObject player;
     int i;
     private Random random=new Random();
+    private  int timer=500;
+
 
     public ReindeerEnemyFo(float x, float y, ID id, Handler handler,int i) {
         super(x, y, id);
@@ -47,7 +49,15 @@ public class ReindeerEnemyFo extends GameObject {
         if (y <= 50 || y >= Game.HEIGHT - 85) {
             velY *= -1;
         }
-
+        if(timer<=0){
+            if(!SnowflakeEnemyF.isA) {
+                handler.addObject(new Nut(random.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.Nut, handler));
+                SnowflakeEnemyF.isA=true;
+            } else
+                timer=500;
+        }else{
+            timer--;
+        }
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.yellow, 9, 9, 0.1f, handler));
         int spawn= random.nextInt(30);
         if(spawn==0) {

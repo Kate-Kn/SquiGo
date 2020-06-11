@@ -4,10 +4,14 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class TreeEnemyS extends GameObject {
 
     private Handler handler;
+    private Random random=new Random();
+    private int timer=500;
  private  int dec;
     public TreeEnemyS(float x, float y, ID id, Handler handler,int dec) {
         super(x, y, id);
@@ -39,6 +43,15 @@ public class TreeEnemyS extends GameObject {
         }
         if (y <= 50 || y >= Game.HEIGHT - 85) {
             velY *= -1;
+        }
+        if(timer<=0){
+            if(!SnowflakeEnemyF.isA) {
+                handler.addObject(new Nut(random.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.Nut, handler));
+                SnowflakeEnemyF.isA=true;
+            } else
+                timer=500;
+        }else{
+            timer--;
         }
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.green, 9, 9, 0.1f, handler));
     }

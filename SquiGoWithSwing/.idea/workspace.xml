@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jinput.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/resources.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/resources/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SquiGoWithSwing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SquiGoWithSwing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/ReindeerEnemyFo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/ReindeerEnemyFo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/Spawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Spawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/TreeEnemyS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/TreeEnemyS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +46,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Game/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Game/Model" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\src\Game\Model" />
+      <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\src\Game\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\src\Game\resources\candy" />
       <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\src\Game\resources\present" />
-      <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\src\Game\resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Member\Desktop\SquiGo\SquiGoWithSwing\src\Game\resources" />
     </key>
   </component>
@@ -109,7 +124,9 @@
       <workItem from="1591784644103" duration="9852000" />
       <workItem from="1591852482641" duration="2908000" />
       <workItem from="1591855739364" duration="1541000" />
-      <workItem from="1591869468832" duration="7472000" />
+      <workItem from="1591869468832" duration="7743000" />
+      <workItem from="1591886659649" duration="65000" />
+      <workItem from="1591886789550" duration="3368000" />
     </task>
     <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
       <created>1591509342521</created>
@@ -293,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591876845197</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Change location.">
+      <created>1591877096071</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1591877096071</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +325,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed identifier of width and height.&#10;Basic movement of enemy." />
     <MESSAGE value="Added 20 enimies" />
     <MESSAGE value="Health bar added in HUD.java." />
     <MESSAGE value="fix typos" />
@@ -326,17 +349,26 @@
     <MESSAGE value="Add Nut.java.&#10;In first level it will appear after 500s." />
     <MESSAGE value="Resolve" />
     <MESSAGE value="Change &quot;Go to menu&quot; to &quot;Menu&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change &quot;Go to menu&quot; to &quot;Menu&quot;" />
+    <MESSAGE value="Change location." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change location." />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="0" key="#Auto_Import/0.0.1366.738@0.0.1366.738" timestamp="1591511358213" />
+    <state x="275" y="28" key="#Project_Structure" timestamp="1591892767466">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="28" key="#Project_Structure/0.0.1366.738@0.0.1366.738" timestamp="1591892767466" />
     <state x="137" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591508305096">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="137" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508305096" />
+    <state x="433" y="173" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591886724558">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="433" y="173" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1591886724558" />
     <state x="488" y="51" key="#com.intellij.ide.util.MemberChooser" timestamp="1591508507385">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -345,26 +377,34 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591876841666">
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591877092065">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591876841666" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1591876927389">
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591877092065" />
+    <state x="129" y="62" key="DiffContextDialog" timestamp="1591893466426">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591876927389" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1591876927389">
+    <state x="129" y="62" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1591893466426" />
+    <state x="463" y="125" key="FileChooserDialogImpl" timestamp="1591892703023">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591876927389" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1591876927389">
+    <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1591892703023" />
+    <state width="661" height="189" key="GridCell.Tab.0.bottom" timestamp="1591894420606">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591876927389" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1591876927389">
+    <state width="661" height="189" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591894420606" />
+    <state width="661" height="189" key="GridCell.Tab.0.center" timestamp="1591894420606">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591876927389" />
+    <state width="661" height="189" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591894420606" />
+    <state width="661" height="189" key="GridCell.Tab.0.left" timestamp="1591894420606">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="661" height="189" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591894420606" />
+    <state width="661" height="189" key="GridCell.Tab.0.right" timestamp="1591894420606">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="661" height="189" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591894420606" />
     <state width="873" height="194" key="GridCell.Tab.1.bottom" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -389,18 +429,18 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="395" y="86" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1591876157531" />
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591876582063">
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591877099634">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591876582063" />
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1591869470665">
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591877099634" />
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1591886790138">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1591869470665" />
-    <state x="417" y="161" key="git4idea.merge.GitPullDialog" timestamp="1591876119046">
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1591886790138" />
+    <state x="417" y="161" key="git4idea.merge.GitPullDialog" timestamp="1591893478555">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="417" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1591876119046" />
+    <state x="417" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1591893478555" />
     <state width="602" height="255" key="javadoc.popup" timestamp="1591511890831">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

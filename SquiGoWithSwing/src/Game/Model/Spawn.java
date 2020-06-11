@@ -21,11 +21,11 @@ public class Spawn {
          scoreKeep=0;
          hud.setLevel(hud.getLevel()+1);
          if (game.diff==0) {
-
              SantaEnemyFif sa = new SantaEnemyFif((Game.WIDTH / 2 - 48), -50, ID.SantaEnemyFif, handler);
              if (hud.getLevel() == 2) {
+                 SnowflakeEnemyF.isA=false;
                  handler.clearEnemies();
-                 for (int i = 0; i < 10; i++)
+                 for (int i = 0; i < 6; i++)
                      handler.addObject(new TreeEnemyS(r.nextInt(Game.WIDTH - 60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.TreeEnemyS, handler, ThreadLocalRandom.current().nextInt(0, 5)));
              }
              if (hud.getLevel() == 3) {
