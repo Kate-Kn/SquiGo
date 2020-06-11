@@ -43,19 +43,7 @@ public class KeyInput extends KeyAdapter {
 
 
             }
-            if (key ==KeyEvent.VK_SPACE){
-                if(game.gameState== Game.STATE.Game){
-                    Game.paused=!Game.paused;
-//                    if(Game.paused){
-//                        Game.paused=false;
-//                    }else {
-//                        Game.paused = true;
-//                    }
-             }
-            }
-            if (key==KeyEvent.VK_ESCAPE){
-                System.exit(1);
-            }
+
 //            if(temp.getId()==ID.Player2){
 //                if(key==KeyEvent.VK_W)
 //                    temp.setVelY(5);
@@ -71,6 +59,17 @@ public class KeyInput extends KeyAdapter {
 
 
         }
+        if (key ==KeyEvent.VK_SPACE){
+            if(game.gameState== Game.STATE.Game){
+                Game.paused=!Game.paused;
+//                    if(Game.paused){
+//                        Game.paused=false;
+//                    }else {
+//                        Game.paused = true;
+//                    }
+            }
+        }
+
         if (key == KeyEvent.VK_ESCAPE) {
             System.exit(1);
         }
