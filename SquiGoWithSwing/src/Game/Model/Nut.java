@@ -16,6 +16,8 @@ public class Nut extends GameObject {
         this.handler = handler;
         velX = 3;
         velY = 2;
+//nut sound added
+        Audio.getSound("nut").play();
     }
 
     public Rectangle getBounds()
