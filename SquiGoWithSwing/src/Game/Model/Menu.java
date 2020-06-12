@@ -31,14 +31,20 @@ public class Menu extends MouseAdapter {
 //                for(int i=0;i<5;i++)
 //                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
            game.gameState= Game.STATE.Select;
+//click sound added
+            Audio.getSound("menu_sound").play();
            return;
             }
             //help button
             if (mouseOver(mx, my, 210, 250, 200, 64)) {
+//click sound added
+                Audio.getSound("menu_sound").play();
                 game.gameState = Game.STATE.Help;
             }
             //quit button
             if (mouseOver(mx, my, 210, 350, 200, 64)) {
+//click sound added
+                Audio.getSound("menu_sound").play();
                 System.exit(1);
             }
         }
@@ -50,6 +56,10 @@ public class Menu extends MouseAdapter {
                 for(int i=0;i<5;i++)
                 handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
                 game.diff=0;
+//click sound and game sound added
+                Audio.getSound("menu_sound").play();
+                Audio.loadmusic();
+                Audio.getMusic("music_game").loop();
             }
             //hard button
             if (mouseOver(mx, my, 210, 250, 200, 64)) {
@@ -58,11 +68,17 @@ public class Menu extends MouseAdapter {
                 for(int i=0;i<5;i++)
                 handler.addObject(new SnowflakeEnemyFhard(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
                 game.diff=1;
+//click sound and game sound added
+                Audio.getSound("menu_sound").play();
+                Audio.loadmusic();
+                Audio.getMusic("music_game").loop();
             }
             //back button
             if (mouseOver(mx, my, 210, 350, 200, 64)) {
 
                     game.gameState = Game.STATE.Menu;
+//click sound added
+                    Audio.getSound("menu_sound").play();
                     return;
             }
         }
@@ -72,6 +88,8 @@ public class Menu extends MouseAdapter {
         if (game.gameState == Game.STATE.Help) {
             if (mouseOver(mx, my, 210, 350, 200, 64)) {
                 game.gameState = Game.STATE.Menu;
+//click sound added
+                Audio.getSound("menu_sound").play();
                 return;
             }
         }
@@ -94,7 +112,10 @@ public class Menu extends MouseAdapter {
             }
             //go to menu
             if (mouseOver(mx, my, 210, 250, 200, 64)) {
-                game.gameState = Game.STATE.Menu;
+                game.gameState = Game.STATE.Menu
+                //menu sound added
+                Audio.loadmusic();
+                Audio.getMusic("music_menu").loop();
 
                 hud.setLevel(1);
                 hud.setScore(0);
