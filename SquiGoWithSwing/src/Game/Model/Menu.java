@@ -112,7 +112,7 @@ public class Menu extends MouseAdapter {
             }
             //go to menu
             if (mouseOver(mx, my, 210, 250, 200, 64)) {
-                game.gameState = Game.STATE.Menu
+                game.gameState = Game.STATE.Menu;
                 //menu sound added
                 Audio.loadmusic();
                 Audio.getMusic("music_menu").loop();
