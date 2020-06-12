@@ -36,7 +36,9 @@ public class Game extends Canvas implements Runnable {
         spawn = new Spawn(handler,hud,this);
         this.addKeyListener(new KeyInput(handler, this));
         new Window(WIDTH, HEIGHT, "SquiGo", this);
-
+//music added for menu
+        Audio.loadmusic();
+        Audio.getMusic("music_menu").loop();
         r = new Random();
       /*  if(gameState==STATE.Game){
             handler.addObject(new Player((WIDTH / 2 - 32), (HEIGHT / 2 - 32), ID.Player, handler));
