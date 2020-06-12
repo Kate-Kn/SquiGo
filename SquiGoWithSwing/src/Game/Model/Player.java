@@ -44,6 +44,8 @@ public class Player extends GameObject {
                 if (getBounds().intersects(tempObject.getBounds())) {
                     handler.removeObject(tempObject);
                     HUD.nuts++;
+//nut sound added
+                    Audio.getSound("nut").play();
                      SnowflakeEnemyF.isA=false;
                 }
             }
