@@ -144,6 +144,15 @@ public class Menu extends MouseAdapter {
     }
     public void render (Graphics g) {
         if (game.gameState == Game.STATE.Menu) {
+//added bc image menu
+           BufferedImage imagem = new BufferedImage(10, 10, 12);
+           try {
+          imagem = ImageIO.read(getClass().getResource("/resources/backs/menuimag.png"));
+            } catch (Exception e) {
+                          e.printStackTrace();
+            }
+            g.drawImage(imagem, -10, 0, 660, 480, null);
+
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
