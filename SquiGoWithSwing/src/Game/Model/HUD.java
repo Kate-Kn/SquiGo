@@ -27,6 +27,8 @@ public class HUD {
         g.drawString("Level: "+ level,320,35);
         g.drawString("Scores: "+ score ,420,35);
         g.drawString("Nuts: "+ nuts ,520,35);
+        g.setColor(Color.orange);
+        g.drawString("Space for pause, esc for escape, s for shop" ,220,15);
 
     }
 
@@ -41,5 +43,8 @@ public class HUD {
     }
     public float getScore(){
         return score;
+    }
+    public int getNuts(){
+        return nuts;
     }
 }

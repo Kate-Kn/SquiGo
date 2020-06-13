@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Game/Model/Shop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/DecorationEnemyTh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/DecorationEnemyTh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/ReindeerBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/ReindeerBullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/SantaEnemyFif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SantaEnemyFif.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/Spawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Spawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +120,8 @@
       <workItem from="1591855739364" duration="1541000" />
       <workItem from="1591869468832" duration="7743000" />
       <workItem from="1591886659649" duration="65000" />
-      <workItem from="1591886789550" duration="4025000" />
+      <workItem from="1591886789550" duration="4560000" />
+      <workItem from="1592050248820" duration="5364000" />
     </task>
     <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
       <created>1591509342521</created>
@@ -317,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591894538162</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Nut in DecorationEnemyTh.java &amp; SantaEnemyFif.java.">
+      <created>1591895077834</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1591895077834</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +334,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Health bar added in HUD.java." />
     <MESSAGE value="fix typos" />
     <MESSAGE value="changes on image size." />
     <MESSAGE value="Health bar from green to red while playing" />
@@ -350,7 +358,8 @@
     <MESSAGE value="Change &quot;Go to menu&quot; to &quot;Menu&quot;" />
     <MESSAGE value="Change location." />
     <MESSAGE value="Nut in ReindeerEnemyFo.java &amp; TreeEnemyS.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nut in ReindeerEnemyFo.java &amp; TreeEnemyS.java" />
+    <MESSAGE value="Nut in DecorationEnemyTh.java &amp; SantaEnemyFif.java." />
+    <option name="LAST_COMMIT_MESSAGE" value="Nut in DecorationEnemyTh.java &amp; SantaEnemyFif.java." />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
@@ -377,10 +386,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591894533382">
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1591895071534">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591894533382" />
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1591895071534" />
     <state x="129" y="62" key="DiffContextDialog" timestamp="1591893466426">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -389,22 +398,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1591892703023" />
-    <state width="661" height="189" key="GridCell.Tab.0.bottom" timestamp="1591894420606">
+    <state width="661" height="189" key="GridCell.Tab.0.bottom" timestamp="1592054670338">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="661" height="189" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591894420606" />
-    <state width="661" height="189" key="GridCell.Tab.0.center" timestamp="1591894420606">
+    <state width="661" height="189" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592054670338" />
+    <state width="661" height="189" key="GridCell.Tab.0.center" timestamp="1592054670338">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="661" height="189" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591894420606" />
-    <state width="661" height="189" key="GridCell.Tab.0.left" timestamp="1591894420606">
+    <state width="661" height="189" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592054670338" />
+    <state width="661" height="189" key="GridCell.Tab.0.left" timestamp="1592054670338">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="661" height="189" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591894420606" />
-    <state width="661" height="189" key="GridCell.Tab.0.right" timestamp="1591894420606">
+    <state width="661" height="189" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592054670338" />
+    <state width="661" height="189" key="GridCell.Tab.0.right" timestamp="1592054670338">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="661" height="189" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591894420606" />
+    <state width="661" height="189" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592054670338" />
     <state width="873" height="194" key="GridCell.Tab.1.bottom" timestamp="1591513806738">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -429,18 +438,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="395" y="86" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1591876157531" />
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591877099634">
+    <state x="412" y="81" key="RollbackChangesDialog" timestamp="1592051113943">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591877099634" />
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1591886790138">
+    <state x="412" y="81" key="RollbackChangesDialog/0.0.1366.738@0.0.1366.738" timestamp="1592051113943" />
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2" timestamp="1591895156190">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1591886790138" />
-    <state x="417" y="161" key="git4idea.merge.GitPullDialog" timestamp="1591893478555">
+    <state x="275" y="74" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1591895156190" />
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1592050918795">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="417" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1591893478555" />
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1592050918795" />
+    <state x="417" y="161" key="git4idea.merge.GitPullDialog" timestamp="1592051126497">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="417" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1592051126497" />
     <state width="602" height="255" key="javadoc.popup" timestamp="1591511890831">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -449,9 +462,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1591768473456" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1591714014563">
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1592051445483">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1591714014563" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1592051445483" />
   </component>
 </project>
