@@ -32,7 +32,7 @@ public class Menu extends MouseAdapter {
 //                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
            game.gameState= Game.STATE.Select;
 //click sound added
-            Audio.getSound("menu_sound").play();
+           // Audio.getSound("menu_sound").play();
            return;
             }
             //help button

@@ -8,10 +8,9 @@ public class HUD {
     private float score = 0;
     private float level = 1;
     public static int nuts = 0;
-    public int bounds = 0;
 
     public void tick() {
-        HEALTH = Game.clam(HEALTH, 0, 100 );
+        HEALTH = Game.clam(HEALTH, 0, 100);
         greenValue = HEALTH * 2;
         greenValue = Game.clam(greenValue, 0, 255);
         score++;
@@ -19,11 +18,11 @@ public class HUD {
 
     public void render(Graphics g) {
         g.setColor(Color.gray);
-        g.fillRect(15, 15, 200 , 32);
+        g.fillRect(15, 15, 200, 32);
         g.setColor(new Color(100, (int) greenValue, 0));
         g.fillRect(15, 15, (int) HEALTH * 2, 32);
         g.setColor(Color.white);
-        g.drawRect(15, 15, 200 , 32);
+        g.drawRect(15, 15, 200, 32);
         g.drawString("Health: " + HEALTH, 220, 35);
         g.drawString("Level: " + level, 320, 35);
         g.drawString("Scores: " + score, 420, 35);
