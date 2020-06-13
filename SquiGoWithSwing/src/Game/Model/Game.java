@@ -10,16 +10,17 @@ public class Game extends Canvas implements Runnable {
     private HUD hud;
     private Thread thread;
     private boolean running = true;
-    public static  boolean paused= false;
+    public static boolean paused = false;
     private Handler handler;
     private Random r;
     private Spawn spawn;
-    public int diff=0;
+    public int diff = 0;
     //0=normal
-    private  Shop shop;
+    private Shop shop;
     //1=hard
 
     private Menu menu;
+
     public enum STATE {
         Menu,
         Help,
@@ -27,16 +28,20 @@ public class Game extends Canvas implements Runnable {
         Select,
         End,
         Shop
-    };
-    public static STATE gameState= STATE.Menu;
+    }
+
+    ;
+    public static STATE gameState = STATE.Menu;
+
     public Game() {
         hud = new HUD();
         handler = new Handler();
-        menu= new Menu(this, handler,hud);
-        shop=new Shop(handler,hud);
+        menu = new Menu(this, handler, hud);
+        shop = new Shop(handler, hud);
         this.addMouseListener(menu);
+        this.addMouseListener(shop);
 
-        spawn = new Spawn(handler,hud,this);
+        spawn = new Spawn(handler, hud, this);
         this.addKeyListener(new KeyInput(handler, this));
         new Window(WIDTH, HEIGHT, "SquiGo", this);
 //music added for menu
@@ -108,23 +113,23 @@ public class Game extends Canvas implements Runnable {
         //hud = new HUD();
         //spawn=new Spawn(handler,hud);
 //        handler.tick();
-        if(gameState==STATE.Game){
+        if (gameState == STATE.Game) {
 
-            if(!(paused)){
+            if (!(paused)) {
                 handler.tick();
-                    hud.tick();
-                    spawn.tick();
+                hud.tick();
+                spawn.tick();
 
-                    if(HUD.HEALTH<=0){
-                        HUD.HEALTH=100;
-                        gameState=STATE.End;
-                        handler.clearEnemies();
+                if (HUD.HEALTH <= 0) {
+                    HUD.HEALTH = 100;
+                    gameState = STATE.End;
+                    handler.clearEnemies();
 
-                    }
+                }
             }
-        } else if (gameState==STATE.Menu||gameState==STATE.End||gameState==STATE.Select){
-          menu.tick();
-          handler.tick();
+        } else if (gameState == STATE.Menu || gameState == STATE.End || gameState == STATE.Select) {
+            menu.tick();
+            handler.tick();
         }
     }
 
@@ -138,16 +143,16 @@ public class Game extends Canvas implements Runnable {
         Graphics g = bs.getDrawGraphics();
         g.setColor(Color.black);
         g.fillRect(0, 0, WIDTH, HEIGHT);
-        if (paused){
+        if (paused) {
             g.setColor(Color.red);
-            g.drawString("PAUSED",300,300);
+            g.drawString("PAUSED", 300, 300);
         }
-        if(gameState==STATE.Game) {
+        if (gameState == STATE.Game) {
             hud.render(g);
             handler.render(g);
-        }else if(gameState== STATE.Shop){
+        } else if (gameState == STATE.Shop) {
             shop.render(g);
-        }else if (gameState==STATE.Menu||gameState==STATE.Help||gameState==STATE.End||gameState==STATE.Select){
+        } else if (gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select) {
             menu.render(g);
             handler.render(g);
         }
@@ -155,7 +160,7 @@ public class Game extends Canvas implements Runnable {
         bs.show();
     }
 
-    public static float clam(float var, float min,float max) {
+    public static float clam(float var, float min, float max) {
         if (var >= max) {
             return var = max;
         } else if (var <= min) {

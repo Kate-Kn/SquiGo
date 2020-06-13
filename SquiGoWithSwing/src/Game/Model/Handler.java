@@ -4,6 +4,7 @@ import java.awt.*;
 import java.util.LinkedList;
 
 public class Handler {
+    public int speed=5;
     LinkedList<GameObject> object = new LinkedList<GameObject>();
 
     public void tick() {

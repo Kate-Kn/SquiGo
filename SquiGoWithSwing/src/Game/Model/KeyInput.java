@@ -10,7 +10,7 @@ public class KeyInput extends KeyAdapter {
 
 
     public KeyInput(Handler handler, Game game) {
-        this.game=game;
+        this.game = game;
         this.handler = handler;
         keyDown[0] = false;
         keyDown[1] = false;
@@ -25,19 +25,20 @@ public class KeyInput extends KeyAdapter {
             GameObject temp = handler.object.get(i);
             if (temp.getId() == ID.Player) {
                 if (key == KeyEvent.VK_UP) {
-                    temp.setVelY(-5);
+                    temp.setVelY(-(handler.speed));
                     keyDown[0] = true;
                 }
                 if (key == KeyEvent.VK_DOWN) {
-                    temp.setVelY(5);
+                    temp.setVelY(handler.speed);
                     keyDown[1] = true;
                 }
                 if (key == KeyEvent.VK_LEFT) {
-                    temp.setVelX(-5);
+                    temp.setVelX(-(handler.speed));
                     keyDown[2] = true;
                 }
                 if (key == KeyEvent.VK_RIGHT) {
-                    temp.setVelX(5);
+                    temp.setVelX(handler.speed);
+
                     keyDown[3] = true;
                 }
 
@@ -59,9 +60,9 @@ public class KeyInput extends KeyAdapter {
 
 
         }
-        if (key ==KeyEvent.VK_SPACE){
-            if(game.gameState== Game.STATE.Game){
-                Game.paused=!Game.paused;
+        if (key == KeyEvent.VK_SPACE) {
+            if (game.gameState == Game.STATE.Game) {
+                Game.paused = !Game.paused;
 //                    if(Game.paused){
 //                        Game.paused=false;
 //                    }else {
@@ -73,11 +74,11 @@ public class KeyInput extends KeyAdapter {
         if (key == KeyEvent.VK_ESCAPE) {
             System.exit(1);
         }
-        if(key==KeyEvent.VK_S){
-            if(Game.gameState== Game.STATE.Game){
-                Game.gameState= Game.STATE.Shop;
-            }else if(Game.gameState== Game.STATE.Shop)
-                Game.gameState= Game.STATE.Game;
+        if (key == KeyEvent.VK_S) {
+            if (Game.gameState == Game.STATE.Game) {
+                Game.gameState = Game.STATE.Shop;
+            } else if (Game.gameState == Game.STATE.Shop)
+                Game.gameState = Game.STATE.Game;
         }
 
     }
@@ -103,10 +104,10 @@ public class KeyInput extends KeyAdapter {
                     keyDown[3] = false;
                     // temp.setVelX(0);
                 }
-                if(!keyDown[0]&& !keyDown[1]){
+                if (!keyDown[0] && !keyDown[1]) {
                     temp.setVelY(0);
                 }
-                if(!keyDown[2]&& !keyDown[3]){
+                if (!keyDown[2] && !keyDown[3]) {
                     temp.setVelX(0);
 
                 }
