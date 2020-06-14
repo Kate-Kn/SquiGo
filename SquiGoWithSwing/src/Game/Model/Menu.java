@@ -157,7 +157,7 @@ public class Menu extends MouseAdapter {
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
             g.setColor(Color.WHITE);
-            g.drawString("Menu", 240, 70);
+          //  g.drawString("Menu", 240, 70);
 
             g.setFont(fnt2);
             g.drawString("Play", 270, 190);
@@ -170,6 +170,15 @@ public class Menu extends MouseAdapter {
             g.setColor(Color.WHITE);
             g.drawString("Quit", 270, 390);
             g.drawRect(210, 350, 200, 64);
+//logo
+            BufferedImage image = new BufferedImage(10, 10, 12);
+            try {
+
+                image = ImageIO.read(getClass().getResource("/resources/Logo.png"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(image, 130, 5, 400, 130, null);
 
 
         } else if (game.gameState== Game.STATE.Help){
