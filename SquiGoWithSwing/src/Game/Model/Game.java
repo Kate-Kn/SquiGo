@@ -144,8 +144,10 @@ public class Game extends Canvas implements Runnable {
         g.setColor(Color.black);
         g.fillRect(0, 0, WIDTH, HEIGHT);
         if (paused) {
-            g.setColor(Color.red);
-            g.drawString("PAUSED", 300, 300);
+            if (gameState != STATE.Shop) {
+                g.setColor(Color.red);
+                g.drawString("PAUSED", 300, 300);
+            }
         }
         if (gameState == STATE.Game) {
             hud.render(g);
