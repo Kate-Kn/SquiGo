@@ -21,15 +21,15 @@ public class HUD {
 
     public void render(Graphics g) {
         g.setColor(new Color(97,165, 177));
-        g.fillRect(0,0,640,50);
-        g.fillRect(0,0,640,50);
-        g.setColor(new Color(241,228, 144));
+        g.fillRect(0,0,640,50);  
         g.setColor(new Color(234,248, 249));
         g.fillRect(15, 10, 200, 32);
         g.setColor(new Color(100, (int) greenValue, 0));
         g.fillRect(15, 10, (int) HEALTH * 2, 32);
         g.setColor(new Color(29,139, 145));
         g.drawRect(15, 10, 200, 32);
+        g.setColor(new Color(241,228, 144));
+        g.fillRect(0,430,640,50);
 
         //level space
                 g.setColor(new Color(193,219, 217));
