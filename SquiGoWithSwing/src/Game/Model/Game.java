@@ -16,8 +16,9 @@ public class Game extends Canvas implements Runnable {
     private Spawn spawn;
     public int diff = 0;
     //0=normal
-    private Shop shop;
     //1=hard
+    private Shop shop;
+
 
     private Menu menu;
 
