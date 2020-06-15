@@ -36,7 +36,7 @@ public class Menu extends MouseAdapter {
 //                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
            game.gameState= Game.STATE.Select;
 //click sound added
-           // Audio.getSound("menu_sound").play();
+           Audio.getSound("menu_sound").play();
            return;
             }
             //help button
@@ -342,7 +342,13 @@ public class Menu extends MouseAdapter {
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt2);
             g.drawString("Back", 270, 390);
-            g.drawRect(210, 350, 200, 64);
+            BufferedImage imageqf = new BufferedImage(5, 5, 12);
+           try {
+               imageqf = ImageIO.read(getClass().getResource("/resources/backs/frame1.png"));
+           } catch (Exception e) {
+               e.printStackTrace();
+           }
+           g.drawImage(imageqf, 210, 350, 200, 64, null);
 
         }else if (game.gameState== Game.STATE.End){
           BufferedImage imagem = new BufferedImage(10, 10, 12);
