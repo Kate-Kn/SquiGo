@@ -27,10 +27,6 @@ public class Shop extends MouseAdapter {
         g.drawRect(50, 100, 150, 150);
         g.drawString("Upgrade Health (+10%) ", 60, 120);
         g.drawString("Cost : 1 nut", 60, 140);
-
-        g.drawRect(250, 100, 150, 150);
-        g.drawString("Upgrade Speed", 260, 120);
-        g.drawString("Cost : 1 nut", 260, 140);
         BufferedImage imag = new BufferedImage(9, 9, 12);
         try {
             imag = ImageIO.read(getClass().getResource("/resources/shop/hp_buymore.png"));
@@ -38,7 +34,20 @@ public class Shop extends MouseAdapter {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        g.drawImage(imag,275,175,null);
+        g.drawImage(imag,75,175,null);
+
+        g.drawRect(250, 100, 150, 150);
+        g.drawString("Upgrade Speed", 260, 120);
+        g.drawString("Cost : 1 nut", 260, 140);
+        BufferedImage ima = new BufferedImage(9, 9, 12);
+        try {
+            ima = ImageIO.read(getClass().getResource("/resources/shop/speed_buy.png"));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        g.drawImage(ima,275,175,null);
+
 
         g.drawRect(450, 100, 150, 150);
         g.drawString("Refill Health", 460, 120);
@@ -57,6 +66,14 @@ public class Shop extends MouseAdapter {
         g.drawRect(250, 270, 150, 150);
         g.drawString("Skip level "+hud.getLevel(), 260, 290);
         g.drawString("Cost : " + p4 + " nuts", 260, 310);
+        BufferedImage im = new BufferedImage(9, 9, 12);
+        try {
+            im = ImageIO.read(getClass().getResource("/resources/shop/enemy_buy.png"));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        g.drawImage(im,270,315,null);
 
 
         g.drawString("Nuts: " + hud.getNuts(), Game.WIDTH - 150, 400);
