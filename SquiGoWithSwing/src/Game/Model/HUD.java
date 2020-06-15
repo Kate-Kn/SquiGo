@@ -18,15 +18,40 @@ public class HUD {
     }
 
     public void render(Graphics g) {
-        g.setColor(Color.gray);
-        g.fillRect(15, 15, 200, 32);
+        g.setColor(new Color(97,165, 177));
+        g.fillRect(0,0,640,50);
+        g.setColor(new Color(234,248, 249));
+        g.fillRect(15, 10, 200, 32);
         g.setColor(new Color(100, (int) greenValue, 0));
-        g.fillRect(15, 15, (int) HEALTH * 2, 32);
-        g.setColor(Color.white);
-        g.drawRect(15, 15, 200, 32);
+        g.fillRect(15, 10, (int) HEALTH * 2, 32);
+        g.setColor(new Color(29,139, 145));
+        g.drawRect(15, 10, 200, 32);
+
+        //level space
+                g.setColor(new Color(193,219, 217));
+                g.fillRect(313, 0, 116, 50);
+        //score space
+                g.setColor(new Color(226,243, 243));
+                g.fillRect(396, 0, 124, 50);
+        //nut space
+                g.setColor(new Color(234,248, 249));
+                g.fillRect(520, 0, 120, 50);
+                BufferedImage image = new BufferedImage(7, 7, 12);
+                try {
+                    image = ImageIO.read(getClass().getResource("/resources/nut.png"));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                g.drawImage(image, 525, 5, null);
+
+        g.setColor(new Color(230,249, 250));
+        Font fnt2 = new Font("arial", 1, 15);
+        g.setFont(fnt2 );
         g.drawString("Health: " + HEALTH, 220, 35);
+        g.setColor(new Color(97,165, 177));
         g.drawString("Level: " + level, 320, 35);
         g.drawString("Scores: " + score, 420, 35);
+        g.setColor(new Color(181,97, 57));
         g.drawString("Nuts: " + nuts, 520, 35);
         g.setColor(Color.orange);
         g.drawString("Space for pause, esc for escape, s for shop", 220, 15);
