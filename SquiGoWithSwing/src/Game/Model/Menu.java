@@ -115,12 +115,12 @@ public class Menu extends MouseAdapter {
             }
             //previous level
             if (mouseOver(mx, my, 90, 290, 400, 50)) {
-                if(hud.getNuts()>=1) {
+                if(hud.getNuts()>=3) {
                     game.gameState = Game.STATE.Game;
                     Game.paused=true;
                     hud.setLevel(hud.getLevel());
 
-                    hud.setNuts(hud.getNuts()-1);
+                    hud.setNuts(hud.getNuts()-3);
                     hud.HEALTH = 100;
 
                     if(game.diff==0){
@@ -402,7 +402,7 @@ public class Menu extends MouseAdapter {
           BufferedImage imagem = new BufferedImage(10, 10, 12);
               try {
 
-                  imagem = ImageIO.read(getClass().getResource("/resources/backs/helpm.png"));
+                  imagem = ImageIO.read(getClass().getResource("/resources/backs/helpmenu.png"));
               } catch (Exception e) {
                   e.printStackTrace();
               }
