@@ -353,34 +353,34 @@ public class Menu extends MouseAdapter {
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
-            g.setColor(new Color(218,68, 121));
+            g.setColor(new Color(64,121, 127));
             g.setFont(fnt2);
             g.drawString("Play", 270, 190);
             BufferedImage imagepf = new BufferedImage(5, 5, 12);
                try {
-                   imagepf = ImageIO.read(getClass().getResource("/resources/backs/helpframe3.png"));
+                   imagepf = ImageIO.read(getClass().getResource("/resources/backs/frame2.png"));
                } catch (Exception e) {
                    e.printStackTrace();
                }
                g.drawImage(imagepf, 210, 150, 200, 64, null);
 
 //help customized
-            g.setColor(new Color(119,188, 66));
+            g.setColor(new Color(97,165, 177));
             g.drawString("Help", 270, 290);
             BufferedImage imagehf = new BufferedImage(5, 5, 12);
               try {
-                imagehf = ImageIO.read(getClass().getResource("/resources/backs/helpframe2.png"));
+                imagehf = ImageIO.read(getClass().getResource("/resources/backs/frame1.png"));
               } catch (Exception e) {
                   e.printStackTrace();
               }
               g.drawImage(imagehf, 210, 250, 200, 64, null);
 
 //quit customized
-            g.setColor(new Color(225, 158,  49));
+            g.setColor(new Color(97,165, 177));
             g.drawString("Quit", 270, 390);
             BufferedImage imageqf = new BufferedImage(5, 5, 12);
               try {
-               imageqf = ImageIO.read(getClass().getResource("/resources/backs/helpframe1.png"));
+               imageqf = ImageIO.read(getClass().getResource("/resources/backs/frame1.png"));
              } catch (Exception e) {
                e.printStackTrace();
              }
@@ -411,7 +411,7 @@ public class Menu extends MouseAdapter {
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
-            g.setColor(Color.WHITE);
+            g.setColor(new Color(97,165, 177));
 //            g.drawString("Help", 240, 70);
 
 //            g.setFont(fnt2);
@@ -471,33 +471,33 @@ public class Menu extends MouseAdapter {
 
 
             g.setFont(fnt2);
-            g.setColor(new Color(83, 147, 61));
+            g.setColor(new Color(64,121, 127));
             g.drawString("Normal", 270, 190);
             BufferedImage imagehf = new BufferedImage(5, 5, 12);
             try {
 
-                imagehf = ImageIO.read(getClass().getResource("/resources/backs/helpframe2.png"));
+                imagehf = ImageIO.read(getClass().getResource("/resources/backs/frame2.png"));
             } catch (Exception e) {
                 e.printStackTrace();
             }
             g.drawImage(imagehf, 210, 150, 200, 64, null);
 
-            g.setColor(new Color(218, 68, 121));
+            g.setColor(new Color(97,165, 177));
             g.drawString("Hard", 270, 290);
             BufferedImage imagepf = new BufferedImage(5, 5, 12);
             try {
 
-                imagepf = ImageIO.read(getClass().getResource("/resources/backs/helpframe3.png"));
+                imagepf = ImageIO.read(getClass().getResource("/resources/backs/frame1.png"));
             } catch (Exception e) {
                 e.printStackTrace();
             }
             g.drawImage(imagepf, 210, 250, 200, 64, null);
 
-            g.setColor(new Color(225, 158, 49));
+            g.setColor(new Color(97,165, 177));
             g.drawString("Back", 270, 390);
             BufferedImage imageqf = new BufferedImage(5, 5, 12);
             try {
-              imageqf = ImageIO.read(getClass().getResource("/resources/backs/helpframe1.png"));
+              imageqf = ImageIO.read(getClass().getResource("/resources/backs/frame1.png"));
             } catch (Exception e) {
               e.printStackTrace();
             }
