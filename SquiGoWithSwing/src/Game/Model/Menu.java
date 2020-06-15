@@ -532,70 +532,71 @@ public class Menu extends MouseAdapter {
             g.drawString("Back", 270, 390);
             g.drawRect(210, 350, 200, 64);
         }
-        else if(game.gameState == Game.STATE.Shop){
+//        else if(game.gameState == Game.STATE.Shop){
+//            Shop shop=new Shop(handler,hud);
+//            shop.render(g);
+//            g.setColor(Color.white);
+//            g.setFont(new Font("arial", 0, 48));
+//            g.drawString("SHOP", Game.WIDTH / 2 - 100, 50);
+//
+//            g.setFont(new Font("arial", 0, 12));
+//            g.drawRect(50, 100, 150, 150);
+//            g.drawString("Upgrade Health (+10%) ", 60, 120);
+//            g.drawString("Cost : 1 nut", 60, 140);
+//            BufferedImage imag = new BufferedImage(9, 9, 12);
+//            try {
+//                imag = ImageIO.read(getClass().getResource("/resources/shop/hp_buymore.png"));
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            g.drawImage(imag,75,175,null);
+//
+//            g.drawRect(250, 100, 150, 150);
+//            g.drawString("Upgrade Speed", 260, 120);
+//            g.drawString("Cost : 1 nut", 260, 140);
+//            BufferedImage ima = new BufferedImage(9, 9, 12);
+//            try {
+//                ima = ImageIO.read(getClass().getResource("/resources/shop/speed_buy.png"));
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            g.drawImage(ima,275,175,null);
+//
+//
+//            g.drawRect(450, 100, 150, 150);
+//            g.drawString("Refill Health", 460, 120);
+//            g.drawString("Cost : " + p3 + " nuts", 460, 140);
+//
+//            BufferedImage image = new BufferedImage(9, 9, 12);
+//            try {
+//                image = ImageIO.read(getClass().getResource("/resources/shop/hp_buy.png"));
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            g.drawImage(image,475,175,null);
+//
+//
+//            g.drawRect(250, 270, 150, 150);
+//            g.drawString("Skip level "+hud.getLevel(), 260, 290);
+//            g.drawString("Cost : " + p4 + " nuts", 260, 310);
+//            BufferedImage im = new BufferedImage(9, 9, 12);
+//            try {
+//                im = ImageIO.read(getClass().getResource("/resources/shop/enemy_buy.png"));
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            g.drawImage(im,270,315,null);
+//
+//
+//            g.drawString("Nuts: " + hud.getNuts(), Game.WIDTH - 150, 400);
+//            g.drawString("Health: " + hud.HEALTH, Game.WIDTH - 150, 415);
+//            g.drawString("Speed: " + handler.speed, Game.WIDTH - 150, 385);
+//            g.drawString("Press s to go back", Game.WIDTH - 150, 430);
 
-            g.setColor(Color.white);
-            g.setFont(new Font("arial", 0, 48));
-            g.drawString("SHOP", Game.WIDTH / 2 - 100, 50);
-
-            g.setFont(new Font("arial", 0, 12));
-            g.drawRect(50, 100, 150, 150);
-            g.drawString("Upgrade Health (+10%) ", 60, 120);
-            g.drawString("Cost : 1 nut", 60, 140);
-            BufferedImage imag = new BufferedImage(9, 9, 12);
-            try {
-                imag = ImageIO.read(getClass().getResource("/resources/shop/hp_buymore.png"));
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            g.drawImage(imag,75,175,null);
-
-            g.drawRect(250, 100, 150, 150);
-            g.drawString("Upgrade Speed", 260, 120);
-            g.drawString("Cost : 1 nut", 260, 140);
-            BufferedImage ima = new BufferedImage(9, 9, 12);
-            try {
-                ima = ImageIO.read(getClass().getResource("/resources/shop/speed_buy.png"));
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            g.drawImage(ima,275,175,null);
-
-
-            g.drawRect(450, 100, 150, 150);
-            g.drawString("Refill Health", 460, 120);
-            g.drawString("Cost : " + p3 + " nuts", 460, 140);
-
-            BufferedImage image = new BufferedImage(9, 9, 12);
-            try {
-                image = ImageIO.read(getClass().getResource("/resources/shop/hp_buy.png"));
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            g.drawImage(image,475,175,null);
-
-
-            g.drawRect(250, 270, 150, 150);
-            g.drawString("Skip level "+hud.getLevel(), 260, 290);
-            g.drawString("Cost : " + p4 + " nuts", 260, 310);
-            BufferedImage im = new BufferedImage(9, 9, 12);
-            try {
-                im = ImageIO.read(getClass().getResource("/resources/shop/enemy_buy.png"));
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            g.drawImage(im,270,315,null);
-
-
-            g.drawString("Nuts: " + hud.getNuts(), Game.WIDTH - 150, 400);
-            g.drawString("Health: " + hud.HEALTH, Game.WIDTH - 150, 415);
-            g.drawString("Speed: " + handler.speed, Game.WIDTH - 150, 385);
-            g.drawString("Press s to go back", Game.WIDTH - 150, 430);
-
-        }
+       // }
     }
 }

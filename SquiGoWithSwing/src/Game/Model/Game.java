@@ -160,9 +160,9 @@ public class Game extends Canvas implements Runnable {
             hud.render(g);
             handler.render(g);
         }
-//        else if (gameState == STATE.Shop) {
-//            shop.render(g);
-//        }
+        else if (gameState == STATE.Shop) {
+            shop.render(g);
+       }
         else if (gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select||
                 gameState == STATE.Finish||gameState == STATE.Shop) {
             menu.render(g);

@@ -85,62 +85,65 @@ public class Shop extends MouseAdapter {
     public void mousePressed(MouseEvent e) {
         int mx = e.getX();
         int my = e.getY();
-        if (mx >= 50 && mx < 200) {
-            if (my >= 100 && my <= 250) {
-                if (hud.getNuts() >= 1) {
-                if (hud.HEALTH < 100) {
-                    hud.setNuts(hud.getNuts() - 1);
-                    if (hud.HEALTH <= 90)
-                        hud.HEALTH = hud.HEALTH + 10;
-                    else
-                        hud.HEALTH = 100;
-                }
+        if (Game.gameState == Game.STATE.Shop) {
+            if (mx >= 50 && mx < 200) {
+                if (my >= 100 && my <= 250) {
+                    if (hud.getNuts() >= 1) {
+                        if (hud.HEALTH < 100) {
+                            hud.setNuts(hud.getNuts() - 1);
+                            if (hud.HEALTH <= 90)
+                                hud.HEALTH = hud.HEALTH + 10;
+                            else
+                                hud.HEALTH = 100;
+                        }
+                    }
                 }
             }
-        }
-        if (mx > 250 && mx < 400) {
-            if (my >= 100 && my <= 250) {
-                if (hud.getNuts() >= 1) {
-                hud.setNuts(hud.getNuts() - 1);
-                handler.speed++;}
-            }
-        }
-        if (mx >= 450 && mx <= 600) {
-            if (my >= 100 && my <= 250) {
-                if (hud.getNuts() >= p3) {
-                if (hud.HEALTH < 100) {
-                    hud.setNuts(hud.getNuts() - p3);
-                    p3++;
-                    hud.HEALTH = 100;
+            if (mx > 250 && mx < 400) {
+                if (my >= 100 && my <= 250) {
+                    if (hud.getNuts() >= 1) {
+                        hud.setNuts(hud.getNuts() - 1);
+                        handler.speed++;
+                    }
                 }
-                 }
             }
-        }
-        if (mx >= 250 && mx <= 640) {
-            if (my >= 270 && my <= 420) {
+            if (mx >= 450 && mx <= 600) {
+                if (my >= 100 && my <= 250) {
+                    if (hud.getNuts() >= p3) {
+                        if (hud.HEALTH < 100) {
+                            hud.setNuts(hud.getNuts() - p3);
+                            p3++;
+                            hud.HEALTH = 100;
+                        }
+                    }
+                }
+            }
+            if (mx >= 250 && mx <= 640) {
+                if (my >= 270 && my <= 420) {
                     if (hud.getNuts() >= p4) {
 
-                if (!isSk) {
-                    isSk=true;
-                    hud.setNuts(hud.getNuts() - p4);
-                    p4++;
-                    if (hud.getLevel() <= 4) {
-                        if (hud.getLevel() == 1)
-                            hud.setScore(2000);
-                        if (hud.getLevel() == 2)
-                            hud.setScore(3000);
-                        if (hud.getLevel() == 3)
-                            hud.setScore(4000);
-                        if (hud.getLevel() == 4)
-                            hud.setScore(5000);
-                    } else
-                        hud.setScore(hud.getScore() + 1000);
-                    Spawn.setScoreKeep(1000);
+                        if (!isSk) {
+                            isSk = true;
+                            hud.setNuts(hud.getNuts() - p4);
+                            p4++;
+                            if (hud.getLevel() <= 4) {
+                                if (hud.getLevel() == 1)
+                                    hud.setScore(2000);
+                                if (hud.getLevel() == 2)
+                                    hud.setScore(3000);
+                                if (hud.getLevel() == 3)
+                                    hud.setScore(4000);
+                                if (hud.getLevel() == 4)
+                                    hud.setScore(5000);
+                            } else
+                                hud.setScore(hud.getScore() + 1000);
+                            Spawn.setScoreKeep(1000);
+                        }
+                    }
                 }
             }
-                 }
-            }
         }
+    }
 
     }
 
