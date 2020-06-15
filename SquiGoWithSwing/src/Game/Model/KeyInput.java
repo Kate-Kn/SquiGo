@@ -57,8 +57,6 @@ public class KeyInput extends KeyAdapter {
 //
 //
 //            }
-
-
         }
         if (key == KeyEvent.VK_SPACE) {
             if (game.gameState == Game.STATE.Game) {

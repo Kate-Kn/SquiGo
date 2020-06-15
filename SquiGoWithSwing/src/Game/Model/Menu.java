@@ -1,8 +1,10 @@
 package Model;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -131,8 +133,8 @@ public class Menu extends MouseAdapter {
     public void mouseReleased(MouseEvent e) {
         super.mousePressed(e);
     }
-    private boolean mouseOver(int mx, int my, int x, int y,int wigth, int heigth){
-        if(mx>x && mx<wigth+x){
+    private boolean mouseOver(int mx, int my, int x, int y,int width, int heigth){
+        if(mx>x && mx<width+x){
             if(my>y && my<heigth+y){
                 return  true;
             } else return false;
@@ -229,7 +231,7 @@ public class Menu extends MouseAdapter {
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
             g.setColor(Color.WHITE);
-            g.drawString("SELECT DIFICULTY", 140, 70);
+            g.drawString("SELECT DIFFICULTY", 140, 70);
 
             g.setFont(fnt2);
             g.drawString("Normal", 270, 190);

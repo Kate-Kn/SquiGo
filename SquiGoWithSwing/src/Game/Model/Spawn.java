@@ -16,6 +16,14 @@ public class Spawn {
         this.game = game;
     }
 
+    public static void setScoreKeep(int scoreKeep) {
+        Spawn.scoreKeep = scoreKeep;
+    }
+
+    public static int getScoreKeep() {
+        return scoreKeep;
+    }
+
     public void tick() {
         scoreKeep++;
 

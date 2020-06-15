@@ -34,7 +34,7 @@ public class Shop extends MouseAdapter {
         g.drawString("Cost : " + p3 + " nuts", 460, 140);
 
         g.drawRect(250, 270, 150, 150);
-        g.drawString("Remove all enemies", 260, 290);
+        g.drawString("Skip level "+hud.getLevel(), 260, 290);
         g.drawString("Cost : " + p4 + " nuts", 260, 310);
 
 
@@ -85,8 +85,19 @@ public class Shop extends MouseAdapter {
                 //if (hud.getNuts() >= p4) {
                     hud.setNuts(hud.getNuts() - p4);
                     p4++;
-                    hud.HEALTH = 100;
-
+                    hud.setLevel(hud.getLevel()+1);
+                    if(hud.getLevel()<=5) {
+                        if (hud.getLevel() == 2)
+                            hud.setScore(2000);
+                        if (hud.getLevel() == 3)
+                            hud.setScore(3000);
+                        if (hud.getLevel() == 4)
+                            hud.setScore(4000);
+                        if (hud.getLevel() == 5)
+                            hud.setScore(5000);
+                    } else
+                    hud.setScore(hud.getScore()+1000);
+                    Spawn.setScoreKeep(1000);
                 // }
             }
         }
