@@ -67,7 +67,7 @@ public class DecorationEnemyTh extends GameObject {
         BufferedImage imag = new BufferedImage(9, 9, 12);
         BufferedImage ima = new BufferedImage(9, 9, 12);
         BufferedImage im = new BufferedImage(9, 9, 12);
-        BufferedImage i = new BufferedImage(9, 9, 12);
+       // BufferedImage i = new BufferedImage(9, 9, 12);
         BufferedImage i1 = new BufferedImage(9, 9, 12);
         BufferedImage i2 = new BufferedImage(9, 9, 12);
         try {
@@ -77,7 +77,7 @@ public class DecorationEnemyTh extends GameObject {
           imag = ImageIO.read(getClass().getResource("/resources/ornament/ornament2.png"));
           ima = ImageIO.read(getClass().getResource("/resources/ornament/ornament3.png"));
           im = ImageIO.read(getClass().getResource("/resources/ornament/ornament4.png"));
-          i = ImageIO.read(getClass().getResource("/resources/ornament/ornament5.png"));
+         // i = ImageIO.read(getClass().getResource("/resources/ornament/ornament5.png"));
           i1 = ImageIO.read(getClass().getResource("/resources/ornament/ornament6.png"));
           i2 = ImageIO.read(getClass().getResource("/resources/ornament/ornament7.png"));
 
@@ -102,9 +102,9 @@ public class DecorationEnemyTh extends GameObject {
         if(dec==3) {
             g.drawImage(im, (int) x, (int) y, null);
         }
-        if(dec==4) {
-            g.drawImage(i, (int) x, (int) y, null);
-        }
+       // if(dec==4) {
+         //   g.drawImage(i, (int) x, (int) y, null);
+        //}
         if(dec==5) {
             g.drawImage(i1, (int) x, (int) y, null);
         }
