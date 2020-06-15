@@ -13,7 +13,7 @@ public class ReindeerEnemyFo extends GameObject {
     private  GameObject player;
     int i;
     private Random random=new Random();
-    private  int timer=500;
+    private  int timer=250;
 
 
     public ReindeerEnemyFo(float x, float y, ID id, Handler handler,int i) {
@@ -54,7 +54,7 @@ public class ReindeerEnemyFo extends GameObject {
                 handler.addObject(new Nut(random.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.Nut, handler));
                 SnowflakeEnemyF.isA=true;
             } else
-                timer=500;
+                timer=200;
         }else{
             timer--;
         }

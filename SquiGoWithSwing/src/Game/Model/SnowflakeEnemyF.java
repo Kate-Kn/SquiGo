@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class SnowflakeEnemyF extends GameObject {
     private Handler handler;
     private  int dec = ThreadLocalRandom.current().nextInt(0, 4);
-    private int timer=500;
+    private int timer=250;
     private Random r =new Random();
     public static boolean isA=false;
     public SnowflakeEnemyF(float x, float y, ID id, Handler handler) {
@@ -32,7 +32,7 @@ public class SnowflakeEnemyF extends GameObject {
                 handler.addObject(new Nut(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.Nut, handler));
                 isA=true;
             } else
-                timer=500;
+                timer=200;
         }else{
             timer--;
         }

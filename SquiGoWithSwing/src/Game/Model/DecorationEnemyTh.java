@@ -11,7 +11,7 @@ public class DecorationEnemyTh extends GameObject {
 
     private int dec;
     private Handler handler;
-    private  int timer=500;
+    private  int timer=250;
     Random random=new Random();
 
     public DecorationEnemyTh(float x, float y, ID id, Handler handler,int dec) {
@@ -54,7 +54,7 @@ public class DecorationEnemyTh extends GameObject {
                 handler.addObject(new Nut(random.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.Nut, handler));
                 SnowflakeEnemyF.isA=true;
             } else
-                timer=500;
+                timer=200;
         }else{
             timer--;
         }

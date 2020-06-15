@@ -87,7 +87,7 @@ public class Shop extends MouseAdapter {
         int my = e.getY();
         if (mx >= 50 && mx < 200) {
             if (my >= 100 && my <= 250) {
-                // if (hud.getNuts() >= 1) {
+                if (hud.getNuts() >= 1) {
                 if (hud.HEALTH < 100) {
                     hud.setNuts(hud.getNuts() - 1);
                     if (hud.HEALTH <= 90)
@@ -95,31 +95,30 @@ public class Shop extends MouseAdapter {
                     else
                         hud.HEALTH = 100;
                 }
-                //}
+                }
             }
         }
         if (mx > 250 && mx < 400) {
             if (my >= 100 && my <= 250) {
-                //if (hud.getNuts() >= 1) {
+                if (hud.getNuts() >= 1) {
                 hud.setNuts(hud.getNuts() - 1);
-                handler.speed++;
-                //}
+                handler.speed++;}
             }
         }
         if (mx >= 450 && mx <= 600) {
             if (my >= 100 && my <= 250) {
-                //if (hud.getNuts() >= p3) {
+                if (hud.getNuts() >= p3) {
                 if (hud.HEALTH < 100) {
                     hud.setNuts(hud.getNuts() - p3);
                     p3++;
                     hud.HEALTH = 100;
                 }
-                // }
+                 }
             }
         }
         if (mx >= 250 && mx <= 640) {
             if (my >= 270 && my <= 420) {
-                    //if (hud.getNuts() >= p4) {
+                    if (hud.getNuts() >= p4) {
 
                 if (!isSk) {
                     isSk=true;
@@ -139,7 +138,7 @@ public class Shop extends MouseAdapter {
                     Spawn.setScoreKeep(1000);
                 }
             }
-                // }
+                 }
             }
         }
 
