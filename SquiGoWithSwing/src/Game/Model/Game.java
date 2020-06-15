@@ -130,8 +130,17 @@ public class Game extends Canvas implements Runnable {
         g.fillRect(0, 0, WIDTH, HEIGHT);
         if (paused) {
             if (gameState != STATE.Shop) {
-                g.setColor(Color.red);
-                g.drawString("PAUSED", 300, 300);
+              Font fnt = new Font("arial", 1, 30);
+            g.setFont(fnt);
+            g.setColor(new Color(218,68,121));
+            g.drawString("PAUSED", 270, 245);
+            BufferedImage imagem = new BufferedImage(10, 10, 12);
+            try {
+             imagem = ImageIO.read(getClass().getResource("/resources/backs/helpframe3.png"));
+            } catch (Exception e) {
+             e.printStackTrace();
+            }
+            g.drawImage(imagem, 230, 200, 200, 64, null);
 
             }
         }
