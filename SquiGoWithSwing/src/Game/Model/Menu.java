@@ -269,24 +269,43 @@ public class Menu extends MouseAdapter {
                           e.printStackTrace();
             }
             g.drawImage(imagem, -10, 0, 660, 480, null);
-
+//play customized
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
-            g.setColor(Color.WHITE);
-          //  g.drawString("Menu", 240, 70);
-
+            g.setColor(new Color(218,68, 121));
             g.setFont(fnt2);
             g.drawString("Play", 270, 190);
-            g.drawRect(210, 150, 200, 64);
+            BufferedImage imagepf = new BufferedImage(5, 5, 12);
+               try {
+                   imagepf = ImageIO.read(getClass().getResource("/resources/backs/helpframe3.png"));
+               } catch (Exception e) {
+                   e.printStackTrace();
+               }
+               g.drawImage(imagepf, 210, 150, 200, 64, null);
 
-            g.setColor(Color.WHITE);
+//help customized
+            g.setColor(new Color(119,188, 66));
             g.drawString("Help", 270, 290);
-            g.drawRect(210, 250, 200, 64);
+            BufferedImage imagehf = new BufferedImage(5, 5, 12);
+              try {
+                imagehf = ImageIO.read(getClass().getResource("/resources/backs/helpframe2.png"));
+              } catch (Exception e) {
+                  e.printStackTrace();
+              }
+              g.drawImage(imagehf, 210, 250, 200, 64, null);
 
-            g.setColor(Color.WHITE);
+//quit customized
+            g.setColor(new Color(225, 158,  49));
             g.drawString("Quit", 270, 390);
-            g.drawRect(210, 350, 200, 64);
+            BufferedImage imageqf = new BufferedImage(5, 5, 12);
+              try {
+               imageqf = ImageIO.read(getClass().getResource("/resources/backs/helpframe1.png"));
+             } catch (Exception e) {
+               e.printStackTrace();
+             }
+             g.drawImage(imageqf, 210, 350, 200, 64, null);
+
 //logo
             BufferedImage image = new BufferedImage(10, 10, 12);
             try {
