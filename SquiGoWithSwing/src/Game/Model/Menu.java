@@ -34,7 +34,7 @@ public class Menu extends MouseAdapter {
 //                handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
            game.gameState= Game.STATE.Select;
 //click sound added
-            Audio.getSound("menu_sound").play();
+           // Audio.getSound("menu_sound").play();
            return;
             }
             //help button
@@ -236,8 +236,8 @@ public class Menu extends MouseAdapter {
     public void mouseReleased(MouseEvent e) {
         super.mousePressed(e);
     }
-    private boolean mouseOver(int mx, int my, int x, int y,int wigth, int heigth){
-        if(mx>x && mx<wigth+x){
+    private boolean mouseOver(int mx, int my, int x, int y,int width, int heigth){
+        if(mx>x && mx<width+x){
             if(my>y && my<heigth+y){
                 return  true;
             } else return false;
@@ -342,7 +342,7 @@ public class Menu extends MouseAdapter {
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
             g.setColor(Color.WHITE);
-            g.drawString("SELECT DIFICULTY", 140, 70);
+            g.drawString("SELECT DIFFICULTY", 140, 70);
 
             g.setFont(fnt2);
             g.drawString("Normal", 270, 190);

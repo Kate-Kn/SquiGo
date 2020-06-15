@@ -4,13 +4,11 @@ package Model;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.Random;
 
 public class Nut extends GameObject {
     Random r=new Random();
     private Handler handler;
-    public static boolean isRemoved=false;
     public Nut(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;

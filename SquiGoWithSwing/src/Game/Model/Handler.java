@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.LinkedList;
 
 public class Handler {
-    public int speed=5;
+    public int speed = 5;
     LinkedList<GameObject> object = new LinkedList<GameObject>();
 
     public void tick() {
@@ -31,10 +31,11 @@ public class Handler {
     public void removeObject(GameObject object) {
         this.object.remove(object);
     }
-    public  void clearEnemies(){
+
+    public void clearEnemies() {
         for (int i = 0; i < object.size(); i++) {
             GameObject tempObject = object.get(i);
-            if(tempObject.getId()==ID.Player) {
+            if (tempObject.getId() == ID.Player) {
                 object.clear();
                 if (Game.gameState != Game.STATE.End) {
                     addObject(new Player(tempObject.getX(), tempObject.getY(), ID.Player, this));

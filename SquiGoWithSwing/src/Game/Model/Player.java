@@ -16,7 +16,7 @@ public class Player extends GameObject {
     }
 
     public Rectangle getBounds() {
-        return new Rectangle((int)x, (int)y, 30, 41);
+        return new Rectangle((int) x, (int) y, 30, 41);
     }
 
     @Override
@@ -33,20 +33,20 @@ public class Player extends GameObject {
     private void collision() {
         for (int i = 0; i < handler.object.size(); i++) {
             GameObject tempObject = handler.object.get(i);
-            if (tempObject.getId() == ID.TreeEnemyS ||tempObject.getId() == ID.SnowflakeEnemyF ||tempObject.getId()==ID.SantaEnemyFif||tempObject.getId()==ID.ReindeerEnemyFo ||tempObject.getId()==ID.ReindeerBullet|tempObject.getId()==ID.SantaBullet||tempObject.getId()==ID.DecorationEnemyTh) {
+            if (tempObject.getId() == ID.TreeEnemyS || tempObject.getId() == ID.SnowflakeEnemyF || tempObject.getId() == ID.SantaEnemyFif || tempObject.getId() == ID.ReindeerEnemyFo || tempObject.getId() == ID.ReindeerBullet | tempObject.getId() == ID.SantaBullet || tempObject.getId() == ID.DecorationEnemyTh) {
                 if (getBounds().intersects(tempObject.getBounds())) { //temp object is now a basic enemy
                     // collision code
                     HUD.HEALTH -= 1;
 
                 }
             }
-            if(tempObject.getId()==ID.Nut){
+            if (tempObject.getId() == ID.Nut) {
                 if (getBounds().intersects(tempObject.getBounds())) {
                     handler.removeObject(tempObject);
-                    HUD.nuts++;
+                    HUD.nuts += 1;
 //nut sound added
                     Audio.getSound("nut").play();
-                     SnowflakeEnemyF.isA=false;
+                    SnowflakeEnemyF.isA = false;
                 }
             }
 
@@ -66,7 +66,7 @@ public class Player extends GameObject {
 
             try {
                 //image = ImageIO.read(new File("src\\Game\\resources\\rabbit.png")); попередній шлях 10.06
-                 image = ImageIO.read(getClass().getResource("/resources/rabbit.png"));
+                image = ImageIO.read(getClass().getResource("/resources/rabbit.png"));
                 //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
                 // хз як виправити, хай поки буде так
                 // короткий "src\\Game\\resources\\rabbit.png"
@@ -75,7 +75,7 @@ public class Player extends GameObject {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            g.drawImage(image, (int)x, (int)y, null);
+            g.drawImage(image, (int) x, (int) y, null);
         }
 //        if(id==ID.Player2) {
 //            g.setColor(Color.red);

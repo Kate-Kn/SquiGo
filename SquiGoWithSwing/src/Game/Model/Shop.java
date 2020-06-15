@@ -1,13 +1,17 @@
 package Model;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
 public class Shop extends MouseAdapter {
     private Handler handler;
     HUD hud;
     private int p3 = 2;
+    private int p4=3;
+    boolean isSk = false;
 
     public Shop(Handler handler, HUD hud) {
         this.handler = handler;
@@ -20,54 +24,124 @@ public class Shop extends MouseAdapter {
         g.drawString("SHOP", Game.WIDTH / 2 - 100, 50);
 
         g.setFont(new Font("arial", 0, 12));
-        g.drawRect(100, 100, 100, 80);
-        g.drawString("Upgrade Health (+10%)", 110, 120);
-        g.drawString("Cost : 1 nut", 110, 140);
+        g.drawRect(50, 100, 150, 150);
+        g.drawString("Upgrade Health (+10%) ", 60, 120);
+        g.drawString("Cost : 1 nut", 60, 140);
+        BufferedImage imag = new BufferedImage(9, 9, 12);
+        try {
+            imag = ImageIO.read(getClass().getResource("/resources/shop/hp_buymore.png"));
 
-        g.drawRect(250, 100, 100, 80);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        g.drawImage(imag,75,175,null);
+
+        g.drawRect(250, 100, 150, 150);
         g.drawString("Upgrade Speed", 260, 120);
         g.drawString("Cost : 1 nut", 260, 140);
+        BufferedImage ima = new BufferedImage(9, 9, 12);
+        try {
+            ima = ImageIO.read(getClass().getResource("/resources/shop/speed_buy.png"));
 
-        g.drawRect(400, 100, 100, 80);
-        g.drawString("Refill Health", 410, 120);
-        g.drawString("Cost : " + p3 + " nuts", 410, 140);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        g.drawImage(ima,275,175,null);
 
-        g.drawString("Nuts: " + hud.getNuts(), Game.WIDTH / 2 - 50, 300);
-        g.drawString("Press s to go back", Game.WIDTH / 2 - 50, 330);
+
+        g.drawRect(450, 100, 150, 150);
+        g.drawString("Refill Health", 460, 120);
+        g.drawString("Cost : " + p3 + " nuts", 460, 140);
+
+        BufferedImage image = new BufferedImage(9, 9, 12);
+        try {
+            image = ImageIO.read(getClass().getResource("/resources/shop/hp_buy.png"));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        g.drawImage(image,475,175,null);
+
+
+        g.drawRect(250, 270, 150, 150);
+        g.drawString("Skip level "+hud.getLevel(), 260, 290);
+        g.drawString("Cost : " + p4 + " nuts", 260, 310);
+        BufferedImage im = new BufferedImage(9, 9, 12);
+        try {
+            im = ImageIO.read(getClass().getResource("/resources/shop/enemy_buy.png"));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        g.drawImage(im,270,315,null);
+
+
+        g.drawString("Nuts: " + hud.getNuts(), Game.WIDTH - 150, 400);
+        g.drawString("Health: " + hud.HEALTH, Game.WIDTH - 150, 415);
+        g.drawString("Speed: " + handler.speed, Game.WIDTH - 150, 385);
+        g.drawString("Press s to go back", Game.WIDTH - 150, 430);
     }
 
     public void mousePressed(MouseEvent e) {
         int mx = e.getX();
         int my = e.getY();
-        if (mx >= 100 || mx <= 200) {
-            if (my >= 100 && my <= 180) {
-                if (hud.getNuts() >= 1) {
+        if (mx >= 50 && mx < 200) {
+            if (my >= 100 && my <= 250) {
+                // if (hud.getNuts() >= 1) {
+                if (hud.HEALTH < 100) {
                     hud.setNuts(hud.getNuts() - 1);
-                    hud.bounds += 20;
                     if (hud.HEALTH <= 90)
-                        hud.HEALTH = hud.HEALTH + hud.bounds / 2;
+                        hud.HEALTH = hud.HEALTH + 10;
                     else
                         hud.HEALTH = 100;
                 }
+                //}
             }
         }
-        if (mx >= 250 || mx <= 500) {
-            if (my >= 100 && my <= 180) {
-                if (hud.getNuts() >= 1) {
-                    hud.setNuts(hud.getNuts() - 1);
-                    handler.speed++;
-                }
+        if (mx > 250 && mx < 400) {
+            if (my >= 100 && my <= 250) {
+                //if (hud.getNuts() >= 1) {
+                hud.setNuts(hud.getNuts() - 1);
+                handler.speed++;
+                //}
             }
         }
-        if (mx >= 400 || mx <= 500) {
-            if (my >= 100 && my <= 180) {
-                if (hud.getNuts() >= 1) {
+        if (mx >= 450 && mx <= 600) {
+            if (my >= 100 && my <= 250) {
+                //if (hud.getNuts() >= p3) {
+                if (hud.HEALTH < 100) {
                     hud.setNuts(hud.getNuts() - p3);
                     p3++;
                     hud.HEALTH = 100;
                 }
+                // }
+            }
+        }
+        if (mx >= 250 && mx <= 640) {
+            if (my >= 270 && my <= 420) {
+                    //if (hud.getNuts() >= p4) {
+
+                if (!isSk) {
+                    isSk=true;
+                    hud.setNuts(hud.getNuts() - p4);
+                    p4++;
+                    if (hud.getLevel() <= 4) {
+                        if (hud.getLevel() == 1)
+                            hud.setScore(2000);
+                        if (hud.getLevel() == 2)
+                            hud.setScore(3000);
+                        if (hud.getLevel() == 3)
+                            hud.setScore(4000);
+                        if (hud.getLevel() == 4)
+                            hud.setScore(5000);
+                    } else
+                        hud.setScore(hud.getScore() + 1000);
+                    Spawn.setScoreKeep(1000);
+                }
+            }
+                // }
             }
         }
 
     }
-}
+
