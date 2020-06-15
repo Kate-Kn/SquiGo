@@ -402,22 +402,14 @@ public class Menu extends MouseAdapter {
           BufferedImage imagem = new BufferedImage(10, 10, 12);
               try {
 
-                  imagem = ImageIO.read(getClass().getResource("/resources/backs/prefhelpm.png"));
+                  imagem = ImageIO.read(getClass().getResource("/resources/backs/helpm.png"));
               } catch (Exception e) {
                   e.printStackTrace();
               }
               g.drawImage(imagem, -10, 0, 660, 480, null);
 
-            Font fnt = new Font("arial", 1, 50);
-            Font fnt2 = new Font("arial", 1, 30);
-            g.setFont(fnt);
             g.setColor(new Color(97,165, 177));
-//            g.drawString("Help", 240, 70);
-
-//            g.setFont(fnt2);
-//            g.drawString("lalalalkjghdljshl indtructions", 50, 200);
-
-
+            Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt2);
             g.drawString("Back", 270, 390);
             g.drawRect(210, 350, 200, 64);
