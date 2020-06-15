@@ -269,6 +269,16 @@ public class Menu extends MouseAdapter {
                           e.printStackTrace();
             }
             g.drawImage(imagem, -10, 0, 660, 480, null);
+
+            BufferedImage imagems = new BufferedImage(10, 10, 12);
+                      try {
+
+                          imagems = ImageIO.read(getClass().getResource("/resources/sqme.png"));
+                      } catch (Exception e) {
+                          e.printStackTrace();
+                      }
+                      g.drawImage(imagems, 10, 250, 180, 190, null);
+
 //play customized
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
