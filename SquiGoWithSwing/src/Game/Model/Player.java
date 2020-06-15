@@ -37,7 +37,7 @@ if(Game.gameState!=Game.STATE.Shop){
             if (tempObject.getId() == ID.TreeEnemyS || tempObject.getId() == ID.SnowflakeEnemyF || tempObject.getId() == ID.SantaEnemyFif || tempObject.getId() == ID.ReindeerEnemyFo || tempObject.getId() == ID.ReindeerBullet | tempObject.getId() == ID.SantaBullet || tempObject.getId() == ID.DecorationEnemyTh) {
                 if (getBounds().intersects(tempObject.getBounds())) { //temp object is now a basic enemy
                     // collision code
-                    HUD.HEALTH -= 1;
+                    HUD.HEALTH -= 0.5;
 
                 }
             }
