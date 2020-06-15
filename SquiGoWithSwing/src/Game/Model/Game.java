@@ -16,9 +16,6 @@ public class Game extends Canvas implements Runnable {
     private Spawn spawn;
     public int diff = 0;
     private Shop shop;
-//    private Finish finish;
-
-
     private Menu menu;
 
     public enum STATE {
@@ -39,10 +36,8 @@ public class Game extends Canvas implements Runnable {
         handler = new Handler();
         menu = new Menu(this, handler, hud);
        shop = new Shop(handler, hud);
-//      finish = new Finish(handler,hud,this);
         this.addMouseListener(menu);
-//        this.addMouseListener(shop);
-//        this.addMouseListener(finish);
+        this.addMouseListener(shop);
 
         spawn = new Spawn(handler, hud, this);
         this.addKeyListener(new KeyInput(handler, this));
@@ -51,18 +46,7 @@ public class Game extends Canvas implements Runnable {
         Audio.loadmusic();
         Audio.getMusic("music_menu").loop();
         r = new Random();
-      /*  if(gameState==STATE.Game){
-            handler.addObject(new Player((WIDTH / 2 - 32), (HEIGHT / 2 - 32), ID.Player, handler));
-            //if everything is on time, may add multiplayer
-            // handler.addObject(new Player((WIGHT/2+64), (HEIGHT /2+64), ID.Player2));
-//
-//    //for many enemies
-//    for(int i=0;i<20;i++) {
-//            handler.addObject(new BasicEnemy(r.nextInt(WIDTH ),r.nextInt (HEIGHT ), ID.BasicEnemy, handler));
-//        }
-            handler.addObject(new SnowflakeEnemyF(r.nextInt(WIDTH-60), HEIGHT-100, ID.SnowflakeEnemyF, handler));
-            handler.addObject(new SnowflakeEnemyF(WIDTH-100,HEIGHT-100,ID.SnowflakeEnemyF,handler));
-        }*/
+
 
 
     }
@@ -113,9 +97,6 @@ public class Game extends Canvas implements Runnable {
     }
 
     private void tick() {
-        //hud = new HUD();
-        //spawn=new Spawn(handler,hud);
-//        handler.tick();
         if (gameState == STATE.Game) {
 
             if (!(paused)) {
@@ -166,9 +147,7 @@ public class Game extends Canvas implements Runnable {
             menu.render(g);
             handler.render(g);
         }
-       // else if (gameState == STATE.Finish) {
-         //  finish.render(g);
-       //}
+
         g.dispose();
         bs.show();
     }

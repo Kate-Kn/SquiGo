@@ -1,5 +1,4 @@
 package Model;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -121,7 +120,6 @@ public class Menu extends MouseAdapter {
 
                     hud.setNuts(hud.getNuts()-3);
                     hud.HEALTH = 100;
-
                     if(game.diff==0){
                         Audio.getSound("menu_sound").play();
                         Audio.loadmusic();
@@ -211,13 +209,6 @@ public class Menu extends MouseAdapter {
                         }
                     }
                 }
-//                else {
-//                    game.gameState=Game.STATE.Menu;
-//                    hud.setLevel(1);
-//                    hud.setScore(0);
-//                    Spawn.scoreKeep=0;
-//                }
-//
 
 
             }
