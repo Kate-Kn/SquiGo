@@ -22,6 +22,8 @@ public class HUD {
     public void render(Graphics g) {
         g.setColor(new Color(97,165, 177));
         g.fillRect(0,0,640,50);
+        g.fillRect(0,0,640,50);
+        g.setColor(new Color(241,228, 144));
         g.setColor(new Color(234,248, 249));
         g.fillRect(15, 10, 200, 32);
         g.setColor(new Color(100, (int) greenValue, 0));
@@ -54,9 +56,9 @@ public class HUD {
         g.drawString("Level: " + level, 320, 35);
         g.drawString("Scores: " + score, 420, 35);
         g.setColor(new Color(181,97, 57));
-        g.drawString("Nuts: " + nuts, 520, 35);
-        g.setColor(Color.orange);
-        g.drawString("Space for pause, esc for escape, s for shop", 220, 15);
+        g.drawString("Nuts: " + nuts, 570, 35);
+        g.setColor(new Color(218, 146, 55));
+        g.drawString("Space for pause, esc to quit, 's' for shop", 190, 450);
 
     }
 
