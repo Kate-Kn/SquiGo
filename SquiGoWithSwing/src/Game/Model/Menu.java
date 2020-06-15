@@ -144,11 +144,20 @@ public class Menu extends MouseAdapter {
     }
     public void render (Graphics g) {
         if (game.gameState == Game.STATE.Menu) {
+//added bc image menu
+           BufferedImage imagem = new BufferedImage(10, 10, 12);
+           try {
+          imagem = ImageIO.read(getClass().getResource("/resources/backs/menuimag.png"));
+            } catch (Exception e) {
+                          e.printStackTrace();
+            }
+            g.drawImage(imagem, -10, 0, 660, 480, null);
+
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
             g.setColor(Color.WHITE);
-            g.drawString("Menu", 240, 70);
+          //  g.drawString("Menu", 240, 70);
 
             g.setFont(fnt2);
             g.drawString("Play", 270, 190);
@@ -161,9 +170,28 @@ public class Menu extends MouseAdapter {
             g.setColor(Color.WHITE);
             g.drawString("Quit", 270, 390);
             g.drawRect(210, 350, 200, 64);
+//logo
+            BufferedImage image = new BufferedImage(10, 10, 12);
+            try {
+
+                image = ImageIO.read(getClass().getResource("/resources/Logo.png"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(image, 130, 5, 400, 130, null);
 
 
         } else if (game.gameState== Game.STATE.Help){
+//added bc image menu
+          BufferedImage imagem = new BufferedImage(10, 10, 12);
+              try {
+
+                  imagem = ImageIO.read(getClass().getResource("/resources/backs/prefhelp.png"));
+              } catch (Exception e) {
+                  e.printStackTrace();
+              }
+              g.drawImage(imagem, -10, 0, 660, 480, null);
+
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
