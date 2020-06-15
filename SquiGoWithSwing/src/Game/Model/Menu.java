@@ -425,18 +425,18 @@ public class Menu extends MouseAdapter {
 
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
+            g.setColor(new Color(97,165, 177));
+            g.fillRect(40, 120,500, 40);
+
             g.setFont(fnt);
             g.setColor(Color.WHITE);
             g.drawString("Game over", 185, 70);
-
             g.setFont(fnt2);
             g.drawString( "Score: "+hud.getScore()+", level: "+ hud.getLevel()+ ", nuts: "+hud.getNuts(), 50, 150);
 
             g.setFont(fnt2);
 
-
-
-            g.setColor(Color.WHITE);
+            g.setColor(new Color(97,165, 177));
             g.drawString("Menu", 270, 270);
             g.drawRect(210, 230, 200, 50);
 
