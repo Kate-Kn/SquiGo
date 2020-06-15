@@ -61,11 +61,7 @@ public class SnowflakeEnemyFhard extends GameObject {
           im = ImageIO.read(getClass().getResource("/resources/snowball3.png"));
             //image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\sprite_0045.png")); last path used 10.06
 
-            //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре  sprite_0045
-            // хз як виправити, хай поки буде так
-            // короткий "src\\Game\\resources\\treeG.png"
-            // мій "C:\Users\Owner\IdeaProjects\SquiGo\SquiGoWithSwing\src\Game\resources\snowflake.png"
-        } catch (Exception e) {
+      } catch (Exception e) {
             e.printStackTrace();
         }
         if(dec==0)

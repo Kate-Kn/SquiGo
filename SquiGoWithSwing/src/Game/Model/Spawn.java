@@ -56,6 +56,9 @@ public class Spawn {
                     handler.addObject(sa);
                 }
                 if (hud.getLevel() == 6) {
+                    handler.clearEnemies();
+                    handler.clearPlayer();
+                    game.gameState = Game.STATE.Finish;
                 }
             } else if (game.diff == 1) {
 
@@ -80,6 +83,9 @@ public class Spawn {
                     handler.addObject(sa);
                 }
                 if (hud.getLevel() == 6) {
+                    handler.clearEnemies();
+                    handler.clearPlayer();
+                    game.gameState = Game.STATE.Finish;
                 }
             }
         }
