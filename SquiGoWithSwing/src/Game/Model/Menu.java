@@ -331,6 +331,14 @@ public class Menu extends MouseAdapter {
             g.drawRect(210, 350, 200, 64);
 
         }else if (game.gameState== Game.STATE.End){
+          BufferedImage imagem = new BufferedImage(10, 10, 12);
+          try {
+         imagem = ImageIO.read(getClass().getResource("/resources/backs/menuimag.png"));
+           } catch (Exception e) {
+                         e.printStackTrace();
+           }
+           g.drawImage(imagem, -10, 0, 660, 480, null);
+           
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
@@ -357,23 +365,51 @@ public class Menu extends MouseAdapter {
 
 
         }else if (game.gameState == Game.STATE.Select) {
-            Font fnt = new Font("arial", 1, 50);
+
+          BufferedImage imagem = new BufferedImage(10, 10, 12);
+            try {
+
+                imagem = ImageIO.read(getClass().getResource("/resources/backs/menutrialex2.png"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(imagem, -10, 0, 660, 480, null);
+
             Font fnt2 = new Font("arial", 1, 30);
-            g.setFont(fnt);
-            g.setColor(Color.WHITE);
-            g.drawString("SELECT DIFFICULTY", 140, 70);
+
 
             g.setFont(fnt2);
+            g.setColor(new Color(83, 147, 61));
             g.drawString("Normal", 270, 190);
-            g.drawRect(210, 150, 200, 64);
+            BufferedImage imagehf = new BufferedImage(5, 5, 12);
+            try {
 
-            g.setColor(Color.WHITE);
+                imagehf = ImageIO.read(getClass().getResource("/resources/backs/helpframe2.png"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(imagehf, 210, 150, 200, 64, null);
+
+            g.setColor(new Color(218, 68, 121));
             g.drawString("Hard", 270, 290);
-            g.drawRect(210, 250, 200, 64);
+            BufferedImage imagepf = new BufferedImage(5, 5, 12);
+            try {
 
-            g.setColor(Color.WHITE);
+                imagepf = ImageIO.read(getClass().getResource("/resources/backs/helpframe3.png"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(imagepf, 210, 250, 200, 64, null);
+
+            g.setColor(new Color(225, 158, 49));
             g.drawString("Back", 270, 390);
-            g.drawRect(210, 350, 200, 64);
+            BufferedImage imageqf = new BufferedImage(5, 5, 12);
+            try {
+              imageqf = ImageIO.read(getClass().getResource("/resources/backs/helpframe1.png"));
+            } catch (Exception e) {
+              e.printStackTrace();
+            }
+            g.drawImage(imageqf, 210, 350, 200, 64, null);
 
 
         }
