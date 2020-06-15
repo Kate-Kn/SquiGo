@@ -40,8 +40,8 @@ public class Game extends Canvas implements Runnable {
         hud = new HUD();
         handler = new Handler();
         menu = new Menu(this, handler, hud);
-//        shop = new Shop(handler, hud);
-//        finish = new Finish(handler,hud,this);
+       shop = new Shop(handler, hud);
+//      finish = new Finish(handler,hud,this);
         this.addMouseListener(menu);
 //        this.addMouseListener(shop);
 //        this.addMouseListener(finish);
@@ -164,13 +164,13 @@ public class Game extends Canvas implements Runnable {
             shop.render(g);
        }
         else if (gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select||
-                gameState == STATE.Finish||gameState == STATE.Shop) {
+                gameState == STATE.Finish) {
             menu.render(g);
             handler.render(g);
         }
-//        else if (gameState == STATE.Finish) {
-//            finish.render(g);
-//        }
+       // else if (gameState == STATE.Finish) {
+         //  finish.render(g);
+       //}
         g.dispose();
         bs.show();
     }

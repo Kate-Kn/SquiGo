@@ -121,7 +121,6 @@ public class Shop extends MouseAdapter {
             if (mx >= 250 && mx <= 640) {
                 if (my >= 270 && my <= 420) {
                     if (hud.getNuts() >= p4) {
-
                         if (!isSk) {
                             isSk = true;
                             hud.setNuts(hud.getNuts() - p4);
