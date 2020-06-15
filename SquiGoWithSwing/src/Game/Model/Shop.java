@@ -1,14 +1,17 @@
 package Model;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
 public class Shop extends MouseAdapter {
     private Handler handler;
     HUD hud;
     private int p3 = 2;
     private int p4=3;
+    boolean isSk = false;
 
     public Shop(Handler handler, HUD hud) {
         this.handler = handler;
@@ -28,10 +31,28 @@ public class Shop extends MouseAdapter {
         g.drawRect(250, 100, 150, 150);
         g.drawString("Upgrade Speed", 260, 120);
         g.drawString("Cost : 1 nut", 260, 140);
+        BufferedImage imag = new BufferedImage(9, 9, 12);
+        try {
+            imag = ImageIO.read(getClass().getResource("/resources/shop/hp_buymore.png"));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        g.drawImage(imag,275,175,null);
 
         g.drawRect(450, 100, 150, 150);
         g.drawString("Refill Health", 460, 120);
         g.drawString("Cost : " + p3 + " nuts", 460, 140);
+
+        BufferedImage image = new BufferedImage(9, 9, 12);
+        try {
+            image = ImageIO.read(getClass().getResource("/resources/shop/hp_buy.png"));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        g.drawImage(image,475,175,null);
+
 
         g.drawRect(250, 270, 150, 150);
         g.drawString("Skip level "+hud.getLevel(), 260, 290);
@@ -47,7 +68,6 @@ public class Shop extends MouseAdapter {
     public void mousePressed(MouseEvent e) {
         int mx = e.getX();
         int my = e.getY();
-         boolean isSk=false;
         if (mx >= 50 && mx < 200) {
             if (my >= 100 && my <= 250) {
                 // if (hud.getNuts() >= 1) {
@@ -82,8 +102,10 @@ public class Shop extends MouseAdapter {
         }
         if (mx >= 250 && mx <= 640) {
             if (my >= 270 && my <= 420) {
-                if (!isSk) {
                     //if (hud.getNuts() >= p4) {
+
+                if (!isSk) {
+                    isSk=true;
                     hud.setNuts(hud.getNuts() - p4);
                     p4++;
                     if (hud.getLevel() <= 4) {
@@ -97,7 +119,6 @@ public class Shop extends MouseAdapter {
                             hud.setScore(5000);
                     } else
                         hud.setScore(hud.getScore() + 1000);
-                    isSk = true;
                     Spawn.setScoreKeep(1000);
                 }
             }
