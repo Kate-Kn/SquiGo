@@ -18,6 +18,7 @@ public class Game extends Canvas implements Runnable {
     //0=normal
     //1=hard
     private Shop shop;
+//    private Finish finish;
 
 
     private Menu menu;
@@ -28,7 +29,8 @@ public class Game extends Canvas implements Runnable {
         Game,
         Select,
         End,
-        Shop
+        Shop,
+        Finish
     }
 
     ;
@@ -39,8 +41,10 @@ public class Game extends Canvas implements Runnable {
         handler = new Handler();
         menu = new Menu(this, handler, hud);
         shop = new Shop(handler, hud);
+//        finish = new Finish(handler,hud,this);
         this.addMouseListener(menu);
         this.addMouseListener(shop);
+//        this.addMouseListener(finish);
 
         spawn = new Spawn(handler, hud, this);
         this.addKeyListener(new KeyInput(handler, this));
@@ -128,7 +132,8 @@ public class Game extends Canvas implements Runnable {
 
                 }
             }
-        } else if (gameState == STATE.Menu || gameState == STATE.End || gameState == STATE.Select) {
+        } else if (gameState == STATE.Menu || gameState == STATE.End
+                || gameState == STATE.Select|| gameState == STATE.Finish) {
             menu.tick();
             handler.tick();
         }
@@ -148,6 +153,7 @@ public class Game extends Canvas implements Runnable {
             if (gameState != STATE.Shop) {
                 g.setColor(Color.red);
                 g.drawString("PAUSED", 300, 300);
+
             }
         }
         if (gameState == STATE.Game) {
@@ -155,10 +161,13 @@ public class Game extends Canvas implements Runnable {
             handler.render(g);
         } else if (gameState == STATE.Shop) {
             shop.render(g);
-        } else if (gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select) {
+        } else if (gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select|| gameState == STATE.Finish) {
             menu.render(g);
             handler.render(g);
         }
+//        else if (gameState == STATE.Finish) {
+//            finish.render(g);
+//        }
         g.dispose();
         bs.show();
     }

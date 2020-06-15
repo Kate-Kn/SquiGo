@@ -109,8 +109,6 @@ public class Menu extends MouseAdapter {
 //                for(int i=0;i<5;i++)
 //                    handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));//1 level
 
-
-
             }
             //previous level
             if (mouseOver(mx, my, 210, 300, 100, 50)) {
@@ -231,6 +229,20 @@ public class Menu extends MouseAdapter {
             }
 
         }
+        if (game.gameState == Game.STATE.Finish) {
+            handler.clearEnemies();
+
+            //back for finish
+            if (mouseOver(mx, my, 210, 350, 200, 64)) {
+                game.gameState = Game.STATE.Menu;
+
+                hud.setLevel(1);
+                hud.setScore(0);
+//click sound added
+                Audio.getSound("menu_sound").play();
+                return;
+            }
+        }
     }
 
     public void mouseReleased(MouseEvent e) {
@@ -252,7 +264,7 @@ public class Menu extends MouseAdapter {
 //added bc image menu
            BufferedImage imagem = new BufferedImage(10, 10, 12);
            try {
-          imagem = ImageIO.read(getClass().getResource("/resources/backs/menuimag.png"));
+            imagem = ImageIO.read(getClass().getResource("/resources/backs/menuimag.png"));
             } catch (Exception e) {
                           e.printStackTrace();
             }
@@ -291,7 +303,7 @@ public class Menu extends MouseAdapter {
           BufferedImage imagem = new BufferedImage(10, 10, 12);
               try {
 
-                  imagem = ImageIO.read(getClass().getResource("/resources/backs/prefhelp.png"));
+                  imagem = ImageIO.read(getClass().getResource("/resources/backs/prefhelpm.png"));
               } catch (Exception e) {
                   e.printStackTrace();
               }
@@ -301,10 +313,10 @@ public class Menu extends MouseAdapter {
             Font fnt2 = new Font("arial", 1, 30);
             g.setFont(fnt);
             g.setColor(Color.WHITE);
-            g.drawString("Help", 240, 70);
+//            g.drawString("Help", 240, 70);
 
-            g.setFont(fnt2);
-            g.drawString("lalalalkjghdljshl indtructions", 50, 200);
+//            g.setFont(fnt2);
+//            g.drawString("lalalalkjghdljshl indtructions", 50, 200);
 
 
             g.setFont(fnt2);
@@ -357,6 +369,41 @@ public class Menu extends MouseAdapter {
             g.drawRect(210, 350, 200, 64);
 
 
+        }
+        else if (game.gameState == Game.STATE.Finish){
+
+
+            g.setColor(Color.white);
+            g.setFont(new Font("arial", 0, 48));
+            g.drawString("YOU WIN!", Game.WIDTH / 2 - 100, 50);
+
+            g.setFont(new Font("arial", 0, 30));
+
+            g.drawString( "Score: "+hud.getScore()+", level: "+ hud.getLevel()+ ", nuts: "+hud.getNuts(), 50, 150);
+
+            BufferedImage imag = new BufferedImage(9, 9, 12);
+            try {
+                imag = ImageIO.read(getClass().getResource("/resources/fireworks1.png"));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(imag,75,275,null);
+
+
+            BufferedImage ima = new BufferedImage(9, 9, 12);
+            try {
+                ima = ImageIO.read(getClass().getResource("/resources/fireworks2.png"));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(ima,275,175,null);
+
+            g.setColor(Color.WHITE);
+            g.setFont(new Font("arial", 0, 30));
+            g.drawString("Back", 270, 390);
+            g.drawRect(210, 350, 200, 64);
         }
     }
 }
