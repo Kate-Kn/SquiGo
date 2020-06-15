@@ -16,15 +16,15 @@ public class Player extends GameObject {
     }
 
     public Rectangle getBounds() {
-        return new Rectangle((int) x, (int) y, 30, 41);
+        return new Rectangle((int) x, (int) y, 57, 70);
     }
 
     @Override
     public void tick() {
         x += velX;
         y += velY;
-        x = Game.clam(x, 0, Game.WIDTH - 45);
-        y = Game.clam(y, 50, Game.HEIGHT - 82);
+        x = Game.clam(x, 0, Game.WIDTH - 70);
+        y = Game.clam(y, 50, Game.HEIGHT - 110);
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.white, 9, 9, 0.02f, handler));
 if(Game.gameState!=Game.STATE.Shop){
         collision();

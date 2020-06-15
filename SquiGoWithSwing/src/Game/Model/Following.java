@@ -35,12 +35,6 @@ public class Following extends GameObject {
         velY=((-1)/distance)*diffY;
         x += velX;
         y += velY;
-        /*if (x <= 0 || x >= Game.WIDTH - 32) {
-            velX *= -1;
-        }
-        if (y <= 0 || y >= Game.HEIGHT - 85) {
-            velY *= -1;
-        }*/
 
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.red, 9, 9, 0.1f, handler));
     }
@@ -50,11 +44,7 @@ public class Following extends GameObject {
         BufferedImage image = new BufferedImage(9, 9, 12);
         try {
           image = ImageIO.read(getClass().getResource("/resources/santa.png"));
-          //  image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\santa.png")); last path used 10.06
-            //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
-            // хз як виправити, хай поки буде так
-            // короткий "src\\Game\\resources\\treeG.png"
-            // мій "C:\Users\Owner\IdeaProjects\SquiGo\SquiGoWithSwing\src\Game\resources\treeG.png"
+
         } catch (Exception e) {
             e.printStackTrace();
         }

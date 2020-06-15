@@ -39,11 +39,6 @@ public class Nut extends GameObject {
         try {
 
           image = ImageIO.read(getClass().getResource("/resources/nut.png"));
-           //image = ImageIO.read(new File("src\\Game\\resources\\nut.png")); last path used 10.06
-            //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
-            // хз як виправити, хай поки буде так
-            // короткий "src\\Game\\resources\\treeG.png"
-            // мій "C:\Users\Owner\IdeaProjects\SquiGo\SquiGoWithSwing\src\Game\nut.png"
         } catch (Exception e) {
             e.printStackTrace();
         }

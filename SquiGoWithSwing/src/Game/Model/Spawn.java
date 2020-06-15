@@ -41,7 +41,7 @@ public class Spawn {
                 if (hud.getLevel() == 3) {
                     SnowflakeEnemyF.isA = false;
                     handler.clearEnemies();
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 0; i < 6; i++)
                         handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH - 60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.DecorationEnemyTh, handler, ThreadLocalRandom.current().nextInt(0, 7)));
                 }
                 if (hud.getLevel() == 4) {
