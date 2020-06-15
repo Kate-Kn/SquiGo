@@ -1,6 +1,8 @@
 package Model;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class HUD {
     public static float HEALTH = 100;

@@ -40,10 +40,10 @@ public class Game extends Canvas implements Runnable {
         hud = new HUD();
         handler = new Handler();
         menu = new Menu(this, handler, hud);
-        shop = new Shop(handler, hud);
+//        shop = new Shop(handler, hud);
 //        finish = new Finish(handler,hud,this);
         this.addMouseListener(menu);
-        this.addMouseListener(shop);
+//        this.addMouseListener(shop);
 //        this.addMouseListener(finish);
 
         spawn = new Spawn(handler, hud, this);
@@ -133,7 +133,7 @@ public class Game extends Canvas implements Runnable {
                 }
             }
         } else if (gameState == STATE.Menu || gameState == STATE.End
-                || gameState == STATE.Select|| gameState == STATE.Finish) {
+                || gameState == STATE.Select|| gameState == STATE.Finish||gameState == STATE.Shop) {
             menu.tick();
             handler.tick();
         }
@@ -159,9 +159,12 @@ public class Game extends Canvas implements Runnable {
         if (gameState == STATE.Game) {
             hud.render(g);
             handler.render(g);
-        } else if (gameState == STATE.Shop) {
-            shop.render(g);
-        } else if (gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select|| gameState == STATE.Finish) {
+        }
+//        else if (gameState == STATE.Shop) {
+//            shop.render(g);
+//        }
+        else if (gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select||
+                gameState == STATE.Finish||gameState == STATE.Shop) {
             menu.render(g);
             handler.render(g);
         }

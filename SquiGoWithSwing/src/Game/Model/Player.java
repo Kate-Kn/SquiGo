@@ -26,8 +26,9 @@ public class Player extends GameObject {
         x = Game.clam(x, 0, Game.WIDTH - 45);
         y = Game.clam(y, 50, Game.HEIGHT - 82);
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.white, 9, 9, 0.02f, handler));
-
+if(Game.gameState!=Game.STATE.Shop){
         collision();
+    }
     }
 
     private void collision() {
@@ -36,7 +37,7 @@ public class Player extends GameObject {
             if (tempObject.getId() == ID.TreeEnemyS || tempObject.getId() == ID.SnowflakeEnemyF || tempObject.getId() == ID.SantaEnemyFif || tempObject.getId() == ID.ReindeerEnemyFo || tempObject.getId() == ID.ReindeerBullet | tempObject.getId() == ID.SantaBullet || tempObject.getId() == ID.DecorationEnemyTh) {
                 if (getBounds().intersects(tempObject.getBounds())) { //temp object is now a basic enemy
                     // collision code
-                    HUD.HEALTH -= 0;
+                    HUD.HEALTH -= 1;
 
                 }
             }
