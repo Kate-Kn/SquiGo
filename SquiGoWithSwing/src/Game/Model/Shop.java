@@ -10,7 +10,7 @@ public class Shop extends MouseAdapter {
     private Handler handler;
     HUD hud;
     private int p3 = 2;
-    private int p4=3;
+    private int p4 = 3;
     boolean isSk = false;
 
     public Shop(Handler handler, HUD hud) {
@@ -34,7 +34,7 @@ public class Shop extends MouseAdapter {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        g.drawImage(imag,75,175,null);
+        g.drawImage(imag, 75, 175, null);
 
         g.drawRect(250, 100, 150, 150);
         g.drawString("Upgrade Speed", 260, 120);
@@ -46,7 +46,7 @@ public class Shop extends MouseAdapter {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        g.drawImage(ima,275,175,null);
+        g.drawImage(ima, 275, 175, null);
 
 
         g.drawRect(450, 100, 150, 150);
@@ -60,11 +60,11 @@ public class Shop extends MouseAdapter {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        g.drawImage(image,475,175,null);
+        g.drawImage(image, 475, 175, null);
 
 
         g.drawRect(250, 270, 150, 150);
-        g.drawString("Skip level "+hud.getLevel(), 260, 290);
+        g.drawString("Skip level " + hud.getLevel(), 260, 290);
         g.drawString("Cost : " + p4 + " nuts", 260, 310);
         BufferedImage im = new BufferedImage(9, 9, 12);
         try {
@@ -73,7 +73,7 @@ public class Shop extends MouseAdapter {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        g.drawImage(im,270,315,null);
+        g.drawImage(im, 270, 315, null);
 
 
         g.drawString("Nuts: " + hud.getNuts(), Game.WIDTH - 150, 400);
@@ -88,14 +88,12 @@ public class Shop extends MouseAdapter {
         if (Game.gameState == Game.STATE.Shop) {
             if (mx >= 50 && mx < 200) {
                 if (my >= 100 && my <= 250) {
-                    if (hud.getNuts() >= 1) {
-                        if (hud.HEALTH < 100) {
-                            hud.setNuts(hud.getNuts() - 1);
-                            if (hud.HEALTH <= 90)
-                                hud.HEALTH = hud.HEALTH + 10;
-                            else
-                                hud.HEALTH = 100;
-                        }
+                    if (hud.HEALTH < 100 && hud.getNuts() >= 1) {
+                        hud.setNuts(hud.getNuts() - 1);
+                        if (hud.HEALTH <= 90)
+                            hud.HEALTH = hud.HEALTH + 10;
+                        else
+                            hud.HEALTH = 100;
                     }
                 }
             }
@@ -109,40 +107,36 @@ public class Shop extends MouseAdapter {
             }
             if (mx >= 450 && mx <= 600) {
                 if (my >= 100 && my <= 250) {
-                    if (hud.getNuts() >= p3) {
-                        if (hud.HEALTH < 100) {
-                            hud.setNuts(hud.getNuts() - p3);
-                            p3++;
-                            hud.HEALTH = 100;
-                        }
+                    if (hud.getNuts() >= p3 && hud.HEALTH < 100) {
+                        hud.setNuts(hud.getNuts() - p3);
+                        p3++;
+                        hud.HEALTH = 100;
                     }
                 }
             }
             if (mx >= 250 && mx <= 640) {
                 if (my >= 270 && my <= 420) {
-                    if (hud.getNuts() >= p4) {
-                        if (!isSk) {
-                            isSk = true;
-                            hud.setNuts(hud.getNuts() - p4);
-                            p4++;
-                            if (hud.getLevel() <= 4) {
-                                if (hud.getLevel() == 1)
-                                    hud.setScore(2000);
-                                if (hud.getLevel() == 2)
-                                    hud.setScore(3000);
-                                if (hud.getLevel() == 3)
-                                    hud.setScore(4000);
-                                if (hud.getLevel() == 4)
-                                    hud.setScore(5000);
-                            } else
-                                hud.setScore(hud.getScore() + 1000);
-                            Spawn.setScoreKeep(1000);
-                        }
+                    if (hud.getNuts() >= p4 && !isSk) {
+                        isSk = true;
+                        hud.setNuts(hud.getNuts() - p4);
+                        p4++;
+                        if (hud.getLevel() <= 4) {
+                            if (hud.getLevel() == 1)
+                                hud.setScore(2000);
+                            if (hud.getLevel() == 2)
+                                hud.setScore(3000);
+                            if (hud.getLevel() == 3)
+                                hud.setScore(4000);
+                            if (hud.getLevel() == 4)
+                                hud.setScore(5000);
+                        } else
+                            hud.setScore(hud.getScore() + 1000);
+                        Spawn.setScoreKeep(1000);
                     }
                 }
             }
         }
     }
 
-    }
+}
 

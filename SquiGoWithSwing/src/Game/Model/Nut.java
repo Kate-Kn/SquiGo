@@ -4,10 +4,8 @@ package Model;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.Random;
 
 public class Nut extends GameObject {
-    Random r=new Random();
     private Handler handler;
     public Nut(float x, float y, ID id, Handler handler) {
         super(x, y, id);
@@ -42,7 +40,6 @@ public class Nut extends GameObject {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
             g.drawImage(image, (int) x, (int) y, null);
     }
 }

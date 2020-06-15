@@ -3,7 +3,6 @@ package Model;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -71,13 +70,6 @@ public class TreeEnemyS extends GameObject {
           ima = ImageIO.read(getClass().getResource("/resources/chtree/chrtree1.png"));
           im = ImageIO.read(getClass().getResource("/resources/chtree/chrtree2.png"));
           i = ImageIO.read(getClass().getResource("/resources/chtree/chrtree3.png"));
-
-            //image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\chtree\\treeG.png")); last path used 10.06
-
-            //тут в мене якийсь трабл зі шляхом, прайює тільки, коли повний, в Каті і з коротним все добре
-            // хз як виправити, хай поки буде так
-            // короткий "src\\Game\\resources\\treeG.png"
-            // мій "C:\Users\Owner\IdeaProjects\SquiGo\SquiGoWithSwing\src\Game\resources\treeG.png"
         } catch (Exception e) {
             e.printStackTrace();
         }

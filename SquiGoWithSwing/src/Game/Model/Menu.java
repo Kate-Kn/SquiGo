@@ -113,7 +113,6 @@ public class Menu extends MouseAdapter {
 //                    handler.addObject(new SnowflakeEnemyF(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));//1 level
 
             }
-            //previous level
             if (mouseOver(mx, my, 90, 290, 400, 50)) {
                 if(hud.getNuts()>=3) {
                     game.gameState = Game.STATE.Game;
@@ -252,67 +251,7 @@ public class Menu extends MouseAdapter {
                 return;
             }
         }
-        if(game.gameState == Game.STATE.Shop){
 
-            mx = e.getX();
-            my = e.getY();
-            if (mx >= 50 && mx < 200) {
-                if (my >= 100 && my <= 250) {
-                    // if (hud.getNuts() >= 1) {
-                    if (hud.HEALTH < 100) {
-                        hud.setNuts(hud.getNuts() - 1);
-                        if (hud.HEALTH <= 90)
-                            hud.HEALTH = hud.HEALTH + 10;
-                        else
-                            hud.HEALTH = 100;
-                    }
-                    //}
-                }
-            }
-            if (mx > 250 && mx < 400) {
-                if (my >= 100 && my <= 250) {
-                    //if (hud.getNuts() >= 1) {
-                    hud.setNuts(hud.getNuts() - 1);
-                    handler.speed++;
-                    //}
-                }
-            }
-            if (mx >= 450 && mx <= 600) {
-                if (my >= 100 && my <= 250) {
-                    //if (hud.getNuts() >= p3) {
-                    if (hud.HEALTH < 100) {
-                        hud.setNuts(hud.getNuts() - p3);
-                        p3++;
-                        hud.HEALTH = 100;
-                    }
-                    // }
-                }
-            }
-            if (mx >= 250 && mx <= 640) {
-                if (my >= 270 && my <= 420) {
-                    //if (hud.getNuts() >= p4) {
-
-                    if (!isSk) {
-                        isSk=true;
-                        hud.setNuts(hud.getNuts() - p4);
-                        p4++;
-                        if (hud.getLevel() <= 4) {
-                            if (hud.getLevel() == 1)
-                                hud.setScore(2000);
-                            if (hud.getLevel() == 2)
-                                hud.setScore(3000);
-                            if (hud.getLevel() == 3)
-                                hud.setScore(4000);
-                            if (hud.getLevel() == 4)
-                                hud.setScore(5000);
-                        } else
-                            hud.setScore(hud.getScore() + 1000);
-                        Spawn.setScoreKeep(1000);
-                    }
-                }
-                // }
-            }
-        }
     }
 
     public void mouseReleased(MouseEvent e) {

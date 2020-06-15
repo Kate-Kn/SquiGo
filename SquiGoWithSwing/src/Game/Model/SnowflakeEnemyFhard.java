@@ -59,7 +59,6 @@ public class SnowflakeEnemyFhard extends GameObject {
           imag = ImageIO.read(getClass().getResource("/resources/snowball1.png"));
           ima = ImageIO.read(getClass().getResource("/resources/snowball2.png"));
           im = ImageIO.read(getClass().getResource("/resources/snowball3.png"));
-            //image = ImageIO.read(new File("C:\\Users\\Owner\\IdeaProjects\\SquiGo\\SquiGoWithSwing\\src\\Game\\resources\\sprite_0045.png")); last path used 10.06
 
       } catch (Exception e) {
             e.printStackTrace();

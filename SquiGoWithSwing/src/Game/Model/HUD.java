@@ -13,7 +13,7 @@ public class HUD {
 
     public void tick() {
         HEALTH = Game.clam(HEALTH, 0, 100);
-        nuts=Game.clam(nuts,0,10000000);
+       // nuts=Game.clam(nuts,0,10000000);
         greenValue = HEALTH * 2;
         greenValue = Game.clam(greenValue, 0, 255);
         score++;
@@ -47,7 +47,6 @@ public class HUD {
                     e.printStackTrace();
                 }
                 g.drawImage(image, 525, 5, null);
-
         g.setColor(new Color(230,249, 250));
         Font fnt2 = new Font("arial", 1, 15);
         g.setFont(fnt2 );
@@ -59,9 +58,7 @@ public class HUD {
         g.drawString("Nuts: " + nuts, 570, 35);
         g.setColor(new Color(218, 146, 55));
         g.drawString("Space for pause, esc to quit, 's' for shop", 190, 450);
-
     }
-
     public float getLevel() {
         return level;
     }

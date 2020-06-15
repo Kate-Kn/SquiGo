@@ -8,7 +8,6 @@ public class KeyInput extends KeyAdapter {
     private boolean[] keyDown = new boolean[4];
     Game game;
 
-
     public KeyInput(Handler handler, Game game) {
         this.game = game;
         this.handler = handler;
@@ -88,19 +87,15 @@ public class KeyInput extends KeyAdapter {
             if (temp.getId() == ID.Player) {
                 if (key == 38) {
                     keyDown[0] = false;
-                    //temp.setVelY(0);
                 }
                 if (key == 40) {
                     keyDown[1] = false;
-                    //temp.setVelY(0);
                 }
                 if (key == 37) {
                     keyDown[2] = false;
-                    // temp.setVelX(0);
                 }
                 if (key == 39) {
                     keyDown[3] = false;
-                    // temp.setVelX(0);
                 }
                 if (!keyDown[0] && !keyDown[1]) {
                     temp.setVelY(0);

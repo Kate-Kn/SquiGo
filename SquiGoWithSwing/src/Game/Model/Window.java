@@ -4,11 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Window extends Canvas {
-    public Window(int WIGTH, int HEIGTH, String title, Game game) {
+    public Window(int WIDTH, int HEIGHT, String title, Game game) {
         JFrame frame = new JFrame(title);
-        frame.setPreferredSize(new Dimension(WIGTH, HEIGTH));
-        frame.setMaximumSize(new Dimension(WIGTH, HEIGTH));
-        frame.setMinimumSize(new Dimension(WIGTH, HEIGTH));
+        frame.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        frame.setMaximumSize(new Dimension(WIDTH, HEIGHT));
+        frame.setMinimumSize(new Dimension(WIDTH, HEIGHT));
 
 
         frame.setResizable(false);

@@ -3,14 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a41542c6-ce03-4d8e-8c11-7c5ca5036ae4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SquiGoWithSwing/Model/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/Following.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Following.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/KeyInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/Nut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Nut.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Model/Spawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Spawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyFhard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/SnowflakeEnemyFhard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/TreeEnemyS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/TreeEnemyS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Model/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Model/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +143,7 @@
       <workItem from="1592200543969" duration="57000" />
       <workItem from="1592205325209" duration="7808000" />
       <workItem from="1592214167759" duration="401000" />
-      <workItem from="1592248918888" duration="5896000" />
+      <workItem from="1592248918888" duration="8059000" />
     </task>
     <task id="LOCAL-00001" summary="Created package Game.&#10;BasicEnemy.java (Christmas tree) is on the way.">
       <created>1591509342521</created>
@@ -424,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592253085661</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Squirrel in frame.">
+      <created>1592255764146</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1592255764146</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +440,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add new method in handler - removeEnemies()." />
     <MESSAGE value="Add new enemy - reindeer(fourth level)." />
     <MESSAGE value="Create ReindeerBullet.java." />
     <MESSAGE value="Bug fix with player movement." />
@@ -457,7 +464,8 @@
     <MESSAGE value="Nuts are more often.&#10;No nuts in debt." />
     <MESSAGE value="No men with star." />
     <MESSAGE value="Shop bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shop bug fix" />
+    <MESSAGE value="Squirrel in frame." />
+    <option name="LAST_COMMIT_MESSAGE" value="Squirrel in frame." />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" key="#Auto_Import" timestamp="1591511358213">
@@ -484,10 +492,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="412" y="129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1591508283276" />
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1592253080431">
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2" timestamp="1592255760545">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1592253080431" />
+    <state x="485" y="31" width="835" height="707" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1592255760545" />
     <state x="129" y="62" key="DiffContextDialog" timestamp="1592248994408">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -496,22 +504,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1591892703023" />
-    <state width="1323" height="227" key="GridCell.Tab.0.bottom" timestamp="1592255655815">
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom" timestamp="1592257935902">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592255655815" />
-    <state width="1323" height="227" key="GridCell.Tab.0.center" timestamp="1592255655814">
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592257935902" />
+    <state width="1323" height="189" key="GridCell.Tab.0.center" timestamp="1592257935902">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592255655814" />
-    <state width="1323" height="227" key="GridCell.Tab.0.left" timestamp="1592255655814">
+    <state width="1323" height="189" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592257935902" />
+    <state width="1323" height="189" key="GridCell.Tab.0.left" timestamp="1592257935901">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592255655814" />
-    <state width="1323" height="227" key="GridCell.Tab.0.right" timestamp="1592255655815">
+    <state width="1323" height="189" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592257935901" />
+    <state width="1323" height="189" key="GridCell.Tab.0.right" timestamp="1592257935902">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592255655815" />
+    <state width="1323" height="189" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592257935902" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1592255655817">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -571,18 +579,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game/Model/Player.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game/Model/Player.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog>
           <selected-grouping-rules>
