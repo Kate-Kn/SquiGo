@@ -67,7 +67,7 @@ if(Game.gameState!=Game.STATE.Shop){
 
             try {
                 //image = ImageIO.read(new File("src\\Game\\resources\\rabbit.png")); попередній шлях 10.06
-                image = ImageIO.read(getClass().getResource("/resources/rabbit.png"));
+                image = ImageIO.read(getClass().getResource("/resources/squi3.png"));
 
             } catch (Exception e) {
                 e.printStackTrace();
