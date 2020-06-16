@@ -83,7 +83,7 @@ public class Shop extends MouseAdapter {
         g.drawString("Nuts: " + hud.getNuts(), 475, 400);
         g.drawString("Health: " + hud.HEALTH, 475, 420);
         g.drawString("Speed: " + handler.speed, 475, 380);
-        g.drawString("Press s to go back", 475, 440);
+        g.drawString("Press s to go back", 475, 435);
     }
 
     public void mousePressed(MouseEvent e) {

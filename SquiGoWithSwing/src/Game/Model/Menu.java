@@ -11,12 +11,7 @@ public class Menu extends MouseAdapter {
     private Game game;
     private Handler handler;
     private Random r=new Random();
-    private int buttonWidth=Game.WIDTH/5;
-    private int buttonHeigth=Game.HEIGHT/5;
     HUD hud;
-    int p3 = 2;
-    int p4=3;
-    boolean isSk = false;
     public Menu(Game game, Handler handler, HUD hud){
         this.game=game;
         this.handler=handler;
