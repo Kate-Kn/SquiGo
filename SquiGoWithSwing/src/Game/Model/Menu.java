@@ -436,13 +436,12 @@ public class Menu extends MouseAdapter {
         else if (game.gameState == Game.STATE.Finish){
 
 
-            g.setColor(Color.white);
-            g.setFont(new Font("arial", 0, 48));
-            g.drawString("YOU WIN!", Game.WIDTH / 2 - 100, 50);
+            g.setColor(new Color(36, 48, 96));
+            g.fillRect(0, 0, 640, 480);
 
-            g.setFont(new Font("arial", 0, 30));
-
-            g.drawString( "Score: "+hud.getScore()+", level: "+ hud.getLevel()+ ", nuts: "+hud.getNuts(), 50, 150);
+            g.setColor(new Color(236, 201, 59));
+            g.setFont(new Font("arial", 1, 48));
+            g.drawString("YOU WIN!", 240, 50);
 
             BufferedImage imag = new BufferedImage(9, 9, 12);
             try {
@@ -454,6 +453,25 @@ public class Menu extends MouseAdapter {
             g.drawImage(imag,75,275,null);
 
 
+            BufferedImage fg = new BufferedImage(9, 9, 12);
+                        try {
+                            fg = ImageIO.read(getClass().getResource("/resources/fireworks1.png"));
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        g.drawImage(fg,10,150,null);
+
+            BufferedImage rt = new BufferedImage(9, 9, 12);
+           try {
+               rt = ImageIO.read(getClass().getResource("/resources/fireworks1.png"));
+
+           } catch (Exception e) {
+               e.printStackTrace();
+           }
+           g.drawImage(rt,10,20,null);
+
+
             BufferedImage ima = new BufferedImage(9, 9, 12);
             try {
                 ima = ImageIO.read(getClass().getResource("/resources/fireworks2.png"));
@@ -462,6 +480,40 @@ public class Menu extends MouseAdapter {
                 e.printStackTrace();
             }
             g.drawImage(ima,275,175,null);
+
+
+            BufferedImage im = new BufferedImage(9, 9, 12);
+            try {
+                im = ImageIO.read(getClass().getResource("/resources/fireworks2.png"));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(im,20,100,null);
+
+
+            BufferedImage ig = new BufferedImage(9, 9, 12);
+            try {
+                ig = ImageIO.read(getClass().getResource("/resources/fireworks1.png"));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(ig,300,40,null);
+
+
+            BufferedImage igs = new BufferedImage(9, 9, 12);
+            try {
+                igs = ImageIO.read(getClass().getResource("/resources/fireworks1.png"));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            g.drawImage(igs,10,300,null);
+
+
+            g.setFont(new Font("arial", 0, 30));
+            g.drawString( "Score: "+hud.getScore()+", level: "+ hud.getLevel()+ ", nuts: "+hud.getNuts(), 50, 130);
 
             g.setColor(Color.WHITE);
             g.setFont(new Font("arial", 0, 30));
