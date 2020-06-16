@@ -18,6 +18,7 @@ public class Audio {
             musicMap.put("music_menu", new Music("resources/music/menu.ogg"));
             musicMap.put("music_game", new Music ("resources/music/game.ogg"));
             soundMap.put("nut", new Sound("resources/music/nutsound.ogg"));
+            soundMap.put("shop_s", new Sound("resources/music/shop_s.ogg"));
 
         } catch (SlickException e) {
             e.printStackTrace();
