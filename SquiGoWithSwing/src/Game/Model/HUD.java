@@ -21,7 +21,7 @@ public class HUD {
 
     public void render(Graphics g) {
         g.setColor(new Color(97,165, 177));
-        g.fillRect(0,0,640,50);  
+        g.fillRect(0,0,640,50);
         g.setColor(new Color(234,248, 249));
         g.fillRect(15, 10, 200, 32);
         g.setColor(new Color(100, (int) greenValue, 0));
@@ -33,7 +33,7 @@ public class HUD {
 
         //level space
                 g.setColor(new Color(193,219, 217));
-                g.fillRect(313, 0, 116, 50);
+                g.fillRect(315, 0, 116, 50);
         //score space
                 g.setColor(new Color(226,243, 243));
                 g.fillRect(396, 0, 124, 50);
@@ -53,9 +53,9 @@ public class HUD {
         g.drawString("Health: " + HEALTH, 220, 35);
         g.setColor(new Color(97,165, 177));
         g.drawString("Level: " + level, 320, 35);
-        g.drawString("Scores: " + score, 420, 35);
+        g.drawString("Scores: " + score, 415, 35);
         g.setColor(new Color(181,97, 57));
-        g.drawString("Nuts: " + nuts, 570, 35);
+        g.drawString("Nuts: " + nuts, 565, 35);
         g.setColor(new Color(218, 146, 55));
         g.drawString("Space for pause, esc to quit, 's' for shop", 190, 450);
     }
