@@ -29,7 +29,7 @@ public class HUD {
         g.setColor(new Color(29,139, 145));
         g.drawRect(15, 10, 200, 32);
         g.setColor(new Color(241,228, 144));
-        g.fillRect(0,430,640,50);
+        g.fillRect(0,420,640,50);
 
         //level space
                 g.setColor(new Color(193,219, 217));
@@ -40,6 +40,7 @@ public class HUD {
         //nut space
                 g.setColor(new Color(234,248, 249));
                 g.fillRect(520, 0, 120, 50);
+
                 BufferedImage image = new BufferedImage(7, 7, 12);
                 try {
                     image = ImageIO.read(getClass().getResource("/resources/nut.png"));
@@ -49,6 +50,7 @@ public class HUD {
                 g.drawImage(image, 525, 5, null);
         g.setColor(new Color(230,249, 250));
         Font fnt2 = new Font("arial", 1, 15);
+
         g.setFont(fnt2 );
         g.drawString("Health: " + HEALTH, 220, 35);
         g.setColor(new Color(97,165, 177));
@@ -56,8 +58,9 @@ public class HUD {
         g.drawString("Scores: " + score, 415, 35);
         g.setColor(new Color(181,97, 57));
         g.drawString("Nuts: " + nuts, 565, 35);
+
         g.setColor(new Color(218, 146, 55));
-        g.drawString("Space for pause, esc to quit, 's' for shop", 190, 450);
+        g.drawString("Space for pause, esc to quit, 's' for shop", 190, 435);
     }
     public float getLevel() {
         return level;
