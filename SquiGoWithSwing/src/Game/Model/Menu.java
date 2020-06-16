@@ -103,7 +103,7 @@ public class Menu extends MouseAdapter {
             //try again
             if (mouseOver(mx, my, 210, 350, 200, 50)) {
                 game.gameState = Game.STATE.Select;
-
+                Audio.getSound("menu_sound").play();
                 hud.setLevel(1);
                 hud.setScore(0);
                 Spawn.scoreKeep=0;
@@ -117,7 +117,7 @@ public class Menu extends MouseAdapter {
                     game.gameState = Game.STATE.Game;
                     Game.paused=true;
                     hud.setLevel(hud.getLevel());
-
+                    Audio.getSound("menu_sound").play();
                     hud.setNuts(hud.getNuts()-3);
                     hud.HEALTH = 100;
                     if(game.diff==0){
