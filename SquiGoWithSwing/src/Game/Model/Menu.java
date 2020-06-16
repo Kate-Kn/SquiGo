@@ -512,6 +512,15 @@ public class Menu extends MouseAdapter {
             g.drawImage(igs,10,300,null);
 
 
+            BufferedImage imagef = new BufferedImage(10, 10, 12);
+                        try {
+                            imagef = ImageIO.read(getClass().getResource("/resources/finalimage.png"));
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        g.drawImage(imagef,250,250,null);
+
             g.setFont(new Font("arial", 0, 30));
             g.drawString( "Score: "+hud.getScore()+", level: "+ hud.getLevel()+ ", nuts: "+hud.getNuts(), 50, 130);
 
