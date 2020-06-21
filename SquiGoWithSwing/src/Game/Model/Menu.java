@@ -66,6 +66,7 @@ public class Menu extends MouseAdapter {
                 handler.addObject(new Player(50,  0, ID.Player, handler));
                 for(int i=0;i<5;i++)
                 handler.addObject(new SnowflakeEnemyFhard(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
+                handler.addObject(new Following(300,  300, ID.Following, handler));
                 game.diff=1;
 //click sound and game sound added
                 Audio.getSound("menu_sound").play();
@@ -166,6 +167,8 @@ public class Menu extends MouseAdapter {
                         Audio.getMusic("music_game").loop();
                         if(hud.getLevel() == 1){
                             handler.addObject(new Player(50,  0, ID.Player, handler));
+                            handler.addObject(new Following(300,  300, ID.Following, handler));
+
                             for(int i=0;i<5;i++)
                                 handler.addObject(new SnowflakeEnemyFhard(r.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT-100), ID.SnowflakeEnemyF, handler));
                             game.diff=1;
@@ -175,6 +178,7 @@ public class Menu extends MouseAdapter {
                             hud.setScore(1000);
                             handler.clearEnemies();
                             handler.addObject(new Player(50,  0, ID.Player, handler));
+                            handler.addObject(new Following(300,  300, ID.Following, handler));
 
                             for (int i = 0; i < 10; i++)
                                 handler.addObject(new TreeEnemyS(r.nextInt(Game.WIDTH - 60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.TreeEnemyS, handler, ThreadLocalRandom.current().nextInt(0, 5)));
@@ -183,6 +187,7 @@ public class Menu extends MouseAdapter {
                             hud.setScore(2000);
                             handler.clearEnemies();
                             handler.addObject(new Player(50,  0, ID.Player, handler));
+                            handler.addObject(new Following(300,  300, ID.Following, handler));
 
                             for (int i = 0; i < 10; i++)
                                 handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH - 60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.DecorationEnemyTh, handler, ThreadLocalRandom.current().nextInt(0, 7)));
@@ -191,6 +196,7 @@ public class Menu extends MouseAdapter {
                             hud.setScore(3000);
                             handler.clearEnemies();
                             handler.addObject(new Player(50,  0, ID.Player, handler));
+                            handler.addObject(new Following(300,  300, ID.Following, handler));
 
                             handler.addObject(new ReindeerEnemyFo((Game.WIDTH - 150), (Game.HEIGHT - 300), ID.ReindeerEnemyFo, handler, 1));
                             handler.addObject(new ReindeerEnemyFo((0), (Game.HEIGHT - 150), ID.ReindeerEnemyFo, handler, 2));
@@ -199,6 +205,7 @@ public class Menu extends MouseAdapter {
                             hud.setScore(4000);
                             handler.clearEnemies();
                             handler.addObject(new Player(50,  0, ID.Player, handler));
+                            handler.addObject(new Following(300,  300, ID.Following, handler));
 
                             handler.addObject(sa);
                         }

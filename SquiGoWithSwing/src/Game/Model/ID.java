@@ -10,6 +10,7 @@ public enum ID {
     TreeEnemyS(),
     SantaBullet(),
     ReindeerBullet,
+    Following,
     SnowflakeEnemyF(),
     Nut();
 
