@@ -509,7 +509,7 @@ public class Menu extends MouseAdapter {
 
             BufferedImage imagef = new BufferedImage(10, 10, 12);
                         try {
-                            imagef = ImageIO.read(getClass().getResource("/resources/finalimage.png"));
+                            imagef = ImageIO.read(getClass().getResource("/resources/final.png"));
 
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -519,7 +519,7 @@ public class Menu extends MouseAdapter {
             g.setFont(new Font("arial", 0, 30));
             g.drawString( "Score: "+hud.getScore()+", level: "+ hud.getLevel()+ ", nuts: "+hud.getNuts(), 50, 130);
 
-            g.setColor(Color.WHITE);
+            g.setColor(Color.orange);
             g.setFont(new Font("arial", 0, 30));
             g.drawString("Back", 270, 390);
             g.drawRect(210, 350, 200, 64);

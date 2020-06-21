@@ -24,6 +24,8 @@ public class Audio {
             e.printStackTrace();
         }
     }
+
+
 public static Music getMusic(String key){
         return musicMap.get(key);
 }
