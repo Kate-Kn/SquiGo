@@ -56,7 +56,7 @@ public class Following extends GameObject {
     public void render(Graphics g) {
         BufferedImage image = new BufferedImage(9, 9, 12);
         try {
-            image = ImageIO.read(getClass().getResource("/resources/bearh.png"));
+            image = ImageIO.read(getClass().getResource("/resources/snowmanh.png"));
 
         } catch (Exception e) {
             e.printStackTrace();
