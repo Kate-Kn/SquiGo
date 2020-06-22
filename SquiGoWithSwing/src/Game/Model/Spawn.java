@@ -58,6 +58,8 @@ public class Spawn {
                 if (hud.getLevel() == 6) {
                     handler.clearEnemies();
                     handler.clearPlayer();
+                    Audio.loadmusic();
+                    Audio.getMusic("music_win").loop();
                     game.gameState = Game.STATE.Finish;
                 }
             } else if (game.diff == 1) {
@@ -94,6 +96,8 @@ public class Spawn {
 
                     handler.clearEnemies();
                     handler.clearPlayer();
+                    Audio.loadmusic();
+                    Audio.getMusic("music_win").loop();
                     game.gameState = Game.STATE.Finish;
                 }
             }
