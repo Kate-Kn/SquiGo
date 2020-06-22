@@ -43,9 +43,7 @@ public class DecorationEnemyTh extends GameObject {
     public void tick() {
         x += velX;
         y += velY;
-//        if (Model.Game.diff==1){
-//
-//        }
+
         if (x <= 0 || x >= Game.WIDTH - 32) {
             velX *= -1;
         }
