@@ -4,11 +4,15 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Following extends GameObject {
 
     private Handler handler;
     private  GameObject player;
+    private  int timer=250;
+    Random random=new Random();
 
     public Following(float x, float y, ID id, Handler handler) {
         super(x, y, id);
@@ -35,6 +39,15 @@ public class Following extends GameObject {
         velY=((-1)/distance)*diffY;
         x += velX;
         y += velY;
+        if(timer<=0){
+            if(!SnowflakeEnemyF.isA) {
+                handler.addObject(new Nut(random.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.Nut, handler));
+                SnowflakeEnemyF.isA=true;
+            } else
+                timer=200;
+        }else{
+            timer--;
+        }
 
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.red, 9, 9, 0.1f, handler));
     }

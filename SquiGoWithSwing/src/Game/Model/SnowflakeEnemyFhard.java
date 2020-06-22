@@ -11,6 +11,8 @@ public class SnowflakeEnemyFhard extends GameObject {
     private Handler handler;
     private Random r = new Random();
     private  int dec = ThreadLocalRandom.current().nextInt(0, 4);
+    private int timer=250;
+    private Random random=new Random();
     public SnowflakeEnemyFhard(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
@@ -42,6 +44,15 @@ public class SnowflakeEnemyFhard extends GameObject {
             } else{
                 velY= (r.nextInt(7)+1)*-1;
             }
+        }
+        if(timer<=0){
+            if(!SnowflakeEnemyF.isA) {
+                handler.addObject(new Nut(random.nextInt(Game.WIDTH-60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.Nut, handler));
+                SnowflakeEnemyF.isA=true;
+            } else
+                timer=200;
+        }else{
+            timer--;
         }
 
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.red, 4, 4, 0.1f, handler));
