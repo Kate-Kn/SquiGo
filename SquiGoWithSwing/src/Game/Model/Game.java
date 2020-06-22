@@ -37,7 +37,7 @@ public class Game extends Canvas implements Runnable {
         hud = new HUD();
         handler = new Handler();
         menu = new Menu(this, handler, hud);
-       shop = new Shop(handler, hud);
+        shop = new Shop(handler, hud);
         this.addMouseListener(menu);
         this.addMouseListener(shop);
 

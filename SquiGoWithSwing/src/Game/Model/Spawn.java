@@ -65,24 +65,33 @@ public class Spawn {
                 SantaEnemyFif sa = new SantaEnemyFif((Game.WIDTH / 2 - 48), -50, ID.SantaEnemyFif, handler);
                 if (hud.getLevel() == 2) {
                     handler.clearEnemies();
+                    handler.addObject(new Following(300,  300, ID.Following, handler));
+
                     for (int i = 0; i < 7; i++)
                         handler.addObject(new TreeEnemyS(r.nextInt(Game.WIDTH - 60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.TreeEnemyS, handler, ThreadLocalRandom.current().nextInt(0, 5)));
                 }
                 if (hud.getLevel() == 3) {
                     handler.clearEnemies();
+                    handler.addObject(new Following(300,  300, ID.Following, handler));
+
                     for (int i = 0; i < 7; i++)
                         handler.addObject(new DecorationEnemyTh(r.nextInt(Game.WIDTH - 60), ThreadLocalRandom.current().nextInt(50, Game.HEIGHT - 100), ID.DecorationEnemyTh, handler, ThreadLocalRandom.current().nextInt(0, 7)));
                 }
                 if (hud.getLevel() == 4) {
                     handler.clearEnemies();
+                    handler.addObject(new Following(300,  300, ID.Following, handler));
+
                     handler.addObject(new ReindeerEnemyFo((Game.WIDTH - 150), (Game.HEIGHT - 300), ID.ReindeerEnemyFo, handler, 1));
                     handler.addObject(new ReindeerEnemyFo((0), (Game.HEIGHT - 150), ID.ReindeerEnemyFo, handler, 2));
                 }
                 if (hud.getLevel() == 5) {
                     handler.clearEnemies();
+                    handler.addObject(new Following(300,  300, ID.Following, handler));
+
                     handler.addObject(sa);
                 }
                 if (hud.getLevel() == 6) {
+
                     handler.clearEnemies();
                     handler.clearPlayer();
                     game.gameState = Game.STATE.Finish;
