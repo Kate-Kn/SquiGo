@@ -17,6 +17,7 @@ public class Audio {
             soundMap.put("menu_sound", new Sound("resources/music/trialclick.ogg"));
             musicMap.put("music_menu", new Music("resources/music/menu.ogg"));
             musicMap.put("music_game", new Music ("resources/music/game.ogg"));
+            musicMap.put("music_win", new Music ("resources/music/winner.ogg"));
             soundMap.put("nut", new Sound("resources/music/nutsound.ogg"));
             soundMap.put("shop_s", new Sound("resources/music/shop_s.ogg"));
 
