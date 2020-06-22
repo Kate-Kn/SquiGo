@@ -231,6 +231,8 @@ public class Menu extends MouseAdapter {
 
         }
         if (game.gameState == Game.STATE.Finish) {
+            Audio.loadmusic();
+            Audio.getMusic("music_menu").loop();
             handler.clearEnemies();
 
             //back for finish
@@ -526,10 +528,11 @@ public class Menu extends MouseAdapter {
             g.setFont(new Font("arial", 0, 30));
             g.drawString( "Score: "+hud.getScore()+", level: "+ hud.getLevel()+ ", nuts: "+hud.getNuts(), 50, 130);
 
-            g.setColor(Color.orange);
+            g.setColor(new Color(223, 157, 239));
+            g.fillRect(210, 350, 200, 64);
+            g.setColor(new Color(214, 104, 219));
             g.setFont(new Font("arial", 0, 30));
             g.drawString("Back", 270, 390);
-            g.drawRect(210, 350, 200, 64);
         }
     }
 }
