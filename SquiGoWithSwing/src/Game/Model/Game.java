@@ -50,7 +50,6 @@ public class Game extends Canvas implements Runnable {
         r = new Random();
 
 
-
     }
 
     public synchronized void start() {
@@ -114,7 +113,7 @@ public class Game extends Canvas implements Runnable {
                 }
             }
         } else if (gameState == STATE.Menu || gameState == STATE.End
-                || gameState == STATE.Select|| gameState == STATE.Finish||gameState == STATE.Shop) {
+                || gameState == STATE.Select || gameState == STATE.Finish || gameState == STATE.Shop) {
             menu.tick();
             handler.tick();
         }
@@ -132,28 +131,26 @@ public class Game extends Canvas implements Runnable {
         g.fillRect(0, 0, WIDTH, HEIGHT);
         if (paused) {
             if (gameState != STATE.Shop) {
-              Font fnt = new Font("arial", 1, 30);
-            g.setFont(fnt);
-            g.setColor(new Color(218,68,121));
-            g.drawString("PAUSED", 270, 245);
-            BufferedImage imagem = new BufferedImage(10, 10, 12);
-            try {
-             imagem = ImageIO.read(getClass().getResource("/resources/backs/helpframe3.png"));
-            } catch (Exception e) {
-             e.printStackTrace();
-            }
-            g.drawImage(imagem, 230, 200, 200, 64, null);
+                Font fnt = new Font("arial", 1, 30);
+                g.setFont(fnt);
+                g.setColor(new Color(218, 68, 121));
+                g.drawString("PAUSED", 270, 245);
+                BufferedImage imagem = new BufferedImage(10, 10, 12);
+                try {
+                    imagem = ImageIO.read(getClass().getResource("/resources/backs/helpframe3.png"));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                g.drawImage(imagem, 230, 200, 200, 64, null);
 
             }
         }
         if (gameState == STATE.Game) {
             hud.render(g);
             handler.render(g);
-        }
-        else if (gameState == STATE.Shop) {
+        } else if (gameState == STATE.Shop) {
             shop.render(g);
-       }
-        else if (gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select||
+        } else if (gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select ||
                 gameState == STATE.Finish) {
             menu.render(g);
             handler.render(g);

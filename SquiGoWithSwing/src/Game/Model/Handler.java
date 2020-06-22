@@ -44,6 +44,7 @@ public class Handler {
         }
 
     }
+
     public void clearPlayer() {
         for (int i = 0; i < object.size(); i++) {
             GameObject tempObject = object.get(i);

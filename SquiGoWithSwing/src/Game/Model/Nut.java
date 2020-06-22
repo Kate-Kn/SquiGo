@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 
 public class Nut extends GameObject {
     private Handler handler;
+
     public Nut(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
@@ -14,19 +15,19 @@ public class Nut extends GameObject {
         velY = 2;
     }
 
-    public Rectangle getBounds()
-    {
-        return new Rectangle((int)x, (int)y, 30, 43);
+    public Rectangle getBounds() {
+        return new Rectangle((int) x, (int) y, 30, 43);
     }
+
     @Override
     public void tick() {
         x += velX;
         y += velY;
-        if(y>Game.HEIGHT) {
+        if (y > Game.HEIGHT) {
             handler.removeObject(this);
-            SnowflakeEnemyF.isA=false;
+            SnowflakeEnemyF.isA = false;
         }
-       handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.orange, 4, 4, 0.1f, handler));
+        handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.orange, 4, 4, 0.1f, handler));
 
     }
 
@@ -36,10 +37,10 @@ public class Nut extends GameObject {
         BufferedImage image = new BufferedImage(9, 9, 12);
         try {
 
-          image = ImageIO.read(getClass().getResource("/resources/nut.png"));
+            image = ImageIO.read(getClass().getResource("/resources/nut.png"));
         } catch (Exception e) {
             e.printStackTrace();
         }
-            g.drawImage(image, (int) x, (int) y, null);
+        g.drawImage(image, (int) x, (int) y, null);
     }
 }

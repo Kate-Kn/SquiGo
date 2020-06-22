@@ -9,13 +9,14 @@ import java.util.Random;
 public class Player extends GameObject {
     Random r = new Random();
     Handler handler;
+
     public Player(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
     }
 
     public Rectangle getBounds() {
-        return new Rectangle((int) x+5, (int) y, 47, 50);
+        return new Rectangle((int) x + 5, (int) y, 47, 50);
     }
 
     @Override
@@ -25,14 +26,14 @@ public class Player extends GameObject {
         x = Game.clam(x, 0, Game.WIDTH - 70);
         y = Game.clam(y, 50, Game.HEIGHT - 110);
         handler.addObject(new BasicTrail(x, y, ID.BasicTrail, Color.white, 9, 9, 0.02f, handler));
-        if(Game.gameState!= Game.STATE.Shop)
-        collision();
+        if (Game.gameState != Game.STATE.Shop)
+            collision();
     }
 
     private void collision() {
         for (int i = 0; i < handler.object.size(); i++) {
             GameObject tempObject = handler.object.get(i);
-            if (tempObject.getId() == ID.TreeEnemyS ||tempObject.getId() == ID.Following || tempObject.getId() == ID.SnowflakeEnemyF || tempObject.getId() == ID.SantaEnemyFif || tempObject.getId() == ID.ReindeerEnemyFo || tempObject.getId() == ID.ReindeerBullet | tempObject.getId() == ID.SantaBullet || tempObject.getId() == ID.DecorationEnemyTh) {
+            if (tempObject.getId() == ID.TreeEnemyS || tempObject.getId() == ID.Following || tempObject.getId() == ID.SnowflakeEnemyF || tempObject.getId() == ID.SantaEnemyFif || tempObject.getId() == ID.ReindeerEnemyFo || tempObject.getId() == ID.ReindeerBullet | tempObject.getId() == ID.SantaBullet || tempObject.getId() == ID.DecorationEnemyTh) {
                 if (getBounds().intersects(tempObject.getBounds())) {
                     HUD.HEALTH -= 0.5;
 
