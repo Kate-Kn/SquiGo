@@ -77,6 +77,14 @@ public class KeyInput extends KeyAdapter {
             } else if (Game.gameState == Game.STATE.Shop)
                 Game.gameState = Game.STATE.Game;
         }
+        if (key == KeyEvent.VK_Q) {
+            if (Game.gameState == Game.STATE.Game||Game.gameState == Game.STATE.Shop||Game.gameState == Game.STATE.Menu||
+                    Game.gameState == Game.STATE.Finish||Game.gameState == Game.STATE.Select||Game.gameState == Game.STATE.Help) {
+                Audio.getMusic("music_menu").stop();
+                Audio.getMusic("music_game").stop();
+                Audio.getMusic("music_win").stop();
+            }
+        }
 
     }
 
